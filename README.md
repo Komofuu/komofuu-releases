@@ -5,7 +5,7 @@
 <p align="center"><a href="https://github.com/Komofuu/komofuu-releases/releases"><strong>Windows downloads</strong></a> · <a href="GETTING-STARTED.md">Getting started</a> · <a href="https://github.com/Komofuu/komofuu-releases/issues/new/choose">Help &amp; feedback</a></p>
 
 Komofuu keeps you company while you read Japanese. Scan visible text when you
-need a word, look it up with furigana, and keep useful vocabulary for later.
+need a word, look it up for definitions, and keep useful vocabulary for later.
 This is the official public downloads and support repository. The application
 source is currently private.
 
