@@ -1,0 +1,17 @@
+name: Suggest a feature
+description: An improvement that would help you study Japanese.
+title: "[Idea]: "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What would this help you do?
+      description: Describe the reading or study task you want to improve.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Suggested change
+    validations:
+      required: true

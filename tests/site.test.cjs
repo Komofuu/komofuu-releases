@@ -1,0 +1,62 @@
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const crypto=require('node:crypto');
+const html=fs.readFileSync(require('node:path').join(__dirname,'../index.html'),'utf8');
+const script=html.match(/<script>([\s\S]*?)<\/script>/)[1];
+const source=script.slice(0,script.indexOf('const reducedMotion'))+script.slice(script.indexOf('// Only complete,'));
+function release(){
+ const tag='v0.11.2';
+ return {tag_name:tag,draft:false,prerelease:false,published_at:'2026-10-27T10:00:00Z',body:'<img src=x onerror=alert(1)>',assets:['Komofuu_0.11.2_x64-setup.exe','Komofuu_0.11.2_x64-setup.exe.sig','LEGAL.txt','latest.json'].map(name=>({name,state:'uploaded',size:1234,digest:'sha256:'+'a'.repeat(64),browser_download_url:`https://github.com/Komofuu/komofuu-releases/releases/download/${tag}/${name}`}))};
+}
+async function run(response){
+ const nodes=new Map();
+ const node=()=>({hidden:true,textContent:'',children:[],events:{},append(...a){this.children.push(...a)},replaceChildren(...a){this.children=a},addEventListener(name,fn){this.events[name]=fn}});
+ const get=id=>{if(!nodes.has(id))nodes.set(id,node());return nodes.get(id)};
+ const calls=[];
+ const context=vm.createContext({URL,AbortController,Intl,Date,Number,String,Boolean,Error,setTimeout:()=>1,clearTimeout(){},document:{getElementById:get,createElement:node},navigator:{clipboard:{writeText:async()=>{}}},fetch:async(...args)=>{calls.push(args);if(response instanceof Error)throw response;return response}});
+ vm.runInContext(source.replace(/loadRelease\(\);\s*$/,''),context);
+ await vm.runInContext('loadRelease()',context);
+ return {context,get,calls};
+}
+test('only a complete public release activates the installer and treats notes as plain text',async()=>{
+ const r=release(),{get,calls}=await run({ok:true,status:200,json:async()=>r});
+ assert.equal(get('hero-dl').href,r.assets[0].browser_download_url);
+ assert.equal(get('release-copy').textContent,r.body);
+ assert.equal(get('digest').textContent,'a'.repeat(64));
+ assert.equal(get('release-notes').hidden,false);
+ assert.equal(calls[0][0],'https://api.github.com/repos/Komofuu/komofuu-releases/releases/latest');
+ assert.equal(calls[0][1].credentials,'omit');
+});
+test('drafts, prereleases, incomplete, duplicate and empty assets are never direct downloads',async()=>{
+ const variants=[];
+ for(const key of ['draft','prerelease']){const r=release();r[key]=true;variants.push(r)}
+ let r=release();r.assets.pop();variants.push(r);
+ r=release();r.assets.push(r.assets[0]);variants.push(r);
+ r=release();r.assets[0].size=0;variants.push(r);
+ r=release();r.tag_name='v0.11.3';variants.push(r);
+ for(const value of variants){const {get}=await run({ok:true,status:200,json:async()=>value});assert.equal(get('hero-dl').href,undefined);}
+});
+test('lookalike hosts, other repositories, query strings and credentialed URLs are rejected',async()=>{
+ const bad=[
+ 'https://github.com.evil.example/Komofuu/komofuu-releases/releases/download/v0.11.2/Komofuu_0.11.2_x64-setup.exe',
+ 'https://github.com/other/downloads/releases/download/v0.11.2/Komofuu_0.11.2_x64-setup.exe',
+ 'https://github.com/Komofuu/komofuu-releases/releases/download/v0.11.2/Komofuu_0.11.2_x64-setup.exe?redirect=elsewhere',
+ 'https://user:password@github.com/Komofuu/komofuu-releases/releases/download/v0.11.2/Komofuu_0.11.2_x64-setup.exe',
+ 'javascript:alert(1)'];
+ for(const url of bad){const r=release();r.assets[0].browser_download_url=url;const {get}=await run({ok:true,status:200,json:async()=>r});assert.equal(get('hero-dl').href,undefined);}
+});
+test('no public release and API failures keep a clear manual-release fallback',async()=>{
+ for(const response of [{ok:false,status:404},{ok:false,status:403},new Error('offline')]){
+  const {get}=await run(response);assert.equal(get('hero-dl').href,undefined);
+  assert.match(get('dl-status').textContent,/first public build|couldn’t check/);
+ }
+ assert.match(html,/id="rel-link" href="https:\/\/github.com\/Komofuu\/komofuu-releases\/releases"/);
+});
+test('CSP matches the exact script and no former/private repository links remain',()=>{
+ const digest=crypto.createHash('sha256').update(script).digest('base64');
+ assert.ok(html.includes("script-src 'sha256-"+digest+"'"));
+ assert.doesNotMatch(html,/yoshsemail|github\.com\/Komofuu\/komofuu(?:["/]|$)|AIza|ghp_/);
+ assert.doesNotMatch(source,/innerHTML|eval\(/);
+});
