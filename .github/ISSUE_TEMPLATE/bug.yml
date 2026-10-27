@@ -1,0 +1,53 @@
+name: Report a bug
+description: Something in Komofuu is not working as expected.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Please redact private information. For vulnerabilities, follow SECURITY.md instead of posting details here."
+  - type: input
+    id: version
+    attributes:
+      label: Komofuu version
+      placeholder: "For example: 0.11.2 — shown in About"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include what you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open…\n2. Choose…\n3. …"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: "For example: Windows 11 25H2"
+  - type: dropdown
+    id: engine
+    attributes:
+      label: OCR engine, if relevant
+      options:
+        - Not an OCR issue
+        - PaddleOCR — CPU
+        - PaddleOCR — GPU / DirectML
+        - Google Lens
+        - Not sure
+  - type: textarea
+    id: display
+    attributes:
+      label: OCR and display details
+      description: "For OCR issues: screen/selected area, Automatic/Horizontal/Vertical layout, monitor resolution, Windows scaling and multiple monitors. A small redacted screenshot can help."
+  - type: textarea
+    id: extra
+    attributes:
+      label: Other details
+      description: Include exact error messages when possible. Do not post secrets, personal clipboard text or full private screenshots.

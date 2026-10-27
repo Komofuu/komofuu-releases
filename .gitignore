@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.openai/
+.env
+.env.*
+!.env.example
+.cursor/
+.claude/
+.aider*
+*.log
+dist/
