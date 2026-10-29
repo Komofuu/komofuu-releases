@@ -14,8 +14,8 @@ legal information and outstanding obligations must be reviewed separately.
 
 The archive contains the exact locked Cargo source archives whose declared
 license includes MPL, conservatively including target/build dependencies. The
-build verifies each archive against Cargo.lock and checks the source files Cargo
-uses against its recorded file checksums; it stops rather than silently shipping
+build verifies each archive against Cargo.lock and compares the source files Cargo
+uses directly with the verified upstream archives; it stops rather than silently shipping
 modified sources without their modifications. Covered files retain MPL-2.0 and
 their original notices; original Komofuu code is not relicensed by this delivery.
 
@@ -62,7 +62,9 @@ on Windows remains required evidence before claiming that arrangement is verifie
 
 ## Scope and verification
 
-This archive exports selected third-party source only, not the private application
+The included Komofuu source-availability document uses MIT; its license is
+KOMOFUU-DOCUMENTATION-LICENSE.md. Third-party source retains its own licenses.
+This archive exports selected third-party source, not the private application
 repository, credentials or user data. It does not resolve Microsoft redistribution
 eligibility, model provenance or every inventory warning. Review the exact build's
 NOTICE-COVERAGE.md and dependency inventory before publication. Do not substitute
