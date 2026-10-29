@@ -25,17 +25,30 @@ not authorize publishing or certify legal/security clearance.
 - [x] MIT selected for original code/assets; standard license and scope are included
   in the source, public repository, app About screen and next installer legal resources.
   This does not assert exclusive copyright or clear third-party obligations.
-- [ ] Publisher identity and verified private privacy/security contact; test GitHub
-  private reporting availability. Do not invent contact details or publish personal
-  details without the owner's choice.
-- [ ] GEOS/LGPL exact corresponding source/build and replacement compliance.
-- [ ] MPL source locations/delivery for covered components actually shipped.
-- [ ] Microsoft runtime publisher eligibility and exact REDIST files.
+- [x] Publisher display name selected by owner: **Komofuu**.
+- [x] Owner supplied privacy contact: komofuu.contact@gmail.com; request guidance
+  is included in the privacy notice. GitHub private vulnerability reporting was
+  verified **enabled** through the public API on 29 October 2026.
+- [x] Pre-build GEOS 3.14.1 source compilation and compatible DLL replacement
+  passed in Windows CI. Exact wheel/DLL provenance and hashed source/build
+  archives are recorded. Retain and publish the final matching source asset.
+- [x] The pre-build Windows check generated the covered source archive: exact
+  MPL Cargo archives, certifi/tqdm sources and pinned native source/build trees.
+  Publish and retain THIRD-PARTY-SOURCES.zip beside the matching final installer.
+- [x] Owner identified Visual Studio Community 2022 17.14.42. All nine separately
+  shipped Microsoft runtime DLLs match original Microsoft/CPython bytes; exact
+  versions and hashes are recorded in the Microsoft runtime review.
+- [x] Installer presents scoped Microsoft runtime terms with explicit acceptance;
+  missing/changed acceptance forces review even for older passive updaters.
+- [ ] Confirm final Windows installer behaviour using INSTALLER-LICENSE-TESTING.md;
+  review applicable Microsoft distribution conditions and final component scope,
+  including statically linked code.
 - [ ] Review all inventory warnings and bundled model/native NOTICE requirements
   for the final Windows build. The 0.13.1 workflow collected 588 records/46 review
   items; that historic count is not the next build's clearance or expected count.
-- [ ] Document the retained unofficial Lens terms uncertainty separately from
-  user upload consent and outage acceptance. Optional/manual does not prove approval.
+- [x] Retained unofficial Lens terms uncertainty is documented in LEGAL-AUDIT.md
+  separately from consent/outage acceptance. This records the decision; it does
+  not claim provider approval or legal clearance.
 - [ ] Review older distributions separately: removing the former online dictionary
   service does not change terms/data already distributed by 0.13.1 or earlier.
 
@@ -55,7 +68,8 @@ not authorize publishing or certify legal/security clearance.
 - [ ] Real AnkiConnect: connect/disconnect, starter/existing note types, mappings,
   duplicates, screenshots on/off, interrupted requests and ambiguous outcomes.
   Confirm no new recording attachment and existing cards/media remain intact.
-- [ ] Update current public 0.13.1 to final new installer through the updater;
+- [ ] Before publication, test clean install and installer upgrade over 0.13.1.
+  After publication, test updating current public 0.13.1 through the updater;
   preserve saved words, dictionaries, preferences and disabled online permissions.
 - [ ] Cancelled and complete uninstall, data-removal checkbox, locked files and
   preservation of exports/Anki/other accounts/shared Windows components.
@@ -65,7 +79,9 @@ not authorize publishing or certify legal/security clearance.
 ## Build, publish and maintain
 
 - [ ] Run unit/browser/Python/native checks and current dependency/security checks.
-- [ ] Review exact installer, matching LEGAL.txt, source/notices and SHA-256 digest.
+- [ ] Review exact installer, matching LEGAL.txt, THIRD-PARTY-SOURCES.zip,
+  source/notices and SHA-256 digests. Retain the matching source asset, not only
+  expiring CI artifacts.
 - [ ] Verify updater signature, public key, manifest version and official download URL.
 - [ ] Make a fresh signed draft-update build from intended main commit; never rerun
   an old workflow expecting new source or overwrite an already published version.

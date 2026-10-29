@@ -54,6 +54,7 @@ mean Yomitan application code is bundled. Structured definitions are rendered as
 | Shapely / GEOS | Shapely BSD-3-Clause; GEOS LGPL-2.1 obligations — https://libgeos.org/ |
 | certifi / covered tqdm portions / MPL Rust crates | Applicable MPL-2.0 source and notice requirements; see exact inventory |
 | NumPy, OpenCV, Pillow, protobuf and other packages | Their individual licenses and nested native-component notices |
+| Microsoft Edge WebView2 / loader | Microsoft; the matched loader SDK 1.0.3800.47 license and NOTICE are included; runtime terms apply separately from the MIT Rust wrappers — https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution |
 | Microsoft Visual C++ runtime | Microsoft's redistribution terms; publisher eligibility still requires confirmation |
 | zip-rs | zip 9.1.2, MIT; stored/deflate dictionary archive reader — https://github.com/zip-rs/zip2 |
 

@@ -29,6 +29,7 @@ contains this downloads repository, not the application source or installer.
 | --- | --- |
 | Komofuu_…_x64-setup.exe | Installer — download/run this file |
 | LEGAL.txt | Matching legal information and third-party notices |
+| THIRD-PARTY-SOURCES.zip | Covered third-party source for releases built with the 0.13.3 workflow; not required to run the app |
 | .exe.sig | Updater verification signature, not an installer |
 | latest.json | Updater metadata, not an installer |
 
@@ -87,3 +88,6 @@ accounts and shared Windows components are kept. Deletion is not secure erasure.
 No Komofuu account, developer upload server or app analytics is implemented.
 Optional Lens, GitHub updates and explicitly opened project pages have their own
 connections/policies. No provider endorsement or affiliation is claimed.
+
+See [third-party source availability](THIRD-PARTY-SOURCES.md). The source asset
+is introduced by the 0.13.3 workflow; older releases may not include it.

@@ -1,9 +1,21 @@
 # Komofuu privacy and data flows
 
 Updated 29 October 2026 for the upcoming 0.13.3 early release. Older installers
-can behave differently; consult their matching LEGAL.txt. These technical notes
-still need the publisher identity, verified private privacy contact and applicable
-request procedure before they can be treated as a finalized publisher notice.
+can behave differently; consult their matching LEGAL.txt.
+
+Publisher: **Komofuu**.
+Privacy contact: [komofuu.contact@gmail.com](mailto:komofuu.contact@gmail.com).
+
+## Privacy questions and requests
+
+Email the project contact above for privacy questions or requests concerning
+information you have shared with Komofuu. Describe your request and include only
+the information needed to explain it. This address is supplied by the publisher;
+no fixed response deadline is promised.
+
+App data stored only on your device is managed through the controls described
+below; the project cannot remotely access or delete it. For security vulnerabilities,
+use the private reporting route in SECURITY.md, or the project email as a fallback.
 
 ## Definitions, clipboard and pronunciation
 
@@ -30,6 +42,10 @@ settings and terms. Old recording URLs/preferences are not used. Existing saved
 vocabulary and Anki media are not deleted; their original data rights still apply.
 
 ## Local storage, OCR and companion behavior
+
+The installer records the accepted bundled-component terms revision locally in
+the current Windows user’s uninstall registry entry. This record is not uploaded;
+normal uninstall removes that entry. New or changed terms require another review.
 
 No Komofuu account, advertising, analytics, telemetry or developer-operated upload
 server is implemented. Preferences, saved words, dictionary indexes and WebView

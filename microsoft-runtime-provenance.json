@@ -1,0 +1,113 @@
+{
+  "review_date": "2026-10-30",
+  "publisher_evidence": "Owner screenshot: Visual Studio Community 2022 17.14.42 installed. This records the edition; it is not independent verification of all licence conditions.",
+  "scope": "Nine separately shipped Microsoft runtime DLL files in the locked OCR manifest. This is file provenance evidence, not a licence grant or a complete audit of statically linked code.",
+  "files": [
+    {
+      "path": "python/Lib/site-packages/numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+      "sha256": "a4c2229bdc2a2a630acdc095b4d86008e5c3e3bc7773174354f3da4f5beb9cde",
+      "file_version": "14.40.33810.0",
+      "filename_renamed": true,
+      "source": {
+        "kind": "Microsoft symbol server original",
+        "url": "https://msdl.microsoft.com/download/symbols/msvcp140.dll/B3DF2F638d000/msvcp140.dll"
+      },
+      "comparison": "Exact SHA-256 match to referenced original bytes"
+    },
+    {
+      "path": "python/Lib/site-packages/shapely.libs/msvcp140-0fa7eb792d3fbcf2233e4ea47e9144b9.dll",
+      "sha256": "0fa7eb792d3fbcf2233e4ea47e9144b9b1309ba8ed5d4731a72fffa8f4f556d6",
+      "file_version": "14.44.35229.0",
+      "filename_renamed": true,
+      "source": {
+        "kind": "Microsoft symbol server original",
+        "url": "https://msdl.microsoft.com/download/symbols/msvcp140.dll/903BA8AA89000/msvcp140.dll"
+      },
+      "comparison": "Exact SHA-256 match to referenced original bytes"
+    },
+    {
+      "path": "python/msvcp140.dll",
+      "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9",
+      "file_version": "14.44.35211.0",
+      "filename_renamed": false,
+      "source": {
+        "kind": "Microsoft redistributable x64 cabinet",
+        "url": "https://download.visualstudio.microsoft.com/download/pr/990c720a-46ce-4dc7-87b9-c2eb615d34b9/CC0FF0EB1DC3F5188AE6300FAEF32BF5BEEBA4BDD6E8E445A9184072096B713B/VC_redist.x64.exe",
+        "archive_sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b"
+      },
+      "comparison": "Exact SHA-256 match to referenced original bytes"
+    },
+    {
+      "path": "python/msvcp140_1.dll",
+      "sha256": "bfad5aef4c63a669e3c140655cdfdf395b6c979b400a447bd5dcb65ed8826c3d",
+      "file_version": "14.44.35211.0",
+      "filename_renamed": false,
+      "source": {
+        "kind": "Microsoft redistributable x64 cabinet",
+        "url": "https://download.visualstudio.microsoft.com/download/pr/990c720a-46ce-4dc7-87b9-c2eb615d34b9/CC0FF0EB1DC3F5188AE6300FAEF32BF5BEEBA4BDD6E8E445A9184072096B713B/VC_redist.x64.exe",
+        "archive_sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b"
+      },
+      "comparison": "Exact SHA-256 match to referenced original bytes"
+    },
+    {
+      "path": "python/msvcp140_2.dll",
+      "sha256": "3ea06f0ee098b4823cb79599df3780e7f23cce52c19aac31d2a0d47efe33a5e9",
+      "file_version": "14.44.35211.0",
+      "filename_renamed": false,
+      "source": {
+        "kind": "Microsoft redistributable x64 cabinet",
+        "url": "https://download.visualstudio.microsoft.com/download/pr/990c720a-46ce-4dc7-87b9-c2eb615d34b9/CC0FF0EB1DC3F5188AE6300FAEF32BF5BEEBA4BDD6E8E445A9184072096B713B/VC_redist.x64.exe",
+        "archive_sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b"
+      },
+      "comparison": "Exact SHA-256 match to referenced original bytes"
+    },
+    {
+      "path": "python/msvcp140_atomic_wait.dll",
+      "sha256": "640b2aefced484d0368eea5bdd06addd0658a3a70a49256e560d6923b404a479",
+      "file_version": "14.44.35211.0",
+      "filename_renamed": false,
+      "source": {
+        "kind": "Microsoft redistributable x64 cabinet",
+        "url": "https://download.visualstudio.microsoft.com/download/pr/990c720a-46ce-4dc7-87b9-c2eb615d34b9/CC0FF0EB1DC3F5188AE6300FAEF32BF5BEEBA4BDD6E8E445A9184072096B713B/VC_redist.x64.exe",
+        "archive_sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b"
+      },
+      "comparison": "Exact SHA-256 match to referenced original bytes"
+    },
+    {
+      "path": "python/msvcp140_codecvt_ids.dll",
+      "sha256": "f2069a52880ec885ee7f0511186100eb7fada0411a2b4948fafea7735b878a18",
+      "file_version": "14.44.35211.0",
+      "filename_renamed": false,
+      "source": {
+        "kind": "Microsoft redistributable x64 cabinet",
+        "url": "https://download.visualstudio.microsoft.com/download/pr/990c720a-46ce-4dc7-87b9-c2eb615d34b9/CC0FF0EB1DC3F5188AE6300FAEF32BF5BEEBA4BDD6E8E445A9184072096B713B/VC_redist.x64.exe",
+        "archive_sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b"
+      },
+      "comparison": "Exact SHA-256 match to referenced original bytes"
+    },
+    {
+      "path": "python/vcruntime140.dll",
+      "sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7",
+      "file_version": "14.51.36247.0",
+      "filename_renamed": false,
+      "source": {
+        "kind": "Official CPython embedded archive",
+        "url": "https://www.python.org/ftp/python/3.13.17/python-3.13.17-embed-amd64.zip",
+        "archive_sha256": "9e35319bffedab8b36ad44d8f377cb4f1733bcec257a0b6d04d94f01486ddb38"
+      },
+      "comparison": "Exact SHA-256 match to referenced original bytes"
+    },
+    {
+      "path": "python/vcruntime140_1.dll",
+      "sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e",
+      "file_version": "14.51.36247.0",
+      "filename_renamed": false,
+      "source": {
+        "kind": "Official CPython embedded archive",
+        "url": "https://www.python.org/ftp/python/3.13.17/python-3.13.17-embed-amd64.zip",
+        "archive_sha256": "9e35319bffedab8b36ad44d8f377cb4f1733bcec257a0b6d04d94f01486ddb38"
+      },
+      "comparison": "Exact SHA-256 match to referenced original bytes"
+    }
+  ]
+}
