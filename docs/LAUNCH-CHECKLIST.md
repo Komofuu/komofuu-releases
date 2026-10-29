@@ -25,17 +25,23 @@ not authorize publishing or certify legal/security clearance.
 - [x] MIT selected for original code/assets; standard license and scope are included
   in the source, public repository, app About screen and next installer legal resources.
   This does not assert exclusive copyright or clear third-party obligations.
-- [ ] Publisher identity and verified private privacy/security contact; test GitHub
-  private reporting availability. Do not invent contact details or publish personal
-  details without the owner's choice.
-- [ ] GEOS/LGPL exact corresponding source/build and replacement compliance.
-- [ ] MPL source locations/delivery for covered components actually shipped.
+- [x] Publisher display name selected by owner: **Komofuu**.
+- [ ] Verified private privacy contact. GitHub private vulnerability reporting was
+  checked on 29 October: **disabled**. Enable it before directing reports there.
+  Security reporting does not replace a general private privacy-request channel.
+- [ ] Verify the new GEOS/LGPL source archive on Windows and test compatible DLL
+  replacement. Exact GEOS 3.14.1 wheel/DLL provenance and hashed source/build
+  archives are recorded; delivery is automated, but no new installer exists yet.
+- [ ] Confirm the generated MPL source archive in the pre-build Windows CI audit.
+  Exact locked Cargo archives and bundled certifi/tqdm sources are now collected;
+  publish THIRD-PARTY-SOURCES.zip beside the matching installer.
 - [ ] Microsoft runtime publisher eligibility and exact REDIST files.
 - [ ] Review all inventory warnings and bundled model/native NOTICE requirements
   for the final Windows build. The 0.13.1 workflow collected 588 records/46 review
   items; that historic count is not the next build's clearance or expected count.
-- [ ] Document the retained unofficial Lens terms uncertainty separately from
-  user upload consent and outage acceptance. Optional/manual does not prove approval.
+- [x] Retained unofficial Lens terms uncertainty is documented in LEGAL-AUDIT.md
+  separately from consent/outage acceptance. This records the decision; it does
+  not claim provider approval or legal clearance.
 - [ ] Review older distributions separately: removing the former online dictionary
   service does not change terms/data already distributed by 0.13.1 or earlier.
 
@@ -55,7 +61,8 @@ not authorize publishing or certify legal/security clearance.
 - [ ] Real AnkiConnect: connect/disconnect, starter/existing note types, mappings,
   duplicates, screenshots on/off, interrupted requests and ambiguous outcomes.
   Confirm no new recording attachment and existing cards/media remain intact.
-- [ ] Update current public 0.13.1 to final new installer through the updater;
+- [ ] Before publication, test clean install and installer upgrade over 0.13.1.
+  After publication, test updating current public 0.13.1 through the updater;
   preserve saved words, dictionaries, preferences and disabled online permissions.
 - [ ] Cancelled and complete uninstall, data-removal checkbox, locked files and
   preservation of exports/Anki/other accounts/shared Windows components.
@@ -65,7 +72,9 @@ not authorize publishing or certify legal/security clearance.
 ## Build, publish and maintain
 
 - [ ] Run unit/browser/Python/native checks and current dependency/security checks.
-- [ ] Review exact installer, matching LEGAL.txt, source/notices and SHA-256 digest.
+- [ ] Review exact installer, matching LEGAL.txt, THIRD-PARTY-SOURCES.zip,
+  source/notices and SHA-256 digests. Retain the matching source asset, not only
+  expiring CI artifacts.
 - [ ] Verify updater signature, public key, manifest version and official download URL.
 - [ ] Make a fresh signed draft-update build from intended main commit; never rerun
   an old workflow expecting new source or overwrite an already published version.

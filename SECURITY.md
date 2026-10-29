@@ -5,7 +5,10 @@ private captures in ordinary GitHub issues.
 
 Use GitHub's **Security → Report a vulnerability** private flow when available:
 https://github.com/Komofuu/komofuu-releases/security/advisories/new
-Availability must be verified by the publisher; this document does not enable it.
+Publisher: **Komofuu**. On 29 October 2026 the public GitHub API reported this
+feature disabled. The publisher must enable it under repository Settings →
+Security → Advanced Security → Private vulnerability reporting before relying on
+this route; this document does not enable it.
 If unavailable, open a public issue asking only for a private reporting channel,
 without including exploit details or sensitive information. A separate verified
 private contact has not yet been supplied; completing it remains a launch item.

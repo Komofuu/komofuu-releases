@@ -20,7 +20,7 @@ authorization. See [launch checklist](LAUNCH-CHECKLIST.md) for unresolved obliga
 1. Complete the applicable launch checklist, review current notices/source delivery
    and record installer, real Anki, upgrade, uninstall and resource-usage tests.
 2. Prepare the fresh signed draft for **0.13.3** (or the actual next version).
-   Confirm matching nonempty .exe, .exe.sig, LEGAL.txt and latest.json, signed version,
+   Confirm matching nonempty .exe, .exe.sig, LEGAL.txt, THIRD-PARTY-SOURCES.zip and latest.json, signed version,
    checksum and official repository download paths. Keep audit inventories with
    release evidence; ordinary CI artifacts expire after 14 days.
 3. Review notes and known limitations. Title **Komofuu <version> — Early Release**.
@@ -47,8 +47,9 @@ Do not add a token to reveal draft/private releases or link a private app reposi
 
 - Original code/assets: MIT selected. Retain LICENSE.md, LICENSING.md and separate
   third-party notices in the public repository and next build.
-- Publisher identity and verified private privacy/security contact. Verify GitHub
-  private vulnerability reporting before directing sensitive reports there.
+- Publisher display name: Komofuu. A private privacy contact remains needed.
+  GitHub private vulnerability reporting was verified disabled on 29 October;
+  enable it before directing sensitive security reports there.
 - GEOS/Microsoft/MPL/model/native-license evidence and review of all inventory warnings.
 - Retained Lens service-terms uncertainty; no provider approval is claimed.
 - Signing-key/password backups, token scope, account protection and who can publish.
@@ -56,3 +57,7 @@ Do not add a token to reveal draft/private releases or link a private app reposi
 
 Publisher signing for Windows is recommended, separate from updater signatures.
 Never tell users to disable antivirus or assume every warning is a false positive.
+
+Source delivery: retain and publish the workflow-generated THIRD-PARTY-SOURCES.zip
+with its matching installer. It contains selected third-party source, not the
+private app repository; see ../THIRD-PARTY-SOURCES.md.

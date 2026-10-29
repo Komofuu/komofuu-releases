@@ -1,9 +1,10 @@
 # Komofuu privacy and data flows
 
 Updated 29 October 2026 for the upcoming 0.13.3 early release. Older installers
-can behave differently; consult their matching LEGAL.txt. These technical notes
-still need the publisher identity, verified private privacy contact and applicable
-request procedure before they can be treated as a finalized publisher notice.
+can behave differently; consult their matching LEGAL.txt. Publisher: **Komofuu**. These technical notes still need a verified private
+privacy contact and applicable request procedure before they can be treated as
+a finalized publisher notice. GitHub vulnerability reporting is for security
+reports; it is not a general private privacy-request channel.
 
 ## Definitions, clipboard and pronunciation
 
