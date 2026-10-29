@@ -105,7 +105,7 @@
       <div class="small">Choose the <code>Komofuu_…_x64-setup.exe</code> asset. GitHub’s “Source code” ZIP is not the app installer.</div>
       <details id="release-notes" hidden><summary>What’s in this release?</summary><p id="release-date" class="small"></p><pre id="release-copy"></pre><a id="release-detail" href="https://github.com/Komofuu/komofuu-releases/releases">Full release notes</a></details>
       <div id="checksum" class="checksum" hidden><span id="digest-label">Installer SHA-256 · published by GitHub</span><code id="digest" aria-labelledby="digest-label"></code><button id="copy-digest" type="button">Copy checksum</button><span id="copy-status" class="small" role="status"></span></div>
-      <p class="small download-note">Early software: OCR and word segmentation can make mistakes. Original app terms remain undecided; see <a href="https://github.com/Komofuu/komofuu-releases/blob/main/LICENSING.md">licensing status</a>.</p>
+      <p class="small download-note">Early software: OCR and word segmentation can make mistakes. Original code and assets use the MIT License; see <a href="https://github.com/Komofuu/komofuu-releases/blob/main/LICENSING.md">license scope</a>.</p>
     </div>
   </section>
 
@@ -149,7 +149,7 @@
       <details><summary>How do updates work?</summary><p>Configured release builds can check through <strong>Settings → Updates</strong>. Checking at startup is optional and off by default. You choose when to download and install. Updates require a valid Komofuu update signature; vocabulary, settings and imported dictionaries are intended to be preserved. Back up important saved words before updating.</p></details>
       <details><summary>Why might Windows or my browser warn about the installer?</summary><p>Preview installers currently have no Windows publisher signature. Update signing is a separate check and does not remove browser or SmartScreen warnings. A warning is not proof a file is safe or harmful. Verify the official release and checksum; do not disable antivirus or bypass a detection you cannot verify.</p></details>
       <details><summary>What gets removed when I uninstall?</summary><p>The app’s <strong>Uninstall and delete app data</strong> option removes Komofuu and its local settings, saved words, dictionary and caches for your Windows account. Export your words first if you want to keep them. Exported backups, Anki cards, downloaded installers and shared Windows components stay.</p></details>
-      <details><summary>Is the app open source?</summary><p>The application source is currently private. This public repository hosts downloads, this website and support information. Original app and artwork licensing is still being finalized; third-party components retain their own licenses.</p></details>
+      <details><summary>Is the application source available?</summary><p>Komofuu’s original code and assets are offered under the MIT License. The application source repository is currently private; this public repository contains the website, downloads and support information. MIT does not require publishing source alongside binaries. Third-party components and dictionary data retain their own licenses and source obligations.</p></details>
     </div>
   </section>
   <section class="support-card" aria-labelledby="support-title"><div><h2 id="support-title">Found a rough edge?</h2><p>Tell us what happened, your app version and which OCR engine you used. Redact private text from screenshots.</p></div><a class="btn alt" id="issues-link" href="https://github.com/Komofuu/komofuu-releases/issues/new/choose">Report an issue</a></section>
@@ -287,4 +287,3 @@ loadRelease();
 </script>
 </body>
 </html>
-

@@ -1,32 +1,41 @@
-# Licensing status
+# Komofuu license scope
 
-**The original Komofuu application and artwork distribution terms are not yet
-finalized.** No open-source license for the private application source is granted
-by this downloads repository. The source remains private.
+Komofuu's original application code, documentation, UI, artwork, animations and
+other original project assets are offered under the [MIT License](LICENSE.md),
+to the extent the licensors hold rights in those materials. This includes the
+original website code and project documentation in the public downloads repository.
 
-Third-party components and data retain their individual licenses and the rights
-those licenses provide. The attribution index is in [Third-party notices](THIRD_PARTY_NOTICES.md).
-Each released installer must include its matching `LEGAL.txt` and full component
-notices. Do not treat GitHub's source archive of this repository as an application
-source offer or as satisfaction of native-library source obligations.
+The project was built with AI assistance. Applying MIT does not establish
+exclusive copyright or assert that purely AI-generated material is protected.
+The license communicates permissions for rights the licensors can actually grant.
 
-Before general public application distribution, the publisher still needs to:
+## Third-party material
 
-- Choose original application/artwork terms; deliberately deferred at the owner’s
-  request. The owner reports AI-assisted artwork/animations; that provenance
-  is recorded without promising exclusive copyright or changing third-party rights.
-- Complete the native dependency review, including GEOS/LGPL source and replacement
-  obligations, Microsoft runtime redistribution eligibility and complete notices.
-- Keep the unresolved service-terms assessment for optional unofficial Google
-  Lens explicit. The owner chooses manual, consented Lens and accepts outages;
-  this is not evidence of Google authorization or endorsement.
-- Review older releases separately: 0.13.3 removes the former online dictionary
-  and recording integration, but existing saved/exported data and earlier
-  distributions retain their original rights and unresolved questions.
-- Supply the publisher's legal identity, private contact method and finalized
-  privacy/user terms for the intended public release.
+MIT does not replace the licenses of third-party libraries, adapted reference
+code, OCR models, fonts, runtimes, dictionary data or other third-party materials.
+Their own copyright notices, license conditions and source-availability obligations
+remain applicable. See [Third-party notices](THIRD_PARTY_NOTICES.md) and the exact
+notices included with the relevant release.
 
-The website and repository can be prepared independently. A successful build,
-public website, signature or credit list does not certify these items as complete.
-No provider affiliation or endorsement is claimed.
+User-imported dictionaries, saved dictionary extracts and exported entries retain
+their source rights. Permission to use Komofuu is not permission to redistribute
+someone else's dictionaries, screenshots, recordings or branding.
 
+No provider affiliation or endorsement is implied. No third-party trademark rights
+are granted by this document.
+
+## Source availability and release status
+
+The application source repository is currently private. The MIT license does not
+require publishing that repository or supplying Komofuu's own source alongside
+binaries. GitHub's source ZIP for the public downloads repository contains that
+repository's website/docs, not the private application source.
+
+Required third-party source delivery remains a separate obligation. The GEOS/MPL
+source and Microsoft-runtime redistribution review, publisher/private contact
+details and final Windows checks remain launch items; choosing MIT does not mark
+them complete.
+
+This license is adopted for the next release built from this source. An already
+published installer's LEGAL.txt and bundled notices are not rewritten by this
+change. Read the license and notices accompanying the particular version.
