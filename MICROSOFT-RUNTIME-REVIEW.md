@@ -49,12 +49,18 @@ components and requires unmodified permitted files. Matching bytes establishes
 file identity; it does not replace those licensing conditions or the publisher's
 agreement to them.
 
-Review how the installer and update flows communicate and apply the included
-Microsoft terms. The existing runtime RTF supplies Microsoft's end-user terms;
-its presence alone is not proof that every distribution requirement is satisfied.
-Keep this review scoped to Microsoft code: Komofuu's original MIT permissions
-and other components' LGPL/MPL rights remain intact. This review does not impose
-a new click-through flow or claim a checkbox is universally required.
+The installer now presents complete Microsoft 2015-2022 and v14 runtime terms,
+with a checkbox explicitly scoped to Microsoft components. Komofuu’s MIT grant
+and other components’ LGPL/MPL rights are preserved. The terms revision is derived
+from the complete displayed document. New/changed terms force an interactive
+review even when an older updater requests passive installation. A silent run
+without a matching receipt aborts before any replacement begins. The receipt is
+written only after acceptance and installation, under the existing current-user
+uninstall registry key; normal uninstall removes it.
+
+This explicit page is the project’s implementation choice. Validate the final
+installer/update behaviour using INSTALLER-LICENSE-TESTING.md; it is not a claim
+that a particular checkbox is universally prescribed by Microsoft.
 
 Repeat the file comparison against the final restored runtime before publication,
 and review new versions or deployment changes. Also inspect statically linked

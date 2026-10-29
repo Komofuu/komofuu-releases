@@ -43,6 +43,10 @@ vocabulary and Anki media are not deleted; their original data rights still appl
 
 ## Local storage, OCR and companion behavior
 
+The installer records the accepted bundled-component terms revision locally in
+the current Windows user’s uninstall registry entry. This record is not uploaded;
+normal uninstall removes that entry. New or changed terms require another review.
+
 No Komofuu account, advertising, analytics, telemetry or developer-operated upload
 server is implemented. Preferences, saved words, dictionary indexes and WebView
 profile data are stored in this Windows account's application profile. They are
