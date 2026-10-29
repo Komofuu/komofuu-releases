@@ -29,12 +29,12 @@ not authorize publishing or certify legal/security clearance.
 - [ ] Verified private privacy contact. GitHub private vulnerability reporting was
   checked on 29 October: **disabled**. Enable it before directing reports there.
   Security reporting does not replace a general private privacy-request channel.
-- [ ] Verify the new GEOS/LGPL source archive on Windows and test compatible DLL
-  replacement. Exact GEOS 3.14.1 wheel/DLL provenance and hashed source/build
-  archives are recorded; delivery is automated, but no new installer exists yet.
-- [ ] Confirm the generated MPL source archive in the pre-build Windows CI audit.
-  Exact locked Cargo archives and bundled certifi/tqdm sources are now collected;
-  publish THIRD-PARTY-SOURCES.zip beside the matching installer.
+- [x] Pre-build GEOS 3.14.1 source compilation and compatible DLL replacement
+  passed in Windows CI. Exact wheel/DLL provenance and hashed source/build
+  archives are recorded. Retain and publish the final matching source asset.
+- [x] The pre-build Windows check generated the covered source archive: exact
+  MPL Cargo archives, certifi/tqdm sources and pinned native source/build trees.
+  Publish and retain THIRD-PARTY-SOURCES.zip beside the matching final installer.
 - [ ] Microsoft runtime publisher eligibility and exact REDIST files.
 - [ ] Review all inventory warnings and bundled model/native NOTICE requirements
   for the final Windows build. The 0.13.1 workflow collected 588 records/46 review

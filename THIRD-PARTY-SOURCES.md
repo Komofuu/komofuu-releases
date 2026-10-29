@@ -50,6 +50,8 @@ in source-lock.json under geos_binaries. Close Komofuu and back up the originals
 before replacing them with compatible x64 GEOS/C API shared libraries built from
 modified source. Preserve the expected filenames, matching exported symbols and
 DLL dependency names; use the supplied wheel build/repair scripts where needed.
+A fresh CMake geos_c.dll imports geos.dll: also place the rebuilt geos.dll under
+that unrenamed filename in shapely.libs when replacing the wheel-named DLLs.
 An incompatible replacement can stop OCR; restore the originals to recover.
 An app update can replace local modifications. Komofuu does not verify these
 installed DLL hashes at runtime or prohibit compatible library replacement.
@@ -57,8 +59,10 @@ installed DLL hashes at runtime or prohibit compatible library replacement.
 Recipients retain rights to modify these libraries and reverse engineer the
 combined work for debugging such modifications as provided by LGPL-2.1. No
 Komofuu usage terms restrict those rights. This delivery supplies source directly;
-it does not rely on an unfulfilled written offer. Actual replacement/rebuild testing
-on Windows remains required evidence before claiming that arrangement is verified.
+it does not rely on an unfulfilled written offer. The pre-build Windows CI check compiled the supplied source with MSVC 14.44,
+loaded the rebuilt libraries in the bundled Python runtime and verified a Shapely
+geometry operation. It restored the original DLLs afterward. Repeat this check
+when sources, ABI, loader arrangement or runtime versions change.
 
 ## Scope and verification
 
