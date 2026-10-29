@@ -18,7 +18,7 @@ not authorize publishing or certify legal/security clearance.
   only on explicit user request; nothing is automatically downloaded/imported.
 - Consented manual Lens remains optional; no provider authorization is claimed.
 - Support templates, privacy/data-flow documentation, credits and local notices.
-- Owner reports artwork/animations were generated using Claude; provenance recorded.
+- Owner reports AI-assisted artwork/animations; provenance recorded.
 
 ## Not complete — owner/external decisions and evidence
 
