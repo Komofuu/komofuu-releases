@@ -31,10 +31,7 @@ require publishing that repository or supplying Komofuu's own source alongside
 binaries. GitHub's source ZIP for the public downloads repository contains that
 repository's website/docs, not the private application source.
 
-Required third-party source delivery remains a separate obligation. The GEOS/MPL
-source and Microsoft-runtime redistribution review, publisher/private contact
-details and final Windows checks remain launch items; choosing MIT does not mark
-them complete.
+Required third-party source delivery remains a separate obligation. Pre-build\nGEOS/MPL source delivery and runtime-file provenance checks have evidence recorded\nin the release review, and the publisher has supplied a private contact. Final\nsource-asset publication, applicable Microsoft distribution conditions and final\nWindows installer checks remain release items; choosing MIT does not complete them.
 
 This license is adopted for the next release built from this source. An already
 published installer's LEGAL.txt and bundled notices are not rewritten by this

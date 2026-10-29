@@ -35,7 +35,7 @@ not authorize publishing or certify legal/security clearance.
 - [x] The pre-build Windows check generated the covered source archive: exact
   MPL Cargo archives, certifi/tqdm sources and pinned native source/build trees.
   Publish and retain THIRD-PARTY-SOURCES.zip beside the matching final installer.
-- [ ] Microsoft runtime publisher eligibility and exact REDIST files.
+- [x] Owner identified Visual Studio Community 2022 17.14.42. All nine separately\n  shipped Microsoft runtime DLLs match original Microsoft/CPython bytes; exact\n  versions and hashes are recorded in the Microsoft runtime review.\n- [ ] Review applicable Microsoft distribution conditions, installer/update term\n  presentation and final component scope, including statically linked code.
 - [ ] Review all inventory warnings and bundled model/native NOTICE requirements
   for the final Windows build. The 0.13.1 workflow collected 588 records/46 review
   items; that historic count is not the next build's clearance or expected count.
