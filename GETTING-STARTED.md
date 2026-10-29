@@ -1,87 +1,101 @@
 # Getting started with Komofuu
 
-## Install and find your companion
+These instructions describe upcoming 0.13.3 and newer. Older downloads can still
+have optional online dictionary/recording features; read their matching LEGAL.txt.
 
-Open [Releases](https://github.com/Komofuu/komofuu-releases/releases), choose a
-published version and download its `Komofuu_…_x64-setup.exe` asset. Read the release
-notes and `LEGAL.txt`. No public release listed means a public download is not
-available yet. The source-code archive is not the app.
+## Install and reveal Komofuu
 
-The current package is for **Windows x64**. Other operating systems and native
-ARM64 packages are not provided. The installer includes local OCR and its models;
-Microsoft WebView2 may need an internet download on first installation if absent.
-Preview compatibility testing is still being expanded; report Windows/DPI issues.
+Download the Windows x64 .exe from a [published release](https://github.com/Komofuu/komofuu-releases/releases).
+The OCR runtime/models are included; no Python, Node or Rust is required. WebView2
+may need an internet download if absent. Other operating systems/native ARM64
+packages are not provided. Supported Windows versions depend on recorded testing;
+report your Windows/build/display scaling if something fails.
 
-On first launch, find the small bar at the top centre of your screen. Drag it down
-to reveal Komofuu. Right-click him or the bar for the menu. **Hide Komofuu** returns
-him to the bar; **Quit Komofuu** exits the app. His visible/hidden state is remembered.
+On first launch, find **Pull me** under the top-centre pill and drag down. Right-click
+Komofuu or the bar for the menu. Hide Komofuu returns to the bar; Quit Komofuu exits.
+His completed visible/hidden state is remembered. The menu's × closes it.
 
-## Choose definitions
+## Add definitions first
 
-Open **Dictionary** from the right-click menu. For local definitions, import an
-EDICT2 dictionary you obtained from the [EDRDG dictionary project](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project)
-under its terms. Dictionary data is not bundled with the app. Alternatively,
-choose online or hybrid definitions through Jotoba; queries then leave your PC.
+Open **Settings → Dictionaries → Find dictionaries to download**. The buttons open
+official project pages in your browser; they do not fetch files in the background.
+Download **Jitendex for Yomitan**, keep the ZIP compressed and choose **Add
+dictionaries…**. Enable its checkbox after import. See [all download pages](DICTIONARIES.md)
+for optional JMnedict, KANJIDIC and BCCWJ frequency. You can import and enable several.
 
-**Ask Komofuu** uses dictionary lookups and basic sentence segmentation. It is
-not an open-ended AI chat service. In a sentence, choose a word to explore it.
-Readings appear above kanji; **Save** keeps an entry in **Saved words**.
+All definitions use local imported dictionaries. There is no online fallback.
+If no results appear, confirm a definition dictionary is installed and enabled;
+frequency metadata alone gives no meanings. Remove old revisions and import new
+downloads to update. Original ZIPs and saved words survive dictionary removal.
+
+Dictionary and Ask Komofuu show word/segment meanings, not guaranteed full-sentence
+translations or an open-ended AI chat. Readings appear as furigana above kanji.
+Save keeps the selected entry/context in Saved words, with JSON backup and TSV export.
 
 ## Scan your screen
 
-1. Choose **Enable OCR** in the right-click menu. The pink border means it is ready.
-2. With the desired text on screen, press **Ctrl + Shift + Space** once.
-3. Hover a highlighted word to look it up. Scan again after the content changes.
+1. Enable OCR in the menu. The border means ready.
+2. Press **Ctrl+Shift+Space** once while the text is visible.
+3. Hover a highlight for its meaning. Scan again after content changes.
 
-Settings lets you change the shortcut and scan area. Entire-screen scans use
-the monitor under your pointer; a smaller selected area can improve focus and
-limit what an online scan shares. If the shortcut conflicts with another app,
-record a different shortcut in Settings.
+Settings → Shortcuts changes keybinds, including scan, clipboard and Anki mining.
+Whole-current-screen scanning uses the monitor under your pointer. A smaller
+selected area limits what online OCR shares. PaddleOCR works locally; CPU is
+default and GPU/DirectML is optional. Switch to CPU if GPU initialization fails.
+Continuous local scanning is off by default and not recommended for ordinary use.
 
-**PaddleOCR** runs locally. Start with CPU; GPU/DirectML is optional and depends
-on your graphics device. Choose CPU if GPU initialization fails.
+Google Lens remains optional, unofficial and online. Separate upload permission
+is required; requested scans send that area to Google. No silent fallback, account
+cookies or automatic retries are used. Keep permission off for private screens;
+full-screen scans include everything visible. Availability/accuracy is not guaranteed
+and the publisher's service-terms review is separate from this permission control.
 
-**Google Lens** is an optional, unofficial online integration. You must separately
-allow captured-area uploads. It can stop working and its authorization basis for
-public distribution remains unresolved. Do not enable it for sensitive screens.
-There is no silent online fallback and Lens allows manual scans only.
+Automatic layout handles mixed directions. Try Vertical Japanese for missed manga
+columns, or zoom/select a smaller area. Tiny readings, art, decorative fonts and
+rotation can still be misread. Check the original text rather than relying blindly
+on highlights or segmentation.
 
-Automatic layout handles mixed directions. Try **Vertical Japanese** if whole
-manga columns are missed. Small furigana, art, decorative fonts and unusual angles
-can still be wrong. A smaller capture or zooming in may help. Checking the original
-text is still necessary; no engine guarantees complete or correct recognition.
+## Clipboard, speech and companion
 
-## Clipboard, pronunciation and music
+Automatic clipboard lookup is on by default unless previously disabled. Copy with
+Ctrl+C and choose words directly within the sentence. Turn it off in Settings →
+Clipboard for manual-only lookup; **Ctrl+Shift+L** still reads the current clipboard
+once. Only Japanese text up to 200 characters is considered, no history is kept,
+and no online dictionary receives the copied text.
 
-**Look up clipboard** reads your current clipboard on request. Automatic clipboard
-lookup is a separate option, off by default. Copy with **Ctrl+C**; **Ctrl+V** pastes.
-For longer copied text, select words directly in the sentence to explore them.
-Do not copy sensitive text while online automatic lookup is enabled.
+Listen/Read aloud use an installed Japanese Windows voice. If missing, add one in
+Windows language/speech settings. No recording download or Anki speech recording is
+provided. Appearance controls themes, interface/background/OCR colors, companion
+color/amount/size and popup text. Music reactions are optional output levels, not
+microphone capture or audio recording, and pause in island/Gaming modes.
 
-**Listen** uses the chosen pronunciation source. Jotoba audio is requested online;
-Windows pronunciation needs an installed Japanese voice. Selecting local
-word definitions does not automatically select local pronunciation.
+## Anki mining
 
-Music reactions are optional and off by default. They use Windows output levels;
-Komofuu does not use the microphone or record/upload audio for this feature.
+Install AnkiConnect in desktop Anki with add-on code **2055492159** (Tools → Add-ons
+→ Get Add-ons), restart Anki and keep it open. In Komofuu Settings → Anki, Connect,
+choose deck/note type and map fields, or Create Komofuu starter setup. Preview mapped
+fields creates no card and can be closed. The connection button becomes Disconnect;
+disconnect disables new mining and clears the session key while keeping mappings.
 
-## Updates and backups
+Hover a scanned word and press **Ctrl+Shift+A**, or use Send to Anki. Include the
+word in the first field and map a definition field. Optional screenshots use a crop
+of the original scan; turn them off for text-only cards. No new recording attachment
+is generated. The legacy Audio field/{audio} marker stays empty, while existing
+Anki notes/media are kept. Duplicate checking is configurable; after an uncertain
+result, inspect Anki before retrying. Cards/images may sync through Anki's own settings.
 
-Before testing an update, export important words from **Saved words**. In a
-configured release build, open **Settings → Updates → Check for updates**. Choose
-Download, then Install and restart. The package signature must verify. Updates
-are intended to keep your profile data; preview upgrade testing is still ongoing.
+## Updates and removal
 
-Only published full releases are visible to the updater. Draft releases are not.
-A missing feed or network failure is an error, not confirmation you are up to date.
-A test build without update configuration needs a manual installer upgrade.
+Export important words before updating. Settings → Updates offers Check, Download
+and Install and restart. Startup checks are optional/off by default. Only regular
+published releases are the current channel; drafts/prereleases are not detected.
+Signature checks must succeed. A network failure is an error, not proof you are
+up to date. Unconfigured development builds need manual installer upgrades.
 
-## Remove Komofuu
+Settings → Advanced → Uninstall Komofuu → Uninstall and delete app data opens
+the Windows uninstaller. Confirm there. Cancelling keeps the app/data. Normal
+Windows uninstall offers a profile-data checkbox. This affects this Windows account;
+exports, Anki, downloaded files, other accounts and shared Windows components stay.
+Locked files may require later cleanup; secure erasure is not promised.
 
-Open **Settings → Uninstall Komofuu → Uninstall and delete app data**. Export saved
-words first if you want to keep them, then confirm in the Windows uninstaller.
-This removes the app and its local profile for your Windows account. Exported
-files, existing Anki cards, downloaded installers and shared Windows components
-are kept. Cancelling the Windows uninstaller keeps the app and its data.
-
-For problems, see [Support](SUPPORT.md). Redact private information from reports.
+See [Privacy](PRIVACY.md), [Support](SUPPORT.md) and [Security reporting](SECURITY.md).

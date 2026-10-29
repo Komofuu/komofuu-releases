@@ -1,75 +1,117 @@
-# Privacy and data flows
+# Komofuu privacy and data flows
 
-Updated 27 October 2026. These are technical privacy notes for the current preview,
-not a finalized legal privacy notice. The publisher's legal identity and a private
-privacy-contact method still need to be supplied before general public distribution.
-For non-sensitive questions, use [public support](SUPPORT.md); do not post personal
-information or private captures in public issues.
+Updated 29 October 2026 for the upcoming 0.13.3 early release. Older installers
+can behave differently; consult their matching LEGAL.txt. These technical notes
+still need the publisher identity, verified private privacy contact and applicable
+request procedure before they can be treated as a finalized publisher notice.
 
-## What stays local
+## Definitions, clipboard and pronunciation
 
-No Komofuu account, developer-operated upload server, advertising or app analytics
-is currently implemented. Settings, saved words and an imported EDICT2 index are
-stored in your Windows profile. Saved entries can include the sentence you saved.
-These files are not an encrypted vault; someone with access to that Windows
-account may be able to read them.
+Definitions use only dictionaries you download and import. There is no online
+dictionary fallback or online recording service. No dictionary data is included
+with the installer. Imported Yomitan ZIPs and EDICT2 files are indexed locally in
+SQLite, with their titles, revisions, attribution, selections and order. Import
+does not contact dictionary URLs or upload the file. Download-page buttons open
+predefined project pages in your default browser only when pressed. Those sites
+receive normal browser/connection information; downloads remain your choice.
 
-PaddleOCR processes requested captures locally. The pink border indicates readiness;
-normal scanning starts on your shortcut. Continuous local scanning is a separate
-option and off by default. Captures use temporary files in the app's local data
-area, normally cleaned up afterward. Crashes may leave temporary files or logs;
-secure erasure is not promised. OCR/dictionary results may be cached in memory.
+Automatic clipboard lookup is on by default unless you previously disabled it.
+While enabled, Komofuu reads the current clipboard after a Windows change
+notification, filters for Japanese text up to 200 characters and performs local
+dictionary lookup. It keeps no clipboard history. Manual lookup reads the
+clipboard when requested. Saving a word can retain its sentence. Native-text
+lookup reads accessible text under the pointer on request and attempts to skip
+password controls. No synthetic Copy, keyboard recording or game injection is used.
 
-Automatic clipboard lookup is optional and off by default. When enabled it reads
-the current clipboard after change notifications and filters for Japanese text up
-to 200 characters; it does not keep a clipboard history. Manual clipboard lookup
-reads the clipboard when requested. A saved entry can retain copied text as context.
-Accessible-text lookup reads text under your pointer on request and attempts to
-skip password controls. Cursor position and inactivity are used locally for animation.
+Listen and Read aloud use an installed Japanese Windows speech voice. Komofuu
+does not download recordings, implement a cloud speech API or record synthesized
+speech into Anki. Windows voices and WebView2 are governed by their own platform
+settings and terms. Old recording URLs/preferences are not used. Existing saved
+vocabulary and Anki media are not deleted; their original data rights still apply.
 
-Optional music reactions read scalar output levels from the default Windows audio
-device. They do not use the microphone, record audio, or upload audio. Monitoring
-pauses in island and Gaming modes.
+## Local storage, OCR and companion behavior
 
-## Optional connections
+No Komofuu account, advertising, analytics, telemetry or developer-operated upload
+server is implemented. Preferences, saved words, dictionary indexes and WebView
+profile data are stored in this Windows account's application profile. They are
+not an encrypted vault. Someone with access to that account may read them.
 
-| Feature | Destination and information |
-| --- | --- |
-| Online/hybrid definitions | Jotoba receives the lookup query and normal network information, including IP address. Enabled automatic clipboard lookup can cause queries from copied text. |
-| Jotoba pronunciation | A requested word/reading may be sent to find a recording. Audio is received into memory for playback; Komofuu does not save an audio corpus. OS/network caches may exist. |
-| Google Lens | After a separate upload permission, a requested scan uploads the captured area to Google's unofficial Lens endpoint. Full-screen scans include everything visible on that monitor. No Google login or browser cookies are supplied. |
-| AnkiConnect | Explicit card/connect actions send card fields and any configured AnkiConnect key to `127.0.0.1:8765` on your PC. Anki's own sync settings are separate. |
-| Updates | A check contacts GitHub for release information; downloading requests the installer. It does not send screenshots, clipboard text, saved words or dictionary queries. Startup checks are optional and off by default; download/install each need your action. |
+PaddleOCR processes requested captures locally. The OCR border indicates readiness;
+scanning normally starts only on your shortcut or Scan screen now. Continuous
+local scanning is optional, off by default and not recommended for ordinary use.
+PaddleOCR/native-text temporary jobs use a leased process-specific app-data
+session. Normal exit cleans the session; startup removes abandoned sessions
+without deleting another active instance's files. Crashes, locked files or deletion
+errors can delay cleanup. Worker diagnostics retain only a 16 KiB tail in memory.
+No secure-erasure or forensic-removal guarantee is made.
 
-Chosen services receive normal connection information such as your IP address.
-Data goes directly to the selected provider, without a Komofuu proxy. Offline
-word definitions do not disable separately selected online pronunciation.
-Installed Windows voices and Microsoft WebView2 have their own platform settings
-and update behavior.
+The latest original OCR scan and bounded dictionary results are cached in memory.
+Stopping OCR clears the original-scan cache. Native Lens encodes its image in
+memory rather than starting the Python OCR worker or writing a Lens image file.
+Cursor position, Windows inactivity, companion position and island state support
+local animation. Optional music reactions read scalar Windows output levels;
+they use no microphone, recording or audio upload and pause in island/Gaming mode.
 
-Lens is unofficial and can stop working. Upload consent does not establish service
-permission for the integration; that remains a publisher release task. Komofuu
-cannot promise Google-side retention periods, deletion or regional processing.
+## Optional Google Lens
 
-Provider information: [Jotoba](https://jotoba.de/about),
-[Google privacy](https://policies.google.com/privacy),
-[Google terms](https://policies.google.com/terms),
-[GitHub privacy](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+Only choosing Lens and granting its separate upload permission allows requested
+scans to send the captured area to Google. Full-screen scans include everything
+visible on that monitor; choose a smaller area to share less. Lens scans are manual:
+no background uploads, silent retries or online fallback from PaddleOCR.
+No Google account/browser cookies are supplied by this adapter.
 
-## Website and public reports
+This is an unofficial integration. It can stop working. Upload consent is a user
+control, not proof of Google's endorsement or service authorization. Google receives
+the capture and normal connection information including IP address. Komofuu cannot
+promise Google-side retention, deletion or regional processing. Data goes directly
+to Google without a Komofuu proxy.
 
-The supplied website has no analytics, advertisements, cookies set by its code,
-or external fonts. It requests public release metadata from GitHub without
-credentials. Website hosting and GitHub downloads still involve host logs and
-normal connection data. Public GitHub issues and any screenshots attached there
-are visible to other people. Do not post secrets, personal clipboard contents,
-or unredacted private screens.
+Provider information: https://policies.google.com/privacy and
+https://policies.google.com/terms . No processor agreement or hosting guarantee
+is claimed here.
 
-## Controls and deletion
+## Anki and updates
 
-Choose local definitions and local pronunciation, keep Lens permission off, and
-turn off automatic clipboard lookup to avoid those optional online requests.
-Delete saved entries or export a backup from Saved words. The full-data uninstall
-option removes the app profile for your Windows account. Exports, Anki cards,
-downloaded installers and information already sent to providers are separate;
-uninstalling does not delete those copies or secure-erase disk storage.
+Anki integration is enabled explicitly. Connecting and mining communicate only
+with AnkiConnect at http://127.0.0.1:8765 on your computer. An optional API key is
+kept in native memory for the session, not stored in preferences. Card fields can
+contain the word, reading, meaning, source sentence, dictionary metadata and tags.
+OCR screenshots are independently optional, cropped from the original scan rather
+than a new capture, and stored in Anki. New cards receive no recording attachments;
+the legacy Audio field/marker remains empty for note-type compatibility.
+
+Anki may upload cards/images through its own synchronization settings. Disabling
+integration or uninstalling Komofuu does not delete Anki cards or media. Mining
+failures can leave unused media when an outcome is uncertain; Komofuu does not run
+a collection-wide media deletion. See Anki's Tools → Check Media.
+
+Configured release builds check GitHub for updates on request. Startup checks are
+optional and off by default; download and installation each need your action.
+GitHub receives normal request/IP information, not dictionary queries, clipboard
+text, saved words or screenshots. Update signatures authenticate packages; they
+do not certify the absence of bugs. Builds without a configured feed/key make no
+update requests. GitHub hosting policy:
+https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
+
+## Website, controls and deletion
+
+The supplied website has no app analytics, advertisements, external fonts or
+cookies set by its code. It requests public GitHub release metadata. Hosting,
+downloads and project links still involve the respective hosts' normal logging.
+Public GitHub issues and their attachments are visible to others. Do not post
+private captures, secrets, personal clipboard contents or vulnerability details.
+
+Disable automatic clipboard lookup to stop automatic clipboard reads. Leave Lens
+permission off and use PaddleOCR to keep OCR local. Delete saved entries, or export
+a backup under Saved words. Enable, disable, reorder and remove dictionaries under
+Settings → Dictionaries. To update one, remove its old revision and import a new
+download. Removal preserves the original ZIP and saved words; SQLite compaction
+reclaims space when possible and reports incomplete compaction.
+
+In an installed release, the confirmed Uninstall and delete app data action opens
+the Windows uninstaller with profile deletion selected. Normal Windows uninstall
+offers a data-removal choice. Updates keep app data. Exports, downloaded ZIPs and
+installers, Anki cards/media, other Windows accounts' data and shared Windows
+components are outside Komofuu's full-data removal. Locked files can require later
+cleanup and are reported. This is deletion, not secure erasure. A cancelled Windows
+uninstall keeps the app/data. Verify this behavior on the final installer.

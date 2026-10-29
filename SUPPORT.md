@@ -27,13 +27,22 @@ clipboard history. For vulnerabilities, see [Security reporting](SECURITY.md).
   layout or Vertical Japanese. Report your version, scaling and engine. Recognition
   can still fail on tiny readings, art and decorative fonts.
 - **GPU fails:** choose CPU in OCR settings. DirectML availability depends on hardware.
-- **No dictionary result offline:** import an EDICT2 dictionary from the Dictionary
-  menu, or explicitly choose online lookup. The OCR runtime is bundled; dictionary
+- **No dictionary result offline:** download a Yomitan definition dictionary from the
+  linked publisher pages, then import/enable it in Settings → Dictionaries. The OCR runtime is bundled; dictionary
   data is a separate import.
 - **Update check fails:** check your connection and public release availability.
   A build without updater configuration needs a manual installer upgrade. Back up
   words first; do not uninstall/delete app data as an update troubleshooting step.
-- **Browser/Windows warning:** preview installers are not Windows publisher-signed.
+- **Browser/Windows warning:** early-release installers are not Windows publisher-signed.
   Check the official release and checksum. Do not disable protection or assume a
   warning is a false positive. Report the exact detection without running the file
   if you cannot establish its source.
+
+
+## Version-specific behavior
+
+The local-only dictionary instructions apply to 0.13.3 and newer. Older releases
+can include online lookup/audio; consult their matching LEGAL.txt. For missing
+definitions, check that a definition dictionary is enabled (frequency alone is
+insufficient). For Listen errors, install a Japanese Windows voice. New Anki cards
+receive no recording attachment; existing notes/media are kept.

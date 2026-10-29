@@ -12,17 +12,21 @@ source offer or as satisfaction of native-library source obligations.
 
 Before general public application distribution, the publisher still needs to:
 
-- Choose original application/artwork terms and confirm the rights to distribute
-  the supplied artwork and animation.
+- Choose original application/artwork terms; deliberately deferred at the owner’s
+  request. The owner reports Claude-generated artwork/animations; that provenance
+  is recorded without promising exclusive copyright or changing third-party rights.
 - Complete the native dependency review, including GEOS/LGPL source and replacement
   obligations, Microsoft runtime redistribution eligibility and complete notices.
-- Resolve permission for the unofficial Google Lens integration, or omit that
-  feature from the public build. Upload consent alone does not resolve this.
-- Resolve Jotoba's additional manga sound-effect corpus and verify pronunciation
-  corpus provenance/terms for the actual recordings used.
+- Keep the unresolved service-terms assessment for optional unofficial Google
+  Lens explicit. The owner chooses manual, consented Lens and accepts outages;
+  this is not evidence of Google authorization or endorsement.
+- Review older releases separately: 0.13.3 removes the former online dictionary
+  and recording integration, but existing saved/exported data and earlier
+  distributions retain their original rights and unresolved questions.
 - Supply the publisher's legal identity, private contact method and finalized
   privacy/user terms for the intended public release.
 
 The website and repository can be prepared independently. A successful build,
 public website, signature or credit list does not certify these items as complete.
 No provider affiliation or endorsement is claimed.
+
