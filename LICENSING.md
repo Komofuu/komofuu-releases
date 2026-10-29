@@ -13,7 +13,7 @@ source offer or as satisfaction of native-library source obligations.
 Before general public application distribution, the publisher still needs to:
 
 - Choose original application/artwork terms; deliberately deferred at the owner’s
-  request. The owner reports Claude-generated artwork/animations; that provenance
+  request. The owner reports AI-assisted artwork/animations; that provenance
   is recorded without promising exclusive copyright or changing third-party rights.
 - Complete the native dependency review, including GEOS/LGPL source and replacement
   obligations, Microsoft runtime redistribution eligibility and complete notices.

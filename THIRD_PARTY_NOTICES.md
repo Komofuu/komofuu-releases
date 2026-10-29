@@ -88,10 +88,6 @@ or downloaded by the current app and no new Anki recording attachment is generat
 
 ## Project provenance
 
-The owner reports AI-assisted development with ChatGPT and artwork/animations
-generated using Claude. This statement is provenance, not a guarantee of exclusive
-copyright or a provider endorsement. Original application/artwork terms are deferred.
-Coucou/Mochi was an early visual reference; no Coucou code is bundled. YomiNinja,
-owocr and Tesseract code are not bundled. Inspiration does not grant rights to
-third-party branding or artwork. Older saved/exported data retains its original
-rights; see the data-migration information in the project documentation.
+This project was built with AI assistance. This statement describes the development
+process and does not establish exclusive copyright. Third-party software, models
+and dictionary data retain their respective licenses and attribution requirements.
