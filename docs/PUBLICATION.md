@@ -1,7 +1,7 @@
 # Publishing Komofuu early releases
 
 The source stays private; this public repository hosts downloads, website and support.
-Application license choice is deferred. This document is preparation, not publication
+Original code/assets are offered under MIT; see LICENSING.md. This document is preparation, not publication
 authorization. See [launch checklist](LAUNCH-CHECKLIST.md) for unresolved obligations.
 
 ## Established setup
@@ -45,7 +45,8 @@ Do not add a token to reveal draft/private releases or link a private app reposi
 
 ## Remaining owner inputs
 
-- Original app/artwork distribution terms: deliberately deferred, not waived.
+- Original code/assets: MIT selected. Retain LICENSE.md, LICENSING.md and separate
+  third-party notices in the public repository and next build.
 - Publisher identity and verified private privacy/security contact. Verify GitHub
   private vulnerability reporting before directing sensitive reports there.
 - GEOS/Microsoft/MPL/model/native-license evidence and review of all inventory warnings.

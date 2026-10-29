@@ -1,8 +1,8 @@
 # Public early-release checklist
 
 Updated 29 October 2026 for the upcoming 0.13.3. This is a normal public release
-labelled **Early release**, not a GitHub prerelease/beta channel. Application license
-selection is deliberately deferred at the owner's request. This checklist does
+labelled **Early release**, not a GitHub prerelease/beta channel. Original application code and assets
+are offered under MIT, subject to the scope in LICENSING.md. This checklist does
 not authorize publishing or certify legal/security clearance.
 
 ## Already established
@@ -22,7 +22,9 @@ not authorize publishing or certify legal/security clearance.
 
 ## Not complete — owner/external decisions and evidence
 
-- [ ] Original app/artwork distribution terms: deferred, no license selected here.
+- [x] MIT selected for original code/assets; standard license and scope are included
+  in the source, public repository, app About screen and next installer legal resources.
+  This does not assert exclusive copyright or clear third-party obligations.
 - [ ] Publisher identity and verified private privacy/security contact; test GitHub
   private reporting availability. Do not invent contact details or publish personal
   details without the owner's choice.

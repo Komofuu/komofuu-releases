@@ -3,7 +3,9 @@
 Updated 29 October 2026 for the upcoming 0.13.3 early release. This index accompanies
 the exact license texts/copyright notices in each build's LEGAL.txt and installed
 legal resources. It does not replace them or certify redistribution clearance.
-Original Komofuu application/artwork terms remain undecided and are not changed here.
+Original Komofuu code and assets are offered under MIT, to the extent rights are
+held by the licensors. See LICENSE.md and LICENSING.md for the grant and scope.
+Third-party components and data retain their own licenses.
 
 ## User-imported dictionary data
 
