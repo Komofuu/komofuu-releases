@@ -26,9 +26,9 @@ not authorize publishing or certify legal/security clearance.
   in the source, public repository, app About screen and next installer legal resources.
   This does not assert exclusive copyright or clear third-party obligations.
 - [x] Publisher display name selected by owner: **Komofuu**.
-- [ ] Verified private privacy contact. GitHub private vulnerability reporting was
-  checked on 29 October: **disabled**. Enable it before directing reports there.
-  Security reporting does not replace a general private privacy-request channel.
+- [x] Owner supplied privacy contact: komofuu.contact@gmail.com; request guidance
+  is included in the privacy notice. GitHub private vulnerability reporting was
+  verified **enabled** through the public API on 29 October 2026.
 - [x] Pre-build GEOS 3.14.1 source compilation and compatible DLL replacement
   passed in Windows CI. Exact wheel/DLL provenance and hashed source/build
   archives are recorded. Retain and publish the final matching source asset.

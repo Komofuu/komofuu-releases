@@ -47,9 +47,9 @@ Do not add a token to reveal draft/private releases or link a private app reposi
 
 - Original code/assets: MIT selected. Retain LICENSE.md, LICENSING.md and separate
   third-party notices in the public repository and next build.
-- Publisher display name: Komofuu. A private privacy contact remains needed.
-  GitHub private vulnerability reporting was verified disabled on 29 October;
-  enable it before directing sensitive security reports there.
+- Publisher display name: Komofuu. Privacy contact supplied by the owner:
+  komofuu.contact@gmail.com. GitHub private vulnerability reporting was verified
+  enabled through the public API on 29 October 2026. Both routes are documented.
 - GEOS/Microsoft/MPL/model/native-license evidence and review of all inventory warnings.
 - Retained Lens service-terms uncertainty; no provider approval is claimed.
 - Signing-key/password backups, token scope, account protection and who can publish.

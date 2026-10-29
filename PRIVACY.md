@@ -1,10 +1,21 @@
 # Komofuu privacy and data flows
 
 Updated 29 October 2026 for the upcoming 0.13.3 early release. Older installers
-can behave differently; consult their matching LEGAL.txt. Publisher: **Komofuu**. These technical notes still need a verified private
-privacy contact and applicable request procedure before they can be treated as
-a finalized publisher notice. GitHub vulnerability reporting is for security
-reports; it is not a general private privacy-request channel.
+can behave differently; consult their matching LEGAL.txt.
+
+Publisher: **Komofuu**.
+Privacy contact: [komofuu.contact@gmail.com](mailto:komofuu.contact@gmail.com).
+
+## Privacy questions and requests
+
+Email the project contact above for privacy questions or requests concerning
+information you have shared with Komofuu. Describe your request and include only
+the information needed to explain it. This address is supplied by the publisher;
+no fixed response deadline is promised.
+
+App data stored only on your device is managed through the controls described
+below; the project cannot remotely access or delete it. For security vulnerabilities,
+use the private reporting route in SECURITY.md, or the project email as a fallback.
 
 ## Definitions, clipboard and pronunciation
 
