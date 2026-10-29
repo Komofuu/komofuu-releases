@@ -1,52 +1,97 @@
-# Credits and third-party notices
+# Komofuu third-party credits
 
-Komofuu depends on the work of the following projects and data creators. This is
-an attribution index, not a replacement for the **LEGAL.txt** distributed with
-each release or the component license texts included in the installer.
-Credits do not imply endorsement or grant permission for an unofficial service.
+Updated 29 October 2026 for the upcoming 0.13.3 early release. This index accompanies
+the exact license texts/copyright notices in each build's LEGAL.txt and installed
+legal resources. It does not replace them or certify redistribution clearance.
+Original Komofuu application/artwork terms remain undecided and are not changed here.
 
-## Dictionary and pronunciation
+## User-imported dictionary data
 
-- **EDICT/JMdict:** James William Breen and the Electronic Dictionary Research and
-  Development Group (EDRDG). Japanese/English data is licensed under **CC BY-SA 4.0**.
-  Offline EDICT2 is imported by the user; it is not bundled. Imported entries are
-  indexed and dictionary results can be formatted or saved as vocabulary.
-  [Project](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) ·
-  [License](https://www.edrdg.org/edrdg/licence.html) ·
-  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-- **Jotoba:** optional dictionary API, by JojiiOfficial, Yukaru and contributors.
-  Komofuu calls the API; it does not bundle the Jotoba server or Joto-kun mascot.
-  [Jotoba](https://jotoba.de/) · [API documentation](https://jotoba.de/docs.html) ·
-  [Source credits](https://jotoba.de/about)
-- **Kanji alive:** contributors' language data and example audio, **CC BY 4.0**.
-  Recordings may be requested through Jotoba; Komofuu does not edit or bundle an
-  audio corpus. [Project](https://kanjialive.com/) ·
-  [Data/media](https://github.com/kanjialive/kanji-data-media) ·
-  [License](https://creativecommons.org/licenses/by/4.0/)
-- **Tofugu / WaniKani:** the historical Japanese vocabulary pronunciation corpus
-  identified in the source review is **CC BY-SA 4.0**. This credit does not cover
-  every current WaniKani recording. Recordings used through Jotoba are not edited
-  by Komofuu. [Corpus and license](https://github.com/tofugu/japanese-vocabulary-pronunciation-audio) ·
-  [Tofugu](https://www.tofugu.com/) · [WaniKani](https://www.wanikani.com/)
-- Jotoba also credits **Chris Kincaid / Japan Powered** for manga sound-effect
-  meanings. Permission for that additional corpus has not been established in
-  Komofuu's review. [Original guide](https://www.japanpowered.com/anime-articles/manga-sound-effect-guide)
+Dictionary files are downloaded and imported by the user, not bundled or mirrored
+by Komofuu. Their own licenses apply. The importer retains supplied attribution,
+title, revision, description and source information; see each installed dictionary's
+About section. Local indexes, saved entries and exports do not remove those rights.
+Komofuu does not claim copyright over imported data. Format support is not permission
+to redistribute a dictionary. Update imported dictionaries regularly by replacing
+the installed revision with a new download from its publisher.
 
-## OCR, runtime and desktop framework
+- EDICT/JMdict and related EDRDG data: copyright James William Breen and the
+  Electronic Dictionary Research and Development Group. Current Japanese/English
+  data: CC BY-SA 4.0; preserve the actual imported edition's terms and any additional
+  contributor conditions. Other language translations may have separate rights.
+  https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project
+  https://www.edrdg.org/edrdg/licence.html
+  https://creativecommons.org/licenses/by-sa/4.0/
+- Jitendex: Stephen Kraus; supplied attribution includes CC BY-SA 4.0, EDRDG data
+  and Tatoeba examples (CC BY 2.0 FR). Use the publisher's Yomitan download and
+  current complete attribution, not a blanket license inferred from this index.
+  https://jitendex.org/pages/downloads.html
+- JMnedict/KANJIDIC for Yomitan: EDRDG data and the contributors credited by the
+  conversion project. KANJIDIC has additional contributor conditions documented
+  by EDRDG. https://github.com/yomidevs/jmdict-yomitan
+- BCCWJ SUW/LUW combined: Kuuuube's distribution, with source attribution to the
+  National Institute for Japanese Language and Linguistics and the upstream
+  conversion project. This is frequency metadata, not a definition dictionary.
+  Consult the linked project and archive terms; no redistribution is granted here.
+  https://github.com/Kuuuube/yomitan-dictionaries#bccwj-suw-luw-combined
 
-| Component | Credit / upstream license information |
+The download links open publisher pages. Komofuu does not automatically download,
+update, execute or render archive HTML/media. Yomitan format compatibility does not
+mean Yomitan application code is bundled. Structured definitions are rendered as text.
+
+## OCR, desktop framework and runtime
+
+| Component | Credit / applicable license information |
 | --- | --- |
-| PaddleOCR models | PaddlePaddle contributors; Apache-2.0 — [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) |
-| RapidOCR | RapidAI contributors; Apache-2.0 — [RapidOCR](https://github.com/RapidAI/RapidOCR) |
-| ONNX Runtime | Microsoft and contributors; MIT plus bundled third-party notices — [ONNX Runtime](https://github.com/microsoft/onnxruntime) |
-| Python | Python Software Foundation and contributors — [Python license](https://docs.python.org/3/license.html) |
-| Noto Sans CJK | Noto/CJK contributors; SIL Open Font License 1.1 — [Noto CJK](https://github.com/notofonts/noto-cjk) |
-| Lens protocol declarations | The Chromium Authors; BSD-3-Clause — [Chromium](https://chromium.googlesource.com/chromium/src/+/main/third_party/lens_server_proto/) |
-| Tauri and plugins | Tauri contributors; component MIT/Apache-2.0 notices — [Tauri](https://github.com/tauri-apps/tauri) |
-| GEOS through Shapely | GEOS contributors; LGPL obligations apply — [GEOS](https://libgeos.org/) |
-| Other libraries/native runtimes | See the release's complete license inventory and bundled component notices |
+| PaddleOCR models | PaddlePaddle contributors; Apache-2.0 and applicable model notices — https://github.com/PaddlePaddle/PaddleOCR |
+| RapidOCR | RapidAI contributors; Apache-2.0 — https://github.com/RapidAI/RapidOCR |
+| ONNX Runtime / DirectML | Microsoft and contributors; MIT and nested third-party notices — https://github.com/microsoft/onnxruntime |
+| Python | Python Software Foundation and contributors; included Python license — https://docs.python.org/3/license.html |
+| Noto Sans CJK | Noto/CJK contributors; SIL OFL 1.1 — https://github.com/notofonts/noto-cjk |
+| Tauri and plugins | Tauri contributors; applicable MIT/Apache-2.0 notices — https://github.com/tauri-apps/tauri |
+| Shapely / GEOS | Shapely BSD-3-Clause; GEOS LGPL-2.1 obligations — https://libgeos.org/ |
+| certifi / covered tqdm portions / MPL Rust crates | Applicable MPL-2.0 source and notice requirements; see exact inventory |
+| NumPy, OpenCV, Pillow, protobuf and other packages | Their individual licenses and nested native-component notices |
+| Microsoft Visual C++ runtime | Microsoft's redistribution terms; publisher eligibility still requires confirmation |
+| zip-rs | zip 9.1.2, MIT; stored/deflate dictionary archive reader — https://github.com/zip-rs/zip2 |
 
-Some redistribution/source-availability obligations and service permissions are
-still being resolved. See [licensing status](LICENSING.md). A credit list alone
-does not clear a component for redistribution. The original Komofuu application
-and artwork do not acquire one blanket license from the components above.
+Exact OCR package/model sources and checksums are in the runtime manifest and
+scripts/paddle-requirements.txt. Runtime licenses remain beside the installed
+OCR files. npm/Cargo versions come from the lockfiles. The Windows build collects
+dependency notices and an audit inventory; build-only components are included
+conservatively. Missing notice coverage and source-delivery obligations must be
+reviewed rather than treated as cleared by a successful build.
+
+## Optional Lens and external Anki integration
+
+Chromium Lens protocol declarations: The Chromium Authors, BSD-3-Clause, bundled
+with the runtime notices. Native Rust Lens follows the OCR protocol subset used by
+chrome_lens_ocr 0.3.0, by Kolby Moroz Liebl (MIT), the OCR dependency used by Manatan.
+This is a bounded adaptation, not the full upstream crate. Its original MIT license
+is bundled under legal/upstream/chrome-lens-ocr-LICENSE.txt.
+https://github.com/KolbyML/chrome-lens-ocr
+https://github.com/KolbyML/Manatan
+
+These code licenses do not grant Google's service authorization. Lens is optional,
+unofficial and manually triggered with upload permission. No Google affiliation,
+endorsement, service availability or deletion guarantee is claimed.
+https://policies.google.com/terms https://policies.google.com/privacy
+
+AnkiConnect: FooSoft and contributors, separately installed, not redistributed.
+https://github.com/FooSoft/anki-connect
+Anki and AnkiConnect are not represented as endorsing Komofuu. Field mapping and
+rapid mining take workflow inspiration from Yomitan; no Yomitan code/card template
+is copied. Komofuu's starter template is original. https://yomitan.wiki/anki/
+Screenshots can contain private/copyrighted material and may be uploaded by Anki sync.
+Listen uses an installed Windows Japanese voice; no recording corpus is bundled
+or downloaded by the current app and no new Anki recording attachment is generated.
+
+## Project provenance
+
+The owner reports AI-assisted development with ChatGPT and artwork/animations
+generated using Claude. This statement is provenance, not a guarantee of exclusive
+copyright or a provider endorsement. Original application/artwork terms are deferred.
+Coucou/Mochi was an early visual reference; no Coucou code is bundled. YomiNinja,
+owocr and Tesseract code are not bundled. Inspiration does not grant rights to
+third-party branding or artwork. Older saved/exported data retains its original
+rights; see the data-migration information in the project documentation.

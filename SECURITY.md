@@ -1,17 +1,20 @@
 # Security reporting
 
-Please do not publish exploit details, credentials, private captures or personal
-data in ordinary GitHub issues.
+Do not publish exploit details, credentials, personal clipboard contents or
+private captures in ordinary GitHub issues.
 
-If **Report a vulnerability** is available under this repository's **Security**
-tab, use GitHub's private reporting flow. If it is not available, open an issue
-asking for a private contact channel, without including the vulnerability details
-or sensitive information. A separate private contact method is still being set up.
+Use GitHub's **Security → Report a vulnerability** private flow when available:
+https://github.com/Komofuu/komofuu-releases/security/advisories/new
+Availability must be verified by the publisher; this document does not enable it.
+If unavailable, open a public issue asking only for a private reporting channel,
+without including exploit details or sensitive information. A separate verified
+private contact has not yet been supplied; completing it remains a launch item.
 
-For a private report, useful details include the affected app version, Windows
-version, impact and minimal reproduction steps. Send only information you are
-entitled to share. Do not upload real user data to demonstrate a problem.
+Private reports should include the affected app/Windows version, impact and a
+minimal reproduction using synthetic or redacted data. Do not send signing keys,
+release tokens, Anki keys, complete copyrighted chapters or real private captures.
 
-Preview releases are still being tested. The project does not promise a response
-deadline or offer a bug bounty. Updates check package signatures; this does not
-replace Windows publisher signing or guarantee the absence of vulnerabilities.
+The project has no promised response deadline or bug bounty. Only current releases
+will be investigated initially; a formal support lifetime has not been announced.
+Updates verify package signatures. This is separate from Windows publisher
+signing and does not guarantee that an application has no vulnerabilities.

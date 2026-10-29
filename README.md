@@ -1,87 +1,88 @@
 <p align="center"><img src="assets/komofuu.svg" width="96" height="96" alt="Komofuu, a little desktop companion"></p>
 <h1 align="center">Komofuu</h1>
 <p align="center">A little company for your Japanese.</p>
-<p align="center"><strong>Windows x64 · Early preview · OCR runtime included</strong></p>
-<p align="center"><a href="https://github.com/Komofuu/komofuu-releases/releases"><strong>Windows downloads</strong></a> · <a href="GETTING-STARTED.md">Getting started</a> · <a href="https://github.com/Komofuu/komofuu-releases/issues/new/choose">Help &amp; feedback</a></p>
+<p align="center"><strong>Windows x64 · Early release · OCR runtime included</strong></p>
+<p align="center"><a href="https://komofuu.github.io/komofuu-releases/">Website</a> · <a href="https://github.com/Komofuu/komofuu-releases/releases">Windows downloads</a> · <a href="GETTING-STARTED.md">Getting started</a> · <a href="https://github.com/Komofuu/komofuu-releases/issues/new/choose">Help &amp; feedback</a></p>
 
-Komofuu keeps you company while you read Japanese. Scan visible text when you
-need a word, look it up for definitions, and keep useful vocabulary for later.
-This is the official public downloads and support repository. The application
-source is currently private.
+Komofuu keeps you company while you read Japanese. Scan visible text, look up
+words, see readings above kanji, save vocabulary and send cards to Anki.
+This is the official public downloads, website and support repository.
+The application source remains private; original distribution terms are still
+undecided. See [licensing status](LICENSING.md).
 
-## Download
+**Version note:** this guide describes the upcoming **0.13.3** and newer local-only
+dictionary behavior. The installer currently offered may be older. Earlier releases
+can include optional online dictionary/audio features; read that release's notes
+and matching LEGAL.txt. Updating this page does not publish a new installer.
 
-**[Open the official releases page →](https://github.com/Komofuu/komofuu-releases/releases)**
+## Download and install
 
-Only published releases are available to visitors. If none appears, the first
-public build is still being prepared. App distribution terms are also being
-finalized; see [Licensing](LICENSING.md).
+**[Open official releases →](https://github.com/Komofuu/komofuu-releases/releases)**
 
-Choose **`Komofuu_<version>_x64-setup.exe`** under **Assets**. The installer includes
-the OCR runtime; you do not need a separate Python installation or development
-tools. GitHub's **Source code** ZIP/TAR contains this downloads repository, not
-the installed app.
+Download **Komofuu_<version>_x64-setup.exe** under Assets. Local OCR/models are
+included; no separate Python/runtime download or developer tools are needed.
+WebView2 may need an internet download if missing. GitHub's Source code ZIP/TAR
+contains this downloads repository, not the application source or installer.
 
-| Release file | What it is for |
+| Release file | Purpose |
 | --- | --- |
-| `Komofuu_…_x64-setup.exe` | Windows installer — download and run this file |
-| `LEGAL.txt` | The build's legal information and third-party notices |
-| `Komofuu_…_x64-setup.exe.sig` | Signature used to verify app updates; not an installer |
-| `latest.json` | Metadata read by Komofuu's updater; not an installer |
+| Komofuu_…_x64-setup.exe | Installer — download/run this file |
+| LEGAL.txt | Matching legal information and third-party notices |
+| .exe.sig | Updater verification signature, not an installer |
+| latest.json | Updater metadata, not an installer |
 
-Preview installers currently lack a Windows publisher signature. A valid updater
-signature is a separate check and does not remove browser/SmartScreen warnings.
-Verify the release and file before running it; do not disable antivirus to install.
+Installers currently lack a Windows publisher signature. Updater signing is a
+separate protection and does not remove browser/SmartScreen warnings. Check the
+official release/digest; do not disable antivirus to bypass a detection you cannot
+verify. No malware-free guarantee is claimed.
 
-## What you can do
+## First use
 
-- **Screen lookup:** enable OCR, press your scan shortcut, then hover recognized
-  Japanese words for definitions. PaddleOCR is local; Google Lens is optional,
-  online and unofficial.
-- **Ask Komofuu:** dictionary-led word and sentence-segment lookup in a chat-style
-  window, with readings above kanji.
-- **Clipboard lookup:** copy Japanese text and explore its words. Automatic
-  clipboard lookup is optional and off by default.
-- **Saved words:** revisit vocabulary with sentence context, export it, or send
-  cards to a locally running AnkiConnect setup.
-- **A desktop companion:** resize Komofuu, choose a theme, use Gaming mode, or tuck
-  him into the small bar at the top of the screen. Music reactions are optional.
+1. Drag down the top-centre pill to reveal Komofuu. Right-click for his menu.
+2. Open **Settings → Dictionaries → Find dictionaries to download**. Start with
+   [Jitendex for Yomitan](https://jitendex.org/pages/downloads.html), download its
+   ZIP yourself and import it with **Add dictionaries…**, without unzipping.
+3. Enable the dictionaries you want. Several can be used together. Optional
+   names, kanji and frequency downloads are in [Dictionary downloads](DICTIONARIES.md).
+4. Enable OCR, then press **Ctrl+Shift+Space** once. The border means ready;
+   hover recognized text for definitions. Change shortcuts in Settings.
 
-OCR can miss or misread small, decorative, tilted or vertical text. Definitions
-and segmentation are study aids, not guaranteed sentence translations.
+Definitions use your imported dictionaries, with no online fallback. PaddleOCR
+is local. Google Lens is optional, online, unofficial and requires separate upload
+permission. A full-screen scan can share everything visible on that monitor.
+OCR and segmentation may be inaccurate, especially for small/decorative/rotated
+or vertical text. They are study aids, not guaranteed translations.
 
-## First launch
+Automatic clipboard lookup is on by default unless previously disabled; copied
+Japanese text is looked up locally. Turn it off for manual-only lookup. Ask Komofuu
+is dictionary-led word/segment lookup, not an open-ended AI service. Listen uses
+an installed Japanese Windows voice; no recording service is contacted.
 
-1. Run the Windows x64 installer from a published release. Internet may be needed
-   to install Microsoft WebView2 if it is missing.
-2. Drag down the small bar at the top centre of your screen to reveal Komofuu.
-3. Right-click Komofuu → **Dictionary**. Import an EDICT2 dictionary for offline
-   meanings, or choose online lookup through Jotoba.
-4. Choose **Enable OCR**, then press **Ctrl + Shift + Space** to scan once.
-   Change that shortcut in Settings. The pink border means OCR is ready;
-   enabling it does not start continuous scans.
+## Anki, updates and data
 
-Read the [first-run guide](GETTING-STARTED.md) for privacy controls, updates,
-backups and uninstall instructions.
+Set up [AnkiConnect](https://github.com/FooSoft/anki-connect) in desktop Anki, then
+connect under Settings → Anki. Choose deck/note type, review mappings or create
+the starter setup. Hover a scanned word and press **Ctrl+Shift+A** to mine its
+word, definition and source text. Original-scan screenshots can be turned off.
+New cards attach no recording; existing Anki notes/media are kept.
 
-## Updates and your data
+Settings → Updates offers signed, user-controlled download/install. Startup
+checks are optional and off by default. Export important saved words before an
+upgrade. Regular releases are detected; GitHub prereleases are not the current
+update channel. The publisher stages drafts and publishes separately.
 
-Configured release builds offer **Settings → Updates**. You choose when to check,
-download, and install; startup checks are optional and off by default. Updates
-are intended to keep settings, saved words and imported dictionaries. Export
-important vocabulary before testing an upgrade.
-
-The in-app **Uninstall and delete app data** option removes the local app profile
-for your Windows account as well as the app. Exported backups, Anki cards and
-downloaded installers are separate files and are kept.
+**Uninstall and delete app data** removes this Windows account's app profile
+after confirmation. Exports, downloaded ZIPs/installers, Anki cards/media, other
+accounts and shared Windows components are kept. Deletion is not secure erasure.
 
 ## Privacy, credits and support
 
+- [Getting started](GETTING-STARTED.md) and [dictionary downloads](DICTIONARIES.md)
 - [Privacy and data flows](PRIVACY.md)
 - [Third-party credits](THIRD_PARTY_NOTICES.md) and [licensing status](LICENSING.md)
-- [Get help or report a bug](SUPPORT.md)
-- [Security reporting](SECURITY.md)
+- [Help](SUPPORT.md) and [security reporting](SECURITY.md)
+- [Older saved data](docs/DATA-MIGRATION.md)
 
-No Komofuu account is required. Online dictionary, pronunciation, Lens and update
-features each make their own requests when used; see the privacy notes.
-Komofuu is not affiliated with or endorsed by the credited providers.
+No Komofuu account, developer upload server or app analytics is implemented.
+Optional Lens, GitHub updates and explicitly opened project pages have their own
+connections/policies. No provider endorsement or affiliation is claimed.

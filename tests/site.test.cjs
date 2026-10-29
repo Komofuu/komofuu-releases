@@ -60,3 +60,16 @@ test('CSP matches the exact script and no former/private repository links remain
  assert.doesNotMatch(html,/yoshsemail|github\.com\/Komofuu\/komofuu(?:["/]|$)|AIza|ghp_/);
  assert.doesNotMatch(source,/innerHTML|eval\(/);
 });
+
+test('dictionary guidance supports other compatible imports and distinguishes the upcoming release',()=>{
+ const read=name=>fs.readFileSync(require('node:path').join(__dirname,'..',name),'utf8');
+ const guide=read('DICTIONARIES.md');
+ for(const url of ['https://jitendex.org/pages/downloads.html','https://github.com/yomidevs/jmdict-yomitan#jmnedict-for-yomitan','https://github.com/yomidevs/jmdict-yomitan#kanjidic-for-yomitan','https://github.com/Kuuuube/yomitan-dictionaries#bccwj-suw-luw-combined']){
+  assert.ok(html.includes(url));assert.ok(guide.includes(url));
+ }
+ assert.match(guide,/other compatible Yomitan format-3 dictionaries/);
+ assert.match(html,/installer offered above may be older/);
+ assert.match(read('PRIVACY.md'),/on by default unless you previously disabled it/);
+ assert.match(read('GETTING-STARTED.md'),/No new recording attachment/);
+});
+
