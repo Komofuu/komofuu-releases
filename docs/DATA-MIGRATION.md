@@ -1,6 +1,6 @@
 # Existing data and upgrades
 
-Upgrading from an earlier test build to 0.13.5 keeps imported dictionaries, saved words and existing Anki
+Upgrading from an earlier test build to 0.13.6 keeps imported dictionaries, saved words and existing Anki
 cards/media. Old online-source and recording preferences are ignored; no setting
 can enable an online definition fallback or recording request. The legacy Audio
 field and {audio} marker stay empty in new cards so old note types keep working.
@@ -11,3 +11,4 @@ A new app version does not change permissions for an older distribution.
 
 Keep backups before upgrading. Exports, downloaded files and Anki data are
 user-managed copies and are not deleted by Komofuu’s uninstall.
+

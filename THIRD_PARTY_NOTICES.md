@@ -1,6 +1,6 @@
 # Komofuu third-party credits
 
-Updated 30 October 2026 for Komofuu 0.13.5 release. This index accompanies
+Updated 30 October 2026 for Komofuu 0.13.6 release. This index accompanies
 the exact license texts/copyright notices in each build's LEGAL.txt and installed
 legal resources. It does not replace them or certify redistribution clearance.
 Original Komofuu material follows the proprietary distribution policy, to the
@@ -114,3 +114,4 @@ Use the THIRD-PARTY-SOURCES.zip asset matching the installer version.
 See [source availability](THIRD-PARTY-SOURCES.md) for MPL source delivery and
 GEOS rebuild/replacement instructions. Those independent rights are unaffected
 by the application EULA and repository proprietary scope notice.
+

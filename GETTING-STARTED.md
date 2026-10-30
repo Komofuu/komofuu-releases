@@ -1,6 +1,6 @@
 # Getting started with Komofuu
 
-These instructions describe **Komofuu 0.13.5, the first official public release**.
+These instructions describe **Komofuu 0.13.6, the first official public release**.
 Use the official releases page for Windows downloads and release notes.
 
 ## Install and reveal Komofuu
@@ -99,3 +99,4 @@ exports, Anki, downloaded files, other accounts and shared Windows components st
 Locked files may require later cleanup; secure erasure is not promised.
 
 See [Privacy](PRIVACY.md), [Support](SUPPORT.md) and [Security reporting](SECURITY.md).
+

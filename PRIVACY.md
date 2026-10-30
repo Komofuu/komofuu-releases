@@ -1,6 +1,6 @@
 # Komofuu privacy and data flows
 
-Updated 30 October 2026 for Komofuu 0.13.5 release. Older installers
+Updated 30 October 2026 for Komofuu 0.13.6 release. Older installers
 can behave differently; consult their matching LEGAL.txt.
 
 Publisher: **Luca Andre Ruenholl**, an individual publishing as **Komofuu**,
@@ -176,3 +176,4 @@ installers, Anki cards/media, other Windows accounts' data and shared Windows
 components are outside Komofuu's full-data removal. Locked files can require later
 cleanup and are reported. This is deletion, not secure erasure. A cancelled Windows
 uninstall keeps the app/data. Verify this behavior on the final installer.
+

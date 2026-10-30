@@ -1,15 +1,15 @@
 # Public early-release checklist
 
-Updated 30 October 2026 for Komofuu 0.13.5. This is a normal public release
+Updated 30 October 2026 for Komofuu 0.13.6. This is a normal public release
 labelled **Early release**, not a GitHub prerelease/beta channel. Future application copies expressly supplied with the completed EULA use
 proprietary freeware terms, subject to LICENSING.md. Earlier MIT grants remain
-intact. Version 0.13.5 is the first official public release. This checklist does
+intact. Version 0.13.6 is the first official public release. This checklist does
 not authorize publishing or certify legal/security clearance.
 
 ## Already established
 
 - Public downloads/support repository: Komofuu/komofuu-releases; app source private.
-- Version 0.13.5 is the first official public launch. Earlier testing distributions
+- Version 0.13.6 is the first official public launch. Earlier testing distributions
   are not the launch download. Repository/updater setup already exists; a source
   change is not automatically a published installer.
 - Bundled PaddleOCR runtime/models, no separate Python requirement for users.
@@ -86,7 +86,7 @@ not authorize publishing or certify legal/security clearance.
   prereleases. Publishing is a separate owner-authorized step after readiness review.
 - [ ] Remove earlier test builds from the public download offering before launch;
   retain historical licence notices and prior-distribution evidence. Confirm the
-  website does not offer a test build while 0.13.5 is still a draft.
+  website does not offer a test build while 0.13.6 is still a draft.
 - [ ] Recheck live mobile/desktop page and direct downloads. Future releases repeat
   notice/security/upgrade checks and document known issues/support scope.
 
@@ -121,3 +121,4 @@ blanket MIT grant. README, website FAQ, publishing guide and credits agree.
 The historical MIT notice remains available for copies and portions it covers.
 The application EULA is unchanged; this repository update does not publish or
 relicense an existing installer. Third-party and demo licences remain independent.
+

@@ -1,6 +1,6 @@
 # Third-party source availability
 
-The first official public release, 0.13.5, and later releases include a separate
+The first official public release, 0.13.6, and later releases include a separate
 **THIRD-PARTY-SOURCES.zip** asset on their matching version's release page:
 https://github.com/Komofuu/komofuu-releases/releases
 
@@ -76,3 +76,4 @@ repository, credentials or user data. It does not resolve Microsoft redistributi
 eligibility, model provenance or every inventory warning. Review the exact build's
 NOTICE-COVERAGE.md and dependency inventory before publication. Do not substitute
 an archive from a different version or claim an unbuilt source asset exists.
+
