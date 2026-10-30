@@ -17,8 +17,10 @@ clipboard history. For vulnerabilities, see [Security reporting](SECURITY.md).
 
 - **Only Source code appears:** that archive is not the app. Look for the `.exe`
   under a published release's Assets. A release without an installer is incomplete.
-- **No official release appears:** the first official public release, 0.13.5, is being prepared.
-  Drafts cannot be downloaded by public visitors or detected by the updater.
+- **No installer appears:** check the official releases page for available Windows
+  downloads. The website accepts only complete regular releases; draft releases
+  and prereleases are excluded. If release information cannot be loaded, use the
+  releases-page link or try again later.
 - **OCR enabled but nothing happens:** the pink border means ready. Press your
   configured scan shortcut; enabling OCR does not start a scan.
 - **Lens permission error:** enable its separate upload permission only if you

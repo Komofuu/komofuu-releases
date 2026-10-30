@@ -1,9 +1,9 @@
 # Public early-release checklist
 
-Updated 30 October 2026 for the prepared licence transition. This is a normal public release
+Updated 30 October 2026 for Komofuu 0.13.5. This is a normal public release
 labelled **Early release**, not a GitHub prerelease/beta channel. Future application copies expressly supplied with the completed EULA use
 proprietary freeware terms, subject to LICENSING.md. Earlier MIT grants remain
-intact. Version 0.13.5 is being prepared as the first official public release. This checklist does
+intact. Version 0.13.5 is the first official public release. This checklist does
 not authorize publishing or certify legal/security clearance.
 
 ## Already established
@@ -79,8 +79,8 @@ not authorize publishing or certify legal/security clearance.
   and who can publish. Do not expose secrets in websites, logs, source or test assets.
 - [ ] Windows publisher signing is recommended; separate from existing updater
   signatures. Do not advise users to disable antivirus to bypass a detection.
-- [ ] Website/docs match the version actually offered; until 0.13.5 is published,
-  show the upcoming-version notice and link each installer's matching LEGAL.txt.
+- [ ] Website/docs match the version actually offered. Keep evergreen availability
+  messages for missing downloads and link each installer's matching LEGAL.txt.
 - [ ] Publish a regular release titled **Komofuu <version> — Early Release**, leave
   prerelease unchecked and set latest when appropriate. Current feed/site exclude
   prereleases. Publishing is a separate owner-authorized step after readiness review.
@@ -94,14 +94,13 @@ No evidence is marked complete merely because a document or checkbox exists.
 No new company, paid hosting, custom domain or compulsory beta label is assumed.
 
 
-## Prepared EULA transition (30 October 2026)
+## EULA and historical permissions (30 October 2026)
 
-Future application distributions are prepared for proprietary freeware terms,
-with earlier MIT grants and third-party rights preserved. The earlier MIT status
-above describes the historical release preparation, not a restriction on the
-publisher offering future copies under different terms.
+Application copies expressly supplied with the proprietary freeware EULA use
+those terms. Earlier MIT grants and third-party rights remain preserved; see
+LICENSING.md for the scope of each distribution.
 
-- [x] Identify publisher Luca Andre Ruenholl in the prepared EULA and copy the
+- [x] Identify publisher Luca Andre Ruenholl in the EULA and copy the
   canonical LICENSE.md from application PR #20 to public EULA.md. Installer
   resources were regenerated in that branch; final Windows tests remain below.
 - [x] Assess publisher disclosure for the confirmed present personal, entirely
@@ -110,8 +109,8 @@ publisher offering future copies under different terms.
 - [ ] Verify final third-party distribution conditions and test changed-term
   acceptance/cancellation before publishing the installer.
 - [x] Align website/documentation proprietary scope and preserve demo CC BY-SA attribution; preserve
-  prior installers and their matching LEGAL.txt. Do not imply that this draft is
-  already the licence of a published download.
+  prior installers and their matching LEGAL.txt. Each installer must retain the
+  licence information actually supplied with it.
 
 
 

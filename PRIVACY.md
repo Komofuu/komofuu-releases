@@ -1,6 +1,6 @@
 # Komofuu privacy and data flows
 
-Updated 30 October 2026 for the prepared 0.13.5 release. Older installers
+Updated 30 October 2026 for Komofuu 0.13.5 release. Older installers
 can behave differently; consult their matching LEGAL.txt.
 
 Publisher: **Luca Andre Ruenholl**, an individual publishing as **Komofuu**,

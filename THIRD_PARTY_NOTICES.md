@@ -1,6 +1,6 @@
 # Komofuu third-party credits
 
-Updated 30 October 2026 for the prepared 0.13.4 release. This index accompanies
+Updated 30 October 2026 for Komofuu 0.13.5 release. This index accompanies
 the exact license texts/copyright notices in each build's LEGAL.txt and installed
 legal resources. It does not replace them or certify redistribution clearance.
 Original Komofuu material follows the proprietary distribution policy, to the

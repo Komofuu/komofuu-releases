@@ -1,20 +1,17 @@
 # Komofuu licence scope
 
-## Application: prepared proprietary freeware transition
+## Application: proprietary freeware
 
-[EULA.md](EULA.md) is the prepared Komofuu Proprietary Freeware EULA for future
+[EULA.md](EULA.md) contains the Komofuu Proprietary Freeware EULA. It governs
 application copies expressly supplied under it. Personal, educational and
 professional/commercial use is free. Its redistribution/modification restrictions
 apply only within its lawful scope, with exceptions for independent licences and
 mandatory law. The app's source repository remains private.
 
-This is not an announcement that a new installer has been published. The prepared
-EULA identifies Luca Andre Ruenholl as publisher and matches LICENSE.md in
-application PR #20 (commit 1accdb323abf7a95f71e4c96ade87148f65ab7b5).
-Installer legal resources were regenerated in that application branch. Before
-publishing, verify that the exact installer includes these terms and complete
-the remaining Windows and distribution checks. Determine any additional required
-publisher/address disclosures separately.
+The EULA identifies Luca Andre Ruenholl as publisher. The installer contains its
+matching EULA and legal information. For historical permissions, third-party
+rights and source availability, consult the exact notices accompanying the
+particular installer.
 
 Earlier copies retain their accompanying licence and any permissions already
 acquired under MIT. New terms do not withdraw those grants, rewrite previous

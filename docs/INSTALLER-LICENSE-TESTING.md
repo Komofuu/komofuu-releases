@@ -1,6 +1,6 @@
 # Installer licence verification
 
-The prepared installer presents the Komofuu Proprietary Freeware EULA and complete
+The installer presents the Komofuu Proprietary Freeware EULA and complete
 Microsoft runtime terms. The checkbox accepts each within its respective scope.
 Prior MIT grants and other components' licence rights remain unaffected. The
 previous MIT notice is retained separately. This is implementation/test guidance,

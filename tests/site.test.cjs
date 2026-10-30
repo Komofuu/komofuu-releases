@@ -50,7 +50,7 @@ test('lookalike hosts, other repositories, query strings and credentialed URLs a
 test('no public release and API failures keep a clear manual-release fallback',async()=>{
  for(const response of [{ok:false,status:404},{ok:false,status:403},new Error('offline')]){
   const {get}=await run(response);assert.equal(get('hero-dl').href,undefined);
-  assert.match(get('dl-status').textContent,/first official public release|couldn’t check/);
+  assert.match(get('dl-status').textContent,/No complete official Windows installer|couldn’t check/);
  }
  assert.match(html,/id="rel-link" href="https:\/\/github.com\/Komofuu\/komofuu-releases\/releases"/);
 });
@@ -61,14 +61,14 @@ test('CSP matches the exact script and no former/private repository links remain
  assert.doesNotMatch(source,/innerHTML|eval\(/);
 });
 
-test('dictionary guidance supports other compatible imports and distinguishes the upcoming release',()=>{
+test('dictionary guidance supports other compatible imports and describes the official release',()=>{
  const read=name=>fs.readFileSync(require('node:path').join(__dirname,'..',name),'utf8');
  const guide=read('DICTIONARIES.md');
  for(const url of ['https://jitendex.org/pages/downloads.html','https://github.com/yomidevs/jmdict-yomitan#jmnedict-for-yomitan','https://github.com/yomidevs/jmdict-yomitan#kanjidic-for-yomitan','https://github.com/Kuuuube/yomitan-dictionaries#bccwj-suw-luw-combined']){
   assert.ok(html.includes(url));assert.ok(guide.includes(url));
  }
  assert.match(guide,/other compatible Yomitan format-3 dictionaries/);
- assert.match(html,/0\.13\.5 is being prepared as the first official public release/);
+ assert.match(html,/Komofuu 0\.13\.5, the first official public release/);
  for(const file of ['README.md','GETTING-STARTED.md','DICTIONARIES.md','SUPPORT.md'])assert.doesNotMatch(read(file),/0\.13\.3/);
  assert.doesNotMatch(html,/0\.13\.3/);
  assert.match(read('PRIVACY.md'),/on by default unless you previously disabled it/);
@@ -81,7 +81,7 @@ test('earlier test builds cannot activate launch downloads but official launch a
   assert.equal(get('hero-dl').href,undefined);
   assert.equal(get('dl-list').children.length,0);
   assert.equal(get('release-notes').hidden,true);
-  assert.match(get('dl-status').textContent,/first official public release/);
+  assert.match(get('dl-status').textContent,/No complete official Windows installer/);
  }
  for(const version of ['0.13.5','0.13.6','0.14.0','1.0.0']){
   const r=release(version),{get}=await run({ok:true,status:200,json:async()=>r});
@@ -101,5 +101,7 @@ test('application and repository proprietary scope preserve earlier and third-pa
  assert.match(read('docs/legacy/MIT-LICENSE-before-proprietary-transition.txt'),/^MIT License/);
  assert.match(read('LICENSING.md'),/Website and documentation: proprietary distribution/);
  assert.doesNotMatch(html,/retain their separate MIT licence/);
- assert.match(html,/EULA.md/);assert.match(html,/pending|prepared/);
+ assert.match(html,/EULA.md/);
+ assert.doesNotMatch(html,/being prepared|in preparation|prepared for future|upcoming release/i);
+ for(const file of ['README.md','GETTING-STARTED.md','SUPPORT.md','LICENSING.md','PRIVACY.md','THIRD_PARTY_NOTICES.md'])assert.doesNotMatch(read(file),/being prepared|in preparation|prepared proprietary|prepared for future|upcoming release/i);
 });

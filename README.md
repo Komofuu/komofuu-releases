@@ -8,16 +8,14 @@ Komofuu keeps you company while you read Japanese. Scan visible text, look up
 words, see readings above kanji, save vocabulary and send cards to Anki.
 This is the official public downloads, website and support repository.
 Komofuu is free to use under its [Proprietary Freeware EULA](EULA.md).
-The application source is private. The first official installer is being prepared
-for release under that EULA by publisher Luca Andre Ruenholl.
+The application source repository is private.
 This public repository follows the same proprietary distribution policy: see
 [LICENSE.md](LICENSE.md) for website/documentation permissions and [licence scope](LICENSING.md)
 for exceptions and independently licensed material.
 
-**First official public release: 0.13.5 — in preparation.** This guide describes
-that release. The website will offer its installer once it is published and the
-required release files are available. Updating these documents does not publish
-an installer.
+**Komofuu 0.13.5 · First official public release.** This guide describes that
+version. Download the Windows installer from the official releases page and read
+the release notes and matching LEGAL.txt.
 
 ## Demonstrations
 
