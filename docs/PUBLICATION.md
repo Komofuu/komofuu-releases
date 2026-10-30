@@ -9,7 +9,7 @@ authorization. See [launch checklist](LAUNCH-CHECKLIST.md) for unresolved obliga
 - GitHub Pages is configured from main/root at https://komofuu.github.io/komofuu-releases/ .
   The repository About field points to that URL. Recheck the actual deployed site
   on desktop/mobile; configuration alone is not a render/download verification.
-- Prepare **0.13.4 as the first official public release**. Earlier builds were
+- Prepare **0.13.5 as the first official public release**. Earlier builds were
   testing distributions, not the official launch. The owner reports successful
   earlier update/uninstall tests; repository and updater setup already exist.
 - The workflow builds verified installers and stages signed updates as drafts;
@@ -20,7 +20,7 @@ authorization. See [launch checklist](LAUNCH-CHECKLIST.md) for unresolved obliga
 
 1. Complete the applicable launch checklist, review current notices/source delivery
    and record installer, real Anki, upgrade, uninstall and resource-usage tests.
-2. Prepare the fresh signed draft for **0.13.4** (or the actual next version).
+2. Prepare the fresh signed draft for **0.13.5** (or the actual next version).
    Confirm matching nonempty .exe, .exe.sig, LEGAL.txt and latest.json, signed version,
    checksum and official repository download paths. Keep audit inventories with
    release evidence; ordinary CI artifacts expire after 14 days.
@@ -40,7 +40,7 @@ The root index.html has no external fonts, analytics or account tokens. It reque
 GitHub's public releases/latest endpoint and accepts only complete regular releases
 with official exact-path assets. Drafts/prereleases are excluded. API failure/rate
 limiting retains a visible manual releases link. The Source code ZIP is not the app.
-The website accepts official releases starting at 0.13.4; earlier test builds
+The website accepts official releases starting at 0.13.5; earlier test builds
 cannot activate its installer links. It displays GitHub's installer SHA-256 when available.
 
 If changing inline JavaScript, regenerate the CSP hash with
@@ -55,7 +55,8 @@ Do not add a token to reveal draft/private releases or link a private app reposi
   Public LICENSE.md describes repository scope; the app repository LICENSE.md is
   its canonical EULA. Do not substitute one for the other in installer generation.
 - Publisher Luca Andre Ruenholl and privacy/security contact are supplied.
-  Preserve those details; assess any additional legally required disclosures.
+  Preserve those details. The present noncommercial launch has been assessed;
+  reassess provider/address disclosures before adding funding or business activity.
 - GEOS rebuilding, source delivery and Microsoft provenance have recorded
   pre-build evidence. Review the final build's inventory and distribution conditions;
   do not treat those evidence records as a blanket clearance.

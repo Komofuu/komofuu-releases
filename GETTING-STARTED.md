@@ -1,6 +1,6 @@
 # Getting started with Komofuu
 
-These instructions describe **0.13.4, the first official public release**, which
+These instructions describe **0.13.5, the first official public release**, which
 is being prepared. Download it when it appears on the official release page.
 
 ## Install and reveal Komofuu

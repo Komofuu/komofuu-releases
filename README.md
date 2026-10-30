@@ -14,7 +14,7 @@ This public repository follows the same proprietary distribution policy: see
 [LICENSE.md](LICENSE.md) for website/documentation permissions and [licence scope](LICENSING.md)
 for exceptions and independently licensed material.
 
-**First official public release: 0.13.4 — in preparation.** This guide describes
+**First official public release: 0.13.5 — in preparation.** This guide describes
 that release. The website will offer its installer once it is published and the
 required release files are available. Updating these documents does not publish
 an installer.
