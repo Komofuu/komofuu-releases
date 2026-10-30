@@ -33,7 +33,7 @@ account or machine snapshot for acceptance history tests.
    Cancel here: no Komofuu files or acceptance receipt should be installed.
 2. Accept and finish. Launch Komofuu, open About/dependency notices and inspect the
    installed legal folder. Verify the complete Microsoft terms remain available.
-3. Start from public 0.13.3, with backed-up saved words, dictionaries and preferences.
+3. Start from an earlier 0.13.3 test installation, with backed-up saved words, dictionaries and preferences.
    Use a controlled update feed or, before publication, launch the new installer
    using `/UPDATE /P` against that existing installation. Ordinary draft releases
    are not discoverable through the public latest feed.

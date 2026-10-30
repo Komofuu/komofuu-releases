@@ -9,13 +9,14 @@ authorization. See [launch checklist](LAUNCH-CHECKLIST.md) for unresolved obliga
 - GitHub Pages is configured from main/root at https://komofuu.github.io/komofuu-releases/ .
   The repository About field points to that URL. Recheck the actual deployed site
   on desktop/mobile; configuration alone is not a render/download verification.
-- Public 0.13.3 exists. The owner reports successful earlier update/uninstall tests.
-  Do not retain old tasks saying the first repository or updater still needs creating.
+- Prepare **0.13.4 as the first official public release**. Earlier builds were
+  testing distributions, not the official launch. The owner reports successful
+  earlier update/uninstall tests; repository and updater setup already exist.
 - The workflow builds verified installers and stages signed updates as drafts;
   it never publishes automatically. Run a fresh build from intended main, not a
   rerun of an older SHA, and never overwrite a published version.
 
-## Next regular release
+## First official public release
 
 1. Complete the applicable launch checklist, review current notices/source delivery
    and record installer, real Anki, upgrade, uninstall and resource-usage tests.
@@ -27,9 +28,11 @@ authorization. See [launch checklist](LAUNCH-CHECKLIST.md) for unresolved obliga
    Leave GitHub's prerelease checkbox unchecked; set latest when appropriate.
    This is a normal public release with an early-maturity description.
 4. Publish only after the separate owner decision. Verify updater discovery and
-   test a current public 0.13.3 installation upgrading without data/permission loss.
+   test upgrading an earlier 0.13.3 test installation without data/permission loss.
 5. Confirm site version/size/checksum/download links and all guidance match the
-   installer actually served. Keep older-version behavior notes while old downloads exist.
+   installer actually served. Remove earlier test builds from the public download
+   offering before launch, while retaining historical licence notices and evidence.
+   Never replace a previously distributed build's files or retroactively change its terms.
 
 ## Website behavior
 
@@ -37,7 +40,8 @@ The root index.html has no external fonts, analytics or account tokens. It reque
 GitHub's public releases/latest endpoint and accepts only complete regular releases
 with official exact-path assets. Drafts/prereleases are excluded. API failure/rate
 limiting retains a visible manual releases link. The Source code ZIP is not the app.
-The supplied page displays GitHub's installer SHA-256 when available.
+The website accepts official releases starting at 0.13.4; earlier test builds
+cannot activate its installer links. It displays GitHub's installer SHA-256 when available.
 
 If changing inline JavaScript, regenerate the CSP hash with
 `python scripts/update-csp.py`; run `node --test tests/site.test.cjs` afterward.
