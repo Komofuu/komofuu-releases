@@ -1,14 +1,17 @@
 # Security reporting
 
-Do not publish exploit details, credentials, personal clipboard contents or
-private captures in ordinary GitHub issues.
+Publisher: **Luca Andre Ruenholl**, publishing as **Komofuu**.
 
-Use GitHub's **Security → Report a vulnerability** private flow when available:
+Use GitHub’s **Security → Report a vulnerability** private flow:
 https://github.com/Komofuu/komofuu-releases/security/advisories/new
-Availability must be verified by the publisher; this document does not enable it.
-If unavailable, open a public issue asking only for a private reporting channel,
-without including exploit details or sensitive information. A separate verified
-private contact has not yet been supplied; completing it remains a launch item.
+Private vulnerability reporting was verified enabled through GitHub’s public API
+on 29 October 2026.
+
+If that flow is unavailable, email
+[komofuu.contact@gmail.com](mailto:komofuu.contact@gmail.com).
+The same address accepts general privacy questions and requests; see PRIVACY.md.
+Keep exploit details, credentials, personal clipboard contents and private captures
+out of public issues.
 
 Private reports should include the affected app/Windows version, impact and a
 minimal reproduction using synthetic or redacted data. Do not send signing keys,

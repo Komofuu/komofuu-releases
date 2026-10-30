@@ -1,6 +1,6 @@
 # Komofuu third-party credits
 
-Updated 29 October 2026 for the upcoming 0.13.3 early release. This index accompanies
+Updated 30 October 2026 for the prepared 0.13.4 release. This index accompanies
 the exact license texts/copyright notices in each build's LEGAL.txt and installed
 legal resources. It does not replace them or certify redistribution clearance.
 Original Komofuu material follows the proprietary distribution policy, to the
@@ -56,7 +56,7 @@ mean Yomitan application code is bundled. Structured definitions are rendered as
 | Shapely / GEOS | Shapely BSD-3-Clause; GEOS LGPL-2.1 obligations — https://libgeos.org/ |
 | certifi / covered tqdm portions / MPL Rust crates | Applicable MPL-2.0 source and notice requirements; see exact inventory |
 | NumPy, OpenCV, Pillow, protobuf and other packages | Their individual licenses and nested native-component notices |
-| Microsoft Visual C++ runtime | Microsoft's redistribution terms; publisher eligibility still requires confirmation |
+| Microsoft Visual C++ runtime | Microsoft's terms; exact DLL provenance and Community edition evidence are recorded in docs/MICROSOFT-RUNTIME-REVIEW.md; final distribution conditions remain subject to review |
 | zip-rs | zip 9.1.2, MIT; stored/deflate dictionary archive reader — https://github.com/zip-rs/zip2 |
 
 Exact OCR package/model sources and checksums are in the runtime manifest and
@@ -107,3 +107,10 @@ Changes: resized background with Komofuu and dictionary overlays. The composite
 screenshot is licensed under CC BY-SA 3.0. No endorsement is implied.
 See [demo media credits](assets/demos/README.md).
 
+
+## Corresponding source delivery
+
+Use the THIRD-PARTY-SOURCES.zip asset matching the installer version.
+See [source availability](THIRD-PARTY-SOURCES.md) for MPL source delivery and
+GEOS rebuild/replacement instructions. Those independent rights are unaffected
+by the application EULA and repository proprietary scope notice.

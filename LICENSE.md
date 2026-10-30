@@ -62,7 +62,10 @@ licensed components retain their respective terms. The visual-novel demonstratio
 composite `assets/demos/visual-novel-demo.png` remains CC BY-SA 3.0, with its source,
 author, modification and licence attribution in [demo credits](assets/demos/README.md).
 This notice and the application EULA do not restrict those independent rights.
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the matching build notices.
+The third-party source guide has its own limited permission to accompany the
+source archives; see [KOMOFUU-DOCUMENTATION-LICENSE.md](KOMOFUU-DOCUMENTATION-LICENSE.md).
+It does not license the app or other repository material. See
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the matching build notices.
 
 For detailed scope and release status, see [LICENSING.md](LICENSING.md). For
 permission beyond the grants above, contact komofuu.contact@gmail.com.

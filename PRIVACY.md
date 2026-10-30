@@ -1,9 +1,23 @@
 # Komofuu privacy and data flows
 
-Updated 29 October 2026 for the upcoming 0.13.3 early release. Older installers
-can behave differently; consult their matching LEGAL.txt. These technical notes
-still need the publisher identity, verified private privacy contact and applicable
-request procedure before they can be treated as a finalized publisher notice.
+Updated 30 October 2026 for the prepared 0.13.4 release. Older installers
+can behave differently; consult their matching LEGAL.txt.
+
+Publisher: **Luca Andre Ruenholl**, an individual publishing as **Komofuu**,
+operating from Romania.
+Privacy contact: [komofuu.contact@gmail.com](mailto:komofuu.contact@gmail.com).
+
+## Privacy questions and requests
+
+Email the project contact above for privacy questions or requests concerning
+information you have shared with Komofuu. Describe your request and include only
+the information needed to explain it. This address is supplied by the publisher;
+requests are handled as required by applicable law. No additional voluntary
+response-time guarantee is offered.
+
+App data stored only on your device is managed through the controls described
+below; the project cannot remotely access or delete it. For security vulnerabilities,
+use the private reporting route in SECURITY.md, or the project email as a fallback.
 
 ## Definitions, clipboard and pronunciation
 
@@ -31,10 +45,25 @@ vocabulary and Anki media are not deleted; their original data rights still appl
 
 ## Local storage, OCR and companion behavior
 
+The installer records the accepted application EULA and bundled-component terms
+revision locally in
+the current Windows user’s uninstall registry entry. This record is not uploaded;
+normal uninstall removes that entry. New or changed terms require another review.
+
+Configured global mouse shortcuts observe only mouse buttons and the current
+Ctrl/Alt/Shift modifier state. They do not record typed text, keep an input history
+or upload input events. Keyboard shortcuts use Windows shortcut registration.
+
 No Komofuu account, advertising, analytics, telemetry or developer-operated upload
 server is implemented. Preferences, saved words, dictionary indexes and WebView
-profile data are stored in this Windows account's application profile. They are
+notes and profile data are stored in this Windows account's application profile. They are
 not an encrypted vault. Someone with access to that account may read them.
+
+Notes keep their text, title, transparency, pin state and window position in a
+bounded local notes.json file in the app-data folder. They are not uploaded or
+sent to Anki, OCR or other services. Closing a note keeps it in the Notes list;
+Delete note removes it from active storage. Updates preserve notes and the
+uninstaller’s app-data deletion includes them. Deletion is not secure erasure.
 
 PaddleOCR processes requested captures locally. The OCR border indicates readiness;
 scanning normally starts only on your shortcut or Scan screen now. Continuous

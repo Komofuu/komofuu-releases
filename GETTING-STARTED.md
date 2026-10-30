@@ -1,6 +1,6 @@
 # Getting started with Komofuu
 
-These instructions describe upcoming 0.13.3 and newer. Older downloads can still
+These instructions describe 0.13.3 and newer; 0.13.4 fixes are being prepared. Older downloads can still
 have optional online dictionary/recording features; read their matching LEGAL.txt.
 
 ## Install and reveal Komofuu
