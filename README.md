@@ -39,6 +39,7 @@ contains this downloads repository, not the application source or installer.
 | --- | --- |
 | Komofuu_…_x64-setup.exe | Installer — download/run this file |
 | LEGAL.txt | Matching legal information and third-party notices |
+| THIRD-PARTY-SOURCES.zip | Matching covered third-party sources; not needed to run the app |
 | .exe.sig | Updater verification signature, not an installer |
 | latest.json | Updater metadata, not an installer |
 
@@ -99,3 +100,8 @@ Optional Lens, GitHub updates and explicitly opened project pages have their own
 connections/policies. No provider endorsement or affiliation is claimed.
 
 
+
+See [third-party source availability](THIRD-PARTY-SOURCES.md) for matching
+source archives and component replacement instructions. Current public 0.13.3
+retains its supplied MIT terms; the prepared proprietary EULA applies to new
+application copies expressly supplied with it.

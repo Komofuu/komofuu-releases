@@ -37,6 +37,10 @@ Contributors' rights, mandatory law, GitHub platform permissions and independent
 third-party licences remain unaffected. Viewing the website is not acceptance of
 the application EULA. AI assistance does not establish copyright in every element.
 
+The third-party source guide has a separate, limited permission for redistribution
+with covered sources; see KOMOFUU-DOCUMENTATION-LICENSE.md. It does not extend
+to the application or other repository material.
+
 ## Third-party material and demo media
 
 Libraries, adapted reference code, OCR models, runtimes, fonts, imported dictionary

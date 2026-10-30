@@ -9,7 +9,7 @@ not authorize publishing or certify legal/security clearance.
 ## Already established
 
 - Public downloads/support repository: Komofuu/komofuu-releases; app source private.
-- Public 0.13.1 installer exists. Older statements that no public release/updater
+- Public 0.13.3 installer exists. Older statements that no public release/updater
   exists are superseded. The latest source is not automatically the latest installer.
 - Bundled PaddleOCR runtime/models, no separate Python requirement for users.
 - Signed updater workflow, version/signature verification and draft-only staging.
@@ -27,17 +27,20 @@ not authorize publishing or certify legal/security clearance.
   repository, subject to their respective scope notices and version applicability.
   Earlier MIT grants are preserved. This does not assert exclusive copyright or
   clear third-party obligations.
-- [ ] Publisher identity and verified private privacy/security contact; test GitHub
-  private reporting availability. Do not invent contact details or publish personal
-  details without the owner's choice.
-- [ ] GEOS/LGPL exact corresponding source/build and replacement compliance.
-- [ ] MPL source locations/delivery for covered components actually shipped.
-- [ ] Microsoft runtime publisher eligibility and exact REDIST files.
+- [x] Publisher Luca Andre Ruenholl and contact komofuu.contact@gmail.com supplied.
+  Privacy/security request instructions are synchronized. Private reporting was
+  verified enabled on 29 October 2026; email remains the fallback.
+- [x] GEOS source rebuilding/replacement and covered MPL source collection passed
+  Windows pre-build CI; see THIRD-PARTY-SOURCES.md. Review and retain the exact
+  final build's archive alongside its installer.
+- [x] Nine Microsoft runtime DLLs have exact provenance and the owner's Community
+  edition evidence is recorded. Final component/distribution conditions and
+  installed acceptance behaviour still require review.
 - [ ] Review all inventory warnings and bundled model/native NOTICE requirements
   for the final Windows build. The 0.13.1 workflow collected 588 records/46 review
   items; that historic count is not the next build's clearance or expected count.
-- [ ] Document the retained unofficial Lens terms uncertainty separately from
-  user upload consent and outage acceptance. Optional/manual does not prove approval.
+- [x] Retained unofficial Lens terms uncertainty is documented separately from
+  upload consent/outage acceptance. This is not evidence of provider approval.
 - [ ] Review older distributions separately: removing the former online dictionary
   service does not change terms/data already distributed by 0.13.1 or earlier.
 
@@ -57,7 +60,7 @@ not authorize publishing or certify legal/security clearance.
 - [ ] Real AnkiConnect: connect/disconnect, starter/existing note types, mappings,
   duplicates, screenshots on/off, interrupted requests and ambiguous outcomes.
   Confirm no new recording attachment and existing cards/media remain intact.
-- [ ] Update current public 0.13.1 to final new installer through the updater;
+- [ ] Update current public 0.13.3 to final new installer through the updater;
   preserve saved words, dictionaries, preferences and disabled online permissions.
 - [ ] Cancelled and complete uninstall, data-removal checkbox, locked files and
   preservation of exports/Anki/other accounts/shared Windows components.
@@ -75,8 +78,8 @@ not authorize publishing or certify legal/security clearance.
   and who can publish. Do not expose secrets in websites, logs, source or test assets.
 - [ ] Windows publisher signing is recommended; separate from existing updater
   signatures. Do not advise users to disable antivirus to bypass a detection.
-- [ ] Website/docs match the version actually offered; until 0.13.3 is published,
-  show the upcoming-behavior notice and link each installer's matching LEGAL.txt.
+- [ ] Website/docs match the version actually offered; until 0.13.4 is published,
+  show the upcoming-version notice and link each installer's matching LEGAL.txt.
 - [ ] Publish a regular release titled **Komofuu <version> — Early Release**, leave
   prerelease unchecked and set latest when appropriate. Current feed/site exclude
   prereleases. Publishing is a separate owner-authorized step after readiness review.
