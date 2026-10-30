@@ -1,15 +1,15 @@
 # Public early-release checklist
 
-Updated 30 October 2026 for the prepared licence transition. This is a normal public release
+Updated 30 October 2026 for Komofuu 0.13.5. This is a normal public release
 labelled **Early release**, not a GitHub prerelease/beta channel. Future application copies expressly supplied with the completed EULA use
 proprietary freeware terms, subject to LICENSING.md. Earlier MIT grants remain
-intact. Version 0.13.4 is being prepared as the first official public release. This checklist does
+intact. Version 0.13.5 is the first official public release. This checklist does
 not authorize publishing or certify legal/security clearance.
 
 ## Already established
 
 - Public downloads/support repository: Komofuu/komofuu-releases; app source private.
-- Version 0.13.4 is the first official public launch. Earlier testing distributions
+- Version 0.13.5 is the first official public launch. Earlier testing distributions
   are not the launch download. Repository/updater setup already exists; a source
   change is not automatically a published installer.
 - Bundled PaddleOCR runtime/models, no separate Python requirement for users.
@@ -79,14 +79,14 @@ not authorize publishing or certify legal/security clearance.
   and who can publish. Do not expose secrets in websites, logs, source or test assets.
 - [ ] Windows publisher signing is recommended; separate from existing updater
   signatures. Do not advise users to disable antivirus to bypass a detection.
-- [ ] Website/docs match the version actually offered; until 0.13.4 is published,
-  show the upcoming-version notice and link each installer's matching LEGAL.txt.
+- [ ] Website/docs match the version actually offered. Keep evergreen availability
+  messages for missing downloads and link each installer's matching LEGAL.txt.
 - [ ] Publish a regular release titled **Komofuu <version> — Early Release**, leave
   prerelease unchecked and set latest when appropriate. Current feed/site exclude
   prereleases. Publishing is a separate owner-authorized step after readiness review.
 - [ ] Remove earlier test builds from the public download offering before launch;
   retain historical licence notices and prior-distribution evidence. Confirm the
-  website does not offer a test build while 0.13.4 is still a draft.
+  website does not offer a test build while 0.13.5 is still a draft.
 - [ ] Recheck live mobile/desktop page and direct downloads. Future releases repeat
   notice/security/upgrade checks and document known issues/support scope.
 
@@ -94,21 +94,23 @@ No evidence is marked complete merely because a document or checkbox exists.
 No new company, paid hosting, custom domain or compulsory beta label is assumed.
 
 
-## Prepared EULA transition (30 October 2026)
+## EULA and historical permissions (30 October 2026)
 
-Future application distributions are prepared for proprietary freeware terms,
-with earlier MIT grants and third-party rights preserved. The earlier MIT status
-above describes the historical release preparation, not a restriction on the
-publisher offering future copies under different terms.
+Application copies expressly supplied with the proprietary freeware EULA use
+those terms. Earlier MIT grants and third-party rights remain preserved; see
+LICENSING.md for the scope of each distribution.
 
-- [x] Identify publisher Luca Andre Ruenholl in the prepared EULA and copy the
+- [x] Identify publisher Luca Andre Ruenholl in the EULA and copy the
   canonical LICENSE.md from application PR #20 to public EULA.md. Installer
   resources were regenerated in that branch; final Windows tests remain below.
-- [ ] Determine required publisher/address disclosures, verify third-party rights,
-  and test changed-term acceptance/cancellation before publishing a new installer.
+- [x] Assess publisher disclosure for the confirmed present personal, entirely
+  noncommercial launch. Reassess before donations or other funding/business
+  activity; no address or company information has been invented.
+- [ ] Verify final third-party distribution conditions and test changed-term
+  acceptance/cancellation before publishing the installer.
 - [x] Align website/documentation proprietary scope and preserve demo CC BY-SA attribution; preserve
-  prior installers and their matching LEGAL.txt. Do not imply that this draft is
-  already the licence of a published download.
+  prior installers and their matching LEGAL.txt. Each installer must retain the
+  licence information actually supplied with it.
 
 
 

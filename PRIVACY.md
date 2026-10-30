@@ -1,6 +1,6 @@
 # Komofuu privacy and data flows
 
-Updated 30 October 2026 for the prepared 0.13.4 release. Older installers
+Updated 30 October 2026 for Komofuu 0.13.5 release. Older installers
 can behave differently; consult their matching LEGAL.txt.
 
 Publisher: **Luca Andre Ruenholl**, an individual publishing as **Komofuu**,
@@ -18,6 +18,38 @@ response-time guarantee is offered.
 App data stored only on your device is managed through the controls described
 below; the project cannot remotely access or delete it. For security vulnerabilities,
 use the private reporting route in SECURITY.md, or the project email as a fallback.
+
+## Support correspondence and reports
+
+For messages and reports sent to the project, the publisher identified above acts
+as controller. This can include your email address or GitHub username, message,
+app/device details and attachments you choose to provide. It does not give the
+publisher access to app data kept only on your device.
+
+The purpose is to answer requests, investigate bugs and security reports, and
+protect the project and users. The legal basis is legitimate interests in providing
+support and maintaining security (GDPR Article 6(1)(f)); responding to statutory
+requests also relies on legal obligations where applicable (Article 6(1)(c)).
+Providing an ordinary support message is optional; without enough information
+the project may be unable to investigate it. There is no automated decision-making
+or profiling using support correspondence.
+
+Email passes through Google, which hosts the project Gmail inbox. GitHub handles
+issues and private vulnerability reports; public issues and attachments are visible
+to others. Providers can process information internationally. See Google's privacy
+policy and transfer frameworks (https://policies.google.com/privacy/frameworks)
+and GitHub's privacy statement linked below for their arrangements. No exclusive
+EU storage or separate signed processor agreement is claimed.
+
+Correspondence is retained only as needed to handle the request, follow-up,
+security investigation and any applicable legal obligations or claims. Retention
+depends on the issue's status, sensitivity and continuing need; unnecessary private
+attachments should be removed rather than retained as general project history.
+
+Contact the privacy email above to exercise applicable rights of access,
+rectification, erasure, restriction, portability or objection. These rights have
+legal conditions and exceptions. You may complain to Romania's ANSPDCP
+(https://www.dataprotection.ro/) or another competent EU supervisory authority.
 
 ## Definitions, clipboard and pronunciation
 
