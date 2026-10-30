@@ -73,3 +73,13 @@ test('dictionary guidance supports other compatible imports and distinguishes th
  assert.match(read('GETTING-STARTED.md'),/No new recording attachment/);
 });
 
+
+
+test('application transition and website MIT scope remain distinct',()=>{
+ const path=require('node:path'),read=name=>fs.readFileSync(path.join(__dirname,'..',name),'utf8');
+ assert.match(read('EULA.md'),/Komofuu Proprietary Freeware License/);
+ assert.match(read('EULA.md'),/\*\*Publisher:\*\* .+, an individual publishing under the project name Komofuu/);
+ assert.match(read('LICENSE.md'),/^MIT License/);
+ assert.match(read('LICENSING.md'),/Website and documentation: separate MIT scope/);
+ assert.match(html,/EULA.md/);assert.match(html,/pending|prepared/);
+});

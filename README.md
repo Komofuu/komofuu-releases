@@ -7,9 +7,12 @@
 Komofuu keeps you company while you read Japanese. Scan visible text, look up
 words, see readings above kanji, save vocabulary and send cards to Anki.
 This is the official public downloads, website and support repository.
-Original code and assets are offered under the [MIT License](LICENSE.md). The
-application source repository remains private. See [license scope](LICENSING.md);
-third-party components/data keep their own licenses.
+The application is preparing a transition to the [Proprietary Freeware EULA](EULA.md)
+for future installers expressly supplied under it. That transition is not yet a
+published release; the prepared text still needs the publisher's full legal name.
+Earlier MIT permissions and third-party rights remain unaffected. Website code and
+documentation keep their separate [MIT License](LICENSE.md). The application source
+repository remains private. See [licence scope](LICENSING.md).
 
 **Version note:** this guide describes the upcoming **0.13.3** and newer local-only
 dictionary behavior. The installer currently offered may be older. Earlier releases
