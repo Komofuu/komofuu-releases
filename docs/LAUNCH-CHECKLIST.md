@@ -23,9 +23,10 @@ not authorize publishing or certify legal/security clearance.
 
 ## Not complete — owner/external decisions and evidence
 
-- [x] MIT selected for original code/assets; standard license and scope are included
-  in the source, public repository, app About screen and next installer legal resources.
-  This does not assert exclusive copyright or clear third-party obligations.
+- [x] Proprietary distribution policy selected for the application and public
+  repository, subject to their respective scope notices and version applicability.
+  Earlier MIT grants are preserved. This does not assert exclusive copyright or
+  clear third-party obligations.
 - [ ] Publisher identity and verified private privacy/security contact; test GitHub
   private reporting availability. Do not invent contact details or publish personal
   details without the owner's choice.
@@ -98,7 +99,16 @@ publisher offering future copies under different terms.
   resources were regenerated in that branch; final Windows tests remain below.
 - [ ] Determine required publisher/address disclosures, verify third-party rights,
   and test changed-term acceptance/cancellation before publishing a new installer.
-- [ ] Keep website MIT scope and any demo CC BY-SA attribution separate; preserve
+- [x] Align website/documentation proprietary scope and preserve demo CC BY-SA attribution; preserve
   prior installers and their matching LEGAL.txt. Do not imply that this draft is
   already the licence of a published download.
 
+
+
+## Public repository licence alignment (30 October 2026)
+
+The root licence now states the proprietary distribution policy instead of a
+blanket MIT grant. README, website FAQ, publishing guide and credits agree.
+The historical MIT notice remains available for copies and portions it covers.
+The application EULA is unchanged; this repository update does not publish or
+relicense an existing installer. Third-party and demo licences remain independent.

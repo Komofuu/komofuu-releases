@@ -3,8 +3,10 @@
 Updated 29 October 2026 for the upcoming 0.13.3 early release. This index accompanies
 the exact license texts/copyright notices in each build's LEGAL.txt and installed
 legal resources. It does not replace them or certify redistribution clearance.
-Original Komofuu code and assets are offered under MIT, to the extent rights are
-held by the licensors. See LICENSE.md and LICENSING.md for the grant and scope.
+Original Komofuu material follows the proprietary distribution policy, to the
+extent the Publisher has the necessary rights. See LICENSE.md, EULA.md and
+LICENSING.md for scope and version applicability. Earlier MIT grants remain valid;
+this notice does not change the terms supplied with existing installers.
 Third-party components and data retain their own licenses.
 
 ## User-imported dictionary data
@@ -104,3 +106,4 @@ under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 Changes: resized background with Komofuu and dictionary overlays. The composite
 screenshot is licensed under CC BY-SA 3.0. No endorsement is implied.
 See [demo media credits](assets/demos/README.md).
+

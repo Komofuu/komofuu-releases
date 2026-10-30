@@ -21,16 +21,21 @@ acquired under MIT. New terms do not withdraw those grants, rewrite previous
 LEGAL.txt assets or change third-party licences. Read the exact notices supplied
 with the particular installer you download.
 
-## Website and documentation: separate MIT scope
+## Website and documentation: proprietary distribution
 
-The original website code and project documentation in this public repository
-remain under [LICENSE.md](LICENSE.md), to the extent rights are held. This does
-not grant MIT permissions to application installers, their bundled components or
-the application EULA. EULA.md states the terms for application use, not the licence
-for this website. Viewing the website does not accept that application agreement.
+The public repository follows the application's proprietary distribution policy.
+[LICENSE.md](LICENSE.md) sets out the current website/documentation permissions
+and reserved rights; [EULA.md](EULA.md) governs application copies supplied under it.
+There is no new blanket MIT grant for original website code, documentation or
+assets. You can still use the official website, read and retain documentation for
+using the app, and share official links without paying a licence fee.
 
-AI assistance does not establish exclusive copyright or protection for every
-component. The licence scope covers only rights the licensor can grant.
+This is a prospective change. Earlier MIT grants remain valid for the copies and
+portions they cover, including unchanged material independently available under
+MIT. See the [historical MIT notice](docs/legacy/MIT-LICENSE-before-proprietary-transition.txt).
+Contributors' rights, mandatory law, GitHub platform permissions and independent
+third-party licences remain unaffected. Viewing the website is not acceptance of
+the application EULA. AI assistance does not establish copyright in every element.
 
 ## Third-party material and demo media
 
@@ -40,7 +45,7 @@ The application EULA does not restrict rights granted by LGPL, MPL or other
 independent licences. See THIRD_PARTY_NOTICES.md and matching build notices.
 
 Any visual-novel demo composite using Korenanteeroge.png remains separately
-CC BY-SA 3.0; the application EULA and website MIT grant do not override that
+CC BY-SA 3.0; the application EULA and repository proprietary notice do not override that
 licence. Preserve its source, author, modification and licence attribution wherever
 it is displayed. Third-party trademarks and provider endorsement are not granted.
 
@@ -48,4 +53,5 @@ GitHub's source archive for this repository contains the website/docs, not the
 private application source or the Windows installer. Required third-party source
 availability is a separate obligation. Licence wording alone is not evidence that
 all distribution or final Windows checks have passed.
+
 

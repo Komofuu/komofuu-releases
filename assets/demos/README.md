@@ -13,5 +13,6 @@ used under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 Changes: resized background with Komofuu and dictionary overlays. This composite
 screenshot is licensed under CC BY-SA 3.0. No endorsement is implied.
 
-The application EULA and website MIT licence do not override this media licence.
+The application EULA and repository proprietary notice do not override this media licence.
 Preserve the attribution, modification notice and licence link when sharing it.
+

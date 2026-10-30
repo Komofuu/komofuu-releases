@@ -1,7 +1,7 @@
 # Publishing Komofuu early releases
 
 The source stays private; this public repository hosts downloads, website and support.
-Original code/assets are offered under MIT; see LICENSING.md. This document is preparation, not publication
+Original material follows the proprietary distribution policy, preserving earlier MIT grants and third-party rights; see LICENSING.md. This document is preparation, not publication
 authorization. See [launch checklist](LAUNCH-CHECKLIST.md) for unresolved obligations.
 
 ## Established setup
@@ -45,8 +45,11 @@ Do not add a token to reveal draft/private releases or link a private app reposi
 
 ## Remaining owner inputs
 
-- Original code/assets: MIT selected. Retain LICENSE.md, LICENSING.md and separate
-  third-party notices in the public repository and next build.
+- Original material: proprietary policy selected for new distributions, preserving
+  earlier MIT grants and independent rights. Keep the public repository scope notice,
+  application EULA and required third-party notices with their correct distributions.
+  Public LICENSE.md describes repository scope; the app repository LICENSE.md is
+  its canonical EULA. Do not substitute one for the other in installer generation.
 - Publisher identity and verified private privacy/security contact. Verify GitHub
   private vulnerability reporting before directing sensitive reports there.
 - GEOS/Microsoft/MPL/model/native-license evidence and review of all inventory warnings.
@@ -56,3 +59,4 @@ Do not add a token to reveal draft/private releases or link a private app reposi
 
 Publisher signing for Windows is recommended, separate from updater signatures.
 Never tell users to disable antivirus or assume every warning is a false positive.
+

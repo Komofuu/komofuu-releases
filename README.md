@@ -10,9 +10,10 @@ This is the official public downloads, website and support repository.
 The application is preparing a transition to the [Proprietary Freeware EULA](EULA.md)
 for future installers expressly supplied under it. That transition is not yet a
 published release. The prepared EULA identifies publisher Luca Andre Ruenholl.
-Earlier MIT permissions and third-party rights remain unaffected. Website code and
-documentation keep their separate [MIT License](LICENSE.md). The application source
-repository remains private. See [licence scope](LICENSING.md).
+This public repository follows the same proprietary distribution policy: see
+[LICENSE.md](LICENSE.md) for website/documentation permissions and [licence scope](LICENSING.md)
+for exceptions. Earlier MIT grants and third-party rights remain unaffected.
+The application source repository remains private.
 
 **Version note:** this guide describes **0.13.3** and newer local-only
 dictionary behavior. The installer currently offered may be older. Earlier releases
@@ -96,4 +97,5 @@ accounts and shared Windows components are kept. Deletion is not secure erasure.
 No Komofuu account, developer upload server or app analytics is implemented.
 Optional Lens, GitHub updates and explicitly opened project pages have their own
 connections/policies. No provider endorsement or affiliation is claimed.
+
 

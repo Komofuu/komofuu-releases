@@ -75,11 +75,16 @@ test('dictionary guidance supports other compatible imports and distinguishes th
 
 
 
-test('application transition and website MIT scope remain distinct',()=>{
+test('application and repository proprietary scope preserve earlier and third-party rights',()=>{
  const path=require('node:path'),read=name=>fs.readFileSync(path.join(__dirname,'..',name),'utf8');
  assert.match(read('EULA.md'),/Komofuu Proprietary Freeware License/);
  assert.match(read('EULA.md'),/\*\*Publisher:\*\* .+, an individual publishing under the project name Komofuu/);
- assert.match(read('LICENSE.md'),/^MIT License/);
- assert.match(read('LICENSING.md'),/Website and documentation: separate MIT scope/);
+ assert.match(read('LICENSE.md'),/^# Komofuu Proprietary Freeware/);
+ assert.match(read('LICENSE.md'),/does not revoke, narrow or override permissions/);
+ assert.match(read('LICENSE.md'),/CC BY-SA 3\.0/);
+ assert.match(read('docs/legacy/MIT-LICENSE-before-proprietary-transition.txt'),/^MIT License/);
+ assert.match(read('LICENSING.md'),/Website and documentation: proprietary distribution/);
+ assert.doesNotMatch(html,/retain their separate MIT licence/);
  assert.match(html,/EULA.md/);assert.match(html,/pending|prepared/);
 });
+
