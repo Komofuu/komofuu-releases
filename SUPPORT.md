@@ -17,7 +17,7 @@ clipboard history. For vulnerabilities, see [Security reporting](SECURITY.md).
 
 - **Only Source code appears:** that archive is not the app. Look for the `.exe`
   under a published release's Assets. A release without an installer is incomplete.
-- **No public release appears:** the first public installer is still being prepared.
+- **No official release appears:** the first official public release, 0.13.4, is being prepared.
   Drafts cannot be downloaded by public visitors or detected by the updater.
 - **OCR enabled but nothing happens:** the pink border means ready. Press your
   configured scan shortcut; enabling OCR does not start a scan.
@@ -41,8 +41,8 @@ clipboard history. For vulnerabilities, see [Security reporting](SECURITY.md).
 
 ## Version-specific behavior
 
-The local-only dictionary instructions apply to 0.13.3 and newer. Older releases
-can include online lookup/audio; consult their matching LEGAL.txt. For missing
+These instructions describe 0.13.4, the first official public release, and later
+versions. Definitions come from your imported local dictionaries. For missing
 definitions, check that a definition dictionary is enabled (frequency alone is
 insufficient). For Listen errors, install a Japanese Windows voice. New Anki cards
 receive no recording attachment; existing notes/media are kept.

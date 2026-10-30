@@ -6,9 +6,9 @@ const crypto=require('node:crypto');
 const html=fs.readFileSync(require('node:path').join(__dirname,'../index.html'),'utf8');
 const script=html.match(/<script>([\s\S]*?)<\/script>/)[1];
 const source=script.slice(0,script.indexOf('const reducedMotion'))+script.slice(script.indexOf('// Only complete,'));
-function release(){
- const tag='v0.11.2';
- return {tag_name:tag,draft:false,prerelease:false,published_at:'2026-10-27T10:00:00Z',body:'<img src=x onerror=alert(1)>',assets:['Komofuu_0.11.2_x64-setup.exe','Komofuu_0.11.2_x64-setup.exe.sig','LEGAL.txt','latest.json'].map(name=>({name,state:'uploaded',size:1234,digest:'sha256:'+'a'.repeat(64),browser_download_url:`https://github.com/Komofuu/komofuu-releases/releases/download/${tag}/${name}`}))};
+function release(version='0.13.4'){
+ const tag='v'+version;
+ return {tag_name:tag,draft:false,prerelease:false,published_at:'2026-10-30T10:00:00Z',body:'<img src=x onerror=alert(1)>',assets:[`Komofuu_${version}_x64-setup.exe`,`Komofuu_${version}_x64-setup.exe.sig`,'LEGAL.txt','latest.json'].map(name=>({name,state:'uploaded',size:1234,digest:'sha256:'+'a'.repeat(64),browser_download_url:`https://github.com/Komofuu/komofuu-releases/releases/download/${tag}/${name}`}))};
 }
 async function run(response){
  const nodes=new Map();
@@ -35,22 +35,22 @@ test('drafts, prereleases, incomplete, duplicate and empty assets are never dire
  let r=release();r.assets.pop();variants.push(r);
  r=release();r.assets.push(r.assets[0]);variants.push(r);
  r=release();r.assets[0].size=0;variants.push(r);
- r=release();r.tag_name='v0.11.3';variants.push(r);
+ r=release();r.tag_name='v0.13.5';variants.push(r);
  for(const value of variants){const {get}=await run({ok:true,status:200,json:async()=>value});assert.equal(get('hero-dl').href,undefined);}
 });
 test('lookalike hosts, other repositories, query strings and credentialed URLs are rejected',async()=>{
  const bad=[
- 'https://github.com.evil.example/Komofuu/komofuu-releases/releases/download/v0.11.2/Komofuu_0.11.2_x64-setup.exe',
- 'https://github.com/other/downloads/releases/download/v0.11.2/Komofuu_0.11.2_x64-setup.exe',
- 'https://github.com/Komofuu/komofuu-releases/releases/download/v0.11.2/Komofuu_0.11.2_x64-setup.exe?redirect=elsewhere',
- 'https://user:password@github.com/Komofuu/komofuu-releases/releases/download/v0.11.2/Komofuu_0.11.2_x64-setup.exe',
+ 'https://github.com.evil.example/Komofuu/komofuu-releases/releases/download/v0.13.4/Komofuu_0.13.4_x64-setup.exe',
+ 'https://github.com/other/downloads/releases/download/v0.13.4/Komofuu_0.13.4_x64-setup.exe',
+ 'https://github.com/Komofuu/komofuu-releases/releases/download/v0.13.4/Komofuu_0.13.4_x64-setup.exe?redirect=elsewhere',
+ 'https://user:password@github.com/Komofuu/komofuu-releases/releases/download/v0.13.4/Komofuu_0.13.4_x64-setup.exe',
  'javascript:alert(1)'];
  for(const url of bad){const r=release();r.assets[0].browser_download_url=url;const {get}=await run({ok:true,status:200,json:async()=>r});assert.equal(get('hero-dl').href,undefined);}
 });
 test('no public release and API failures keep a clear manual-release fallback',async()=>{
  for(const response of [{ok:false,status:404},{ok:false,status:403},new Error('offline')]){
   const {get}=await run(response);assert.equal(get('hero-dl').href,undefined);
-  assert.match(get('dl-status').textContent,/first public build|couldn’t check/);
+  assert.match(get('dl-status').textContent,/first official public release|couldn’t check/);
  }
  assert.match(html,/id="rel-link" href="https:\/\/github.com\/Komofuu\/komofuu-releases\/releases"/);
 });
@@ -68,9 +68,25 @@ test('dictionary guidance supports other compatible imports and distinguishes th
   assert.ok(html.includes(url));assert.ok(guide.includes(url));
  }
  assert.match(guide,/other compatible Yomitan format-3 dictionaries/);
- assert.match(html,/installer offered above may be older/);
+ assert.match(html,/0\.13\.4 is being prepared as the first official public release/);
+ for(const file of ['README.md','GETTING-STARTED.md','DICTIONARIES.md','SUPPORT.md'])assert.doesNotMatch(read(file),/0\.13\.3/);
+ assert.doesNotMatch(html,/0\.13\.3/);
  assert.match(read('PRIVACY.md'),/on by default unless you previously disabled it/);
  assert.match(read('GETTING-STARTED.md'),/No new recording attachment/);
+});
+
+test('earlier test builds cannot activate launch downloads but official launch and future versions can',async()=>{
+ for(const version of ['0.11.2','0.12.99','0.13.3']){
+  const {get}=await run({ok:true,status:200,json:async()=>release(version)});
+  assert.equal(get('hero-dl').href,undefined);
+  assert.equal(get('dl-list').children.length,0);
+  assert.equal(get('release-notes').hidden,true);
+  assert.match(get('dl-status').textContent,/first official public release/);
+ }
+ for(const version of ['0.13.4','0.13.5','0.14.0','1.0.0']){
+  const r=release(version),{get}=await run({ok:true,status:200,json:async()=>r});
+  assert.equal(get('hero-dl').href,r.assets[0].browser_download_url);
+ }
 });
 
 

@@ -7,18 +7,17 @@
 Komofuu keeps you company while you read Japanese. Scan visible text, look up
 words, see readings above kanji, save vocabulary and send cards to Anki.
 This is the official public downloads, website and support repository.
-The application is preparing a transition to the [Proprietary Freeware EULA](EULA.md)
-for future installers expressly supplied under it. That transition is not yet a
-published release. The prepared EULA identifies publisher Luca Andre Ruenholl.
+Komofuu is free to use under its [Proprietary Freeware EULA](EULA.md).
+The application source is private. The first official installer is being prepared
+for release under that EULA by publisher Luca Andre Ruenholl.
 This public repository follows the same proprietary distribution policy: see
 [LICENSE.md](LICENSE.md) for website/documentation permissions and [licence scope](LICENSING.md)
-for exceptions. Earlier MIT grants and third-party rights remain unaffected.
-The application source repository remains private.
+for exceptions and independently licensed material.
 
-**Version note:** this guide describes **0.13.3** and newer local-only
-dictionary behavior. The installer currently offered may be older. Earlier releases
-can include optional online dictionary/audio features; read that release's notes
-and matching LEGAL.txt. Updating this page does not publish a new installer.
+**First official public release: 0.13.4 — in preparation.** This guide describes
+that release. The website will offer its installer once it is published and the
+required release files are available. Updating these documents does not publish
+an installer.
 
 ## Demonstrations
 
@@ -102,6 +101,4 @@ connections/policies. No provider endorsement or affiliation is claimed.
 
 
 See [third-party source availability](THIRD-PARTY-SOURCES.md) for matching
-source archives and component replacement instructions. Current public 0.13.3
-retains its supplied MIT terms; the prepared proprietary EULA applies to new
-application copies expressly supplied with it.
+source archives and component replacement instructions.

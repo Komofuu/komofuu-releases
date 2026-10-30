@@ -3,14 +3,15 @@
 Updated 30 October 2026 for the prepared licence transition. This is a normal public release
 labelled **Early release**, not a GitHub prerelease/beta channel. Future application copies expressly supplied with the completed EULA use
 proprietary freeware terms, subject to LICENSING.md. Earlier MIT grants remain
-intact. The checklist below also records prior 0.13.3 release preparation. This checklist does
+intact. Version 0.13.4 is being prepared as the first official public release. This checklist does
 not authorize publishing or certify legal/security clearance.
 
 ## Already established
 
 - Public downloads/support repository: Komofuu/komofuu-releases; app source private.
-- Public 0.13.3 installer exists. Older statements that no public release/updater
-  exists are superseded. The latest source is not automatically the latest installer.
+- Version 0.13.4 is the first official public launch. Earlier testing distributions
+  are not the launch download. Repository/updater setup already exists; a source
+  change is not automatically a published installer.
 - Bundled PaddleOCR runtime/models, no separate Python requirement for users.
 - Signed updater workflow, version/signature verification and draft-only staging.
   Owner reports a successful earlier update and uninstall test; retain that evidence.
@@ -60,7 +61,7 @@ not authorize publishing or certify legal/security clearance.
 - [ ] Real AnkiConnect: connect/disconnect, starter/existing note types, mappings,
   duplicates, screenshots on/off, interrupted requests and ambiguous outcomes.
   Confirm no new recording attachment and existing cards/media remain intact.
-- [ ] Update current public 0.13.3 to final new installer through the updater;
+- [ ] Upgrade an earlier 0.13.3 test installation to the final installer;
   preserve saved words, dictionaries, preferences and disabled online permissions.
 - [ ] Cancelled and complete uninstall, data-removal checkbox, locked files and
   preservation of exports/Anki/other accounts/shared Windows components.
@@ -83,6 +84,9 @@ not authorize publishing or certify legal/security clearance.
 - [ ] Publish a regular release titled **Komofuu <version> — Early Release**, leave
   prerelease unchecked and set latest when appropriate. Current feed/site exclude
   prereleases. Publishing is a separate owner-authorized step after readiness review.
+- [ ] Remove earlier test builds from the public download offering before launch;
+  retain historical licence notices and prior-distribution evidence. Confirm the
+  website does not offer a test build while 0.13.4 is still a draft.
 - [ ] Recheck live mobile/desktop page and direct downloads. Future releases repeat
   notice/security/upgrade checks and document known issues/support scope.
 
