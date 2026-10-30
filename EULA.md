@@ -4,7 +4,7 @@
 **Version 1.0 — October 30, 2026**
 
 **Software:** Komofuu  
-**Publisher:** [YOUR FULL LEGAL NAME], an individual publishing under the project name Komofuu (the "Publisher").
+**Publisher:** Luca Andre Ruenholl, an individual publishing under the project name Komofuu (the "Publisher").
 
 **Country of operation:** Romania
 

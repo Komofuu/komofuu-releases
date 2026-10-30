@@ -9,15 +9,21 @@ words, see readings above kanji, save vocabulary and send cards to Anki.
 This is the official public downloads, website and support repository.
 The application is preparing a transition to the [Proprietary Freeware EULA](EULA.md)
 for future installers expressly supplied under it. That transition is not yet a
-published release; the prepared text still needs the publisher's full legal name.
+published release. The prepared EULA identifies publisher Luca Andre Ruenholl.
 Earlier MIT permissions and third-party rights remain unaffected. Website code and
 documentation keep their separate [MIT License](LICENSE.md). The application source
 repository remains private. See [licence scope](LICENSING.md).
 
-**Version note:** this guide describes the upcoming **0.13.3** and newer local-only
+**Version note:** this guide describes **0.13.3** and newer local-only
 dictionary behavior. The installer currently offered may be older. Earlier releases
 can include optional online dictionary/audio features; read that release's notes
 and matching LEGAL.txt. Updating this page does not publish a new installer.
+
+## Demonstrations
+
+The [website](https://komofuu.github.io/komofuu-releases/#demo) includes a manga
+OCR recording and screenshots of visual-novel lookup, clipboard lookup and saved
+words. See [demo credits](assets/demos/README.md) for media attribution and scope.
 
 ## Download and install
 
@@ -90,3 +96,4 @@ accounts and shared Windows components are kept. Deletion is not secure erasure.
 No Komofuu account, developer upload server or app analytics is implemented.
 Optional Lens, GitHub updates and explicitly opened project pages have their own
 connections/policies. No provider endorsement or affiliation is claimed.
+

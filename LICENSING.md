@@ -9,10 +9,12 @@ apply only within its lawful scope, with exceptions for independent licences and
 mandatory law. The app's source repository remains private.
 
 This is not an announcement that a new installer has been published. The prepared
-EULA still needs the publisher's full legal name. Before publishing, complete the
-canonical LICENSE.md in the private application repository, regenerate installer
-legal resources and copy the exact completed text to this repository's EULA.md.
-Determine any additional required publisher/address disclosures separately.
+EULA identifies Luca Andre Ruenholl as publisher and matches LICENSE.md in
+application PR #20 (commit 1accdb323abf7a95f71e4c96ade87148f65ab7b5).
+Installer legal resources were regenerated in that application branch. Before
+publishing, verify that the exact installer includes these terms and complete
+the remaining Windows and distribution checks. Determine any additional required
+publisher/address disclosures separately.
 
 Earlier copies retain their accompanying licence and any permissions already
 acquired under MIT. New terms do not withdraw those grants, rewrite previous
@@ -46,3 +48,4 @@ GitHub's source archive for this repository contains the website/docs, not the
 private application source or the Windows installer. Required third-party source
 availability is a separate obligation. Licence wording alone is not evidence that
 all distribution or final Windows checks have passed.
+

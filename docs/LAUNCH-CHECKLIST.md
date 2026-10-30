@@ -93,10 +93,12 @@ with earlier MIT grants and third-party rights preserved. The earlier MIT status
 above describes the historical release preparation, not a restriction on the
 publisher offering future copies under different terms.
 
-- [ ] Complete the publisher name in private LICENSE.md and regenerate installer
-  terms/resources; copy that exact completed document to public EULA.md.
+- [x] Identify publisher Luca Andre Ruenholl in the prepared EULA and copy the
+  canonical LICENSE.md from application PR #20 to public EULA.md. Installer
+  resources were regenerated in that branch; final Windows tests remain below.
 - [ ] Determine required publisher/address disclosures, verify third-party rights,
   and test changed-term acceptance/cancellation before publishing a new installer.
 - [ ] Keep website MIT scope and any demo CC BY-SA attribution separate; preserve
   prior installers and their matching LEGAL.txt. Do not imply that this draft is
   already the licence of a published download.
+

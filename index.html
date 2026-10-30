@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Komofuu — Japanese OCR &amp; dictionary companion for Windows</title>
-<meta name="description" content="Meet Komofuu, a desktop companion for Japanese reading on Windows. Scan text on demand, look up words, see furigana and save vocabulary.">
+<title>Komofuu — Read manga, visual novels and games in Japanese (Windows)</title>
+<meta name="description" content="Komofuu is a desktop companion for reading Japanese on Windows. Scan manga pages, visual novel text boxes and games, hover for readings and meanings, and save words.">
 <meta name="theme-color" content="#1c1519">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-rYy+hUhesZNA4hzopUhGoJA5lZ1M8c7T4sKR+MTYmP8='; style-src 'unsafe-inline'; img-src 'self' data:; connect-src https://api.github.com; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-wzD0TBXZVs3g7n30vCV/AmX6FnkrHKQRsIBCnnreqIc='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src https://api.github.com; base-uri 'none'; form-action 'none'">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Komofuu — a little company for your Japanese">
-<meta property="og:description" content="On-demand OCR, dictionary lookups and saved words, with a little desktop companion. Early release for Windows x64.">
+<meta property="og:description" content="Read manga and visual novels in Japanese with on-demand OCR, dictionary lookups and saved words. Early release for Windows x64.">
 <link rel="icon" href="assets/komofuu.svg" type="image/svg+xml">
 <style>
 :root{color-scheme:dark;--ink:#45333e;--text:#f2e5eb;--soft:#c3aeb9;--pink:#d77aa8;--lilac:#d77aa8;--mint:#eac3d8;--butter:#f7d98a;--blush:#fdf0ee;--pink-soft:#f6c6d5;--panel:#2a2026;--line:#46343e;--font:system-ui,"Segoe UI","Yu Gothic UI",Meiryo,sans-serif}
@@ -18,27 +18,95 @@
 
 .skip{position:absolute;left:12px;top:-80px;background:var(--panel);padding:10px 16px;z-index:100;border:1px solid var(--pink);border-radius:8px}.skip:focus{top:12px}code{font-size:.86em;overflow-wrap:anywhere}.setup-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding:0;list-style:none;counter-reset:setup;margin:24px 0}.setup-grid li{counter-increment:setup;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}.setup-grid h3{font-size:16px;margin-bottom:8px}.setup-grid h3::before{content:counter(setup) ' · ';color:var(--pink)}.setup-grid p{font-size:14px;color:var(--soft)}details{border-top:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-weight:650;line-height:1.5}details p{color:var(--soft);font-size:14px;margin-top:12px;max-width:800px}summary:hover{color:#f5c4da}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.7 var(--font);color:var(--soft);max-height:320px;overflow:auto;margin:16px 0}.checksum{margin-top:16px;font-size:13px}.checksum #digest-label{display:block;color:var(--soft)}.checksum code{display:block;margin:8px 0;padding:10px;border:1px solid var(--line);border-radius:8px;user-select:all}.checksum button{background:transparent;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}.download-note{margin-top:18px}.support-card{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--line)}.support-card h2{font-size:24px}.support-card p{color:var(--soft);font-size:14px;max-width:600px}.support-card .btn{white-space:nowrap;margin:0}.screen,.bubble{box-shadow:0 3px 12px #0002}@media(max-width:600px){.setup-grid{grid-template-columns:1fr}.support-card{align-items:flex-start;flex-direction:column}.dl-row .btn{width:100%}}
 @media(max-width:600px){nav{padding:20px 0}.hero{padding:24px 0}.hero h1{font-size:32px;line-height:1.16}.hero p{font-size:16px}.tag{letter-spacing:1px}}
+/* ---------- rework ---------- */
+body{font-size:16px}
+.topbar{position:sticky;top:0;z-index:50;background:#1c1519d9;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid #46343e80}
+nav{padding:12px 0}nav>div{align-items:center}nav .btn{margin:0;padding:9px 16px}nav a.link{padding:6px 2px}
+.eyebrow{display:block;font-size:14px;font-weight:650;color:var(--pink);margin-bottom:8px}
+section{padding:80px 0 0}main>section:last-of-type{padding-bottom:0}
+h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-1.2px;margin-bottom:16px;max-width:760px}
+.section-intro{font-size:17px;max-width:660px}
+.hero{padding:64px 0 24px;gap:56px}.hero h1{font-size:clamp(36px,5.2vw,58px)}
+.lede{font-size:19px;color:var(--soft);max-width:540px;margin-bottom:26px}
+.hero-art{position:relative;padding-bottom:56px}
+.shot{padding-bottom:22px;transform:rotate(-1.2deg)}.shot p{font-size:clamp(20px,3vw,28px);line-height:2;margin:6px 0}
+.hl,.w{background:#d77aa840;border:1px solid #d77aa8;border-radius:5px;padding:0 3px}
+.hero-art .stage{position:absolute;right:-6px;bottom:-34px;padding:0;background:none;width:150px}
+.hero-art .bubble{font-size:12px;padding:6px 11px;margin-bottom:10px}.hero-art #mascot{width:120px;margin:0 auto}
+.trust{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:56px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--soft);font-size:14px}
+.trust b{color:var(--text);font-weight:650}
+.uses{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+.use{background:linear-gradient(160deg,#3a2430,var(--panel));border:1px solid #6a4a5b;border-radius:22px;padding:32px}
+.use h3{font-size:22px;margin-bottom:10px;letter-spacing:-.4px}.use p{color:var(--soft);font-size:15px}.use ul{margin:14px 0 0;padding-left:18px;color:var(--soft);font-size:14px}
+.uses-more{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+.card{transition:border-color .2s}.card:hover{border-color:#6a4a5b}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 14px}
+.tab{background:transparent;color:var(--soft);border:1px solid var(--line);border-radius:99px;padding:9px 18px;font-weight:600;cursor:pointer}
+.tab:hover{color:var(--text);border-color:#6a4a5b}.tab[aria-selected=true]{background:var(--pink);border-color:var(--pink);color:#2a1420}
+.toolbar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.toolbar .btn{margin:0}
+.stagebox{position:relative;border-radius:20px;overflow:hidden;min-height:380px;border:1px solid var(--line);box-shadow:0 14px 40px #0004}
+.fx{position:absolute;inset:0;pointer-events:none;border:3px solid transparent;border-radius:inherit;transition:border-color .3s;z-index:5}
+.fx:after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,#ff8fb5,transparent);opacity:0}
+.scanned .fx{border-color:#d77aa866}.scanning .fx{border-color:#ff8fb5}.scanning .fx:after{opacity:1;animation:sweep .9s linear}
+@keyframes sweep{from{top:0}to{top:calc(100% - 3px)}}
+.w{font:inherit;color:inherit;cursor:default;background:none;border-color:transparent;transition:background .3s,border-color .3s}
+.scanned .w{background:#d77aa840;border-color:#d77aa8;cursor:pointer}.scanned .w:hover,.scanned .w:focus-visible{background:#d77aa880}
+.mini{position:absolute;right:12px;top:10px;width:44px;height:42px;z-index:4;opacity:.95}
+.pop,.clip-pop{background:#fffafc;color:#45333e;border:1px solid #d9b2c6;border-radius:14px;padding:12px 16px;box-shadow:0 10px 30px #0006;font-family:var(--font)}
+.pop{position:absolute;z-index:8;width:236px;font-size:14px;line-height:1.5}
+.pop h3,.clip-pop h3{font-size:25px;line-height:1.7}.pop rt,.clip-pop rt{font-size:11px;font-weight:400}.pop small,.clip-pop small{color:#796671}.pop p,.clip-pop p{margin:2px 0 8px}
+.save{font:600 13px var(--font);background:#45333e;color:#fffafc;border:0;border-radius:8px;padding:6px 12px;cursor:pointer}.save[aria-pressed=true]{background:#d77aa8;color:#2a1420}
+.manga{display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;padding:8px;background:#f3f0ea;min-height:420px}
+.pn{position:relative;overflow:hidden;border:3px solid #17131a;background:#e8e4dc}.pn:first-child{grid-row:span 2}.pn svg.art{position:absolute;inset:0;width:100%;height:100%}
+.bub{position:absolute;top:10px;right:10px;z-index:3;background:#fff;color:#17131a;border:2px solid #17131a;border-radius:50% / 38%;padding:14px 9px;writing-mode:vertical-rl;font-size:18px;line-height:1.55}
+.bub.l{right:auto;left:10px}
+.vn{background:linear-gradient(#3b2a4a,#c9788f 62%,#f4c28f);min-height:400px}.vn svg.art{position:absolute;inset:0;width:100%;height:100%}
+.tb{position:absolute;left:14px;right:14px;bottom:14px;z-index:3;background:#1c1519e6;border:1px solid #6a4a5b;border-radius:12px;padding:24px 20px 16px;color:#fff;font-size:clamp(17px,2.6vw,23px);line-height:1.8}
+.nm{position:absolute;top:-14px;left:16px;background:var(--pink);color:#2a1420;padding:2px 14px;border-radius:8px;font-weight:700;font-size:14px}
+.docbox{background:#231a20;padding:28px;min-height:380px;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.docbox p.sel{font-size:clamp(22px,3.4vw,32px);line-height:1.8;background:#4a2c3c;padding:4px 12px;border-radius:8px}
+.clip-pop{width:min(100%,420px)}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}
+.chip{font:inherit;font-size:18px;background:#f6e3ec;color:#45333e;border:1px solid #d9b2c6;border-radius:8px;padding:2px 10px;cursor:pointer}.chip[aria-pressed=true]{background:#d77aa8;color:#2a1420}
+.saved{list-style:none;padding:20px;margin:0;display:grid;gap:12px;background:#231a20;min-height:380px;align-content:start}
+.saved li{display:flex;justify-content:space-between;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.saved h3{font-size:22px;line-height:1.7}.saved rt{font-size:11px;font-weight:400}.saved q{display:block;color:var(--soft);font-size:14px;margin-top:4px}.saved .rm{align-self:center;background:none;border:1px solid var(--line);color:var(--soft);border-radius:8px;padding:4px 10px;cursor:pointer}
+.empty{color:var(--soft);padding:12px}
+.ph{display:grid;place-items:center;background:#231a20;border-style:dashed;color:var(--soft);font-size:17px}.ph p{margin:0}
+.foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;text-align:left}.foot p{max-width:440px;margin-top:12px}.fl{display:flex;gap:10px 24px;flex-wrap:wrap;align-items:flex-start}footer a{margin:0}
+@media(max-width:860px){.uses,.uses-more{grid-template-columns:1fr}.manga{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){nav a.link:not(.keep){display:none}section{padding-top:56px}.hero-art{padding-bottom:70px}.shot{transform:none}}
+@media(max-width:520px){.manga{grid-template-columns:1fr;grid-template-rows:auto;min-height:0}.pn,.pn:first-child{grid-row:auto;min-height:230px}.use{padding:24px}}
+
+html{scroll-padding-top:90px}.logo-mark{overflow:visible}
+.demo-media{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.demo-media>a{display:block}.demo-media img,.demo-media video{display:block;width:100%;height:auto;max-height:680px;object-fit:contain;background:#171217}
+.demo-media figcaption{padding:18px 22px;color:var(--soft);font-size:13px;line-height:1.7}
+.demo-media figcaption a{overflow-wrap:anywhere}
 </style>
 </head>
 <body id="top">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="kf" viewBox="-65 -60 130 125"><defs><radialGradient id="logo-body" cx="35%" cy="25%" r="80%"><stop stop-color="#fffefb"/><stop offset=".65" stop-color="#fdf0ee"/><stop offset="1" stop-color="#f6c6d5"/></radialGradient></defs><path d="M-6,-50 C30,-51 57,-30 57,3 C57,32 48,50 34,50 C14,51.5 -16,51.5 -34,50 C-50,49 -57,32 -57,8 C-57,-28 -33,-49 -6,-50Z" fill="url(#logo-body)"/><ellipse cx="-33" cy="12" rx="10" ry="6" fill="#f58fb0" opacity=".55"/><ellipse cx="33" cy="12" rx="10" ry="6" fill="#f58fb0" opacity=".55"/><ellipse cx="-20" cy="-1" rx="6" ry="8" fill="#34283a"/><ellipse cx="20" cy="-1" rx="6" ry="8" fill="#34283a"/><circle cx="-22" cy="-4" r="2" fill="#fff"/><circle cx="18" cy="-4" r="2" fill="#fff"/><path d="M-5 15Q0 22 5 15" fill="none" stroke="#8a4a5c" stroke-width="2.5" stroke-linecap="round"/></symbol></svg>
 <a class="skip" href="#main">Skip to content</a>
-<div class="wrap">
+<header class="topbar"><div class="wrap">
   <nav aria-label="Main navigation">
-    <a class="logo" href="#top"><svg class="logo-mark" viewBox="-65 -60 130 125" aria-hidden="true" focusable="false"><defs><radialGradient id="logo-body" cx="35%" cy="25%" r="80%"><stop stop-color="#fffefb"/><stop offset=".65" stop-color="#fdf0ee"/><stop offset="1" stop-color="#f6c6d5"/></radialGradient></defs><path d="M-6,-50 C30,-51 57,-30 57,3 C57,32 48,50 34,50 C14,51.5 -16,51.5 -34,50 C-50,49 -57,32 -57,8 C-57,-28 -33,-49 -6,-50Z" fill="url(#logo-body)"/><ellipse cx="-33" cy="12" rx="10" ry="6" fill="#f58fb0" opacity=".55"/><ellipse cx="33" cy="12" rx="10" ry="6" fill="#f58fb0" opacity=".55"/><ellipse cx="-20" cy="-1" rx="6" ry="8" fill="#34283a"/><ellipse cx="20" cy="-1" rx="6" ry="8" fill="#34283a"/><circle cx="-22" cy="-4" r="2" fill="#fff"/><circle cx="18" cy="-4" r="2" fill="#fff"/><path d="M-5 15Q0 22 5 15" fill="none" stroke="#8a4a5c" stroke-width="2.5" stroke-linecap="round"/></svg>Komofuu</a>
-    <div><a class="link" href="#features">Features</a><a class="link" href="#download">Download</a><a class="link" href="#faq">FAQ</a><a class="link" id="gh-link" href="https://github.com/Komofuu/komofuu-releases">GitHub</a></div>
+    <a class="logo" href="#top"><svg class="logo-mark" aria-hidden="true" focusable="false"><use href="#kf"/></svg>Komofuu</a>
+    <div><a class="link" href="#uses">Manga &amp; visual novels</a><a class="link" href="#demo">Demos</a><a class="link" href="#features">Features</a><a class="link" href="#privacy">Privacy</a><a class="link" href="#faq">FAQ</a><a class="link" id="gh-link" href="https://github.com/Komofuu/komofuu-releases">GitHub</a><a class="btn keep" href="#download">Download</a></div>
   </nav>
-
+</div></header>
+<div class="wrap">
   <main id="main">
   <header class="hero">
     <div>
       <span class="tag">EARLY RELEASE · WINDOWS x64</span>
-      <h1>Meet <span>Komofuu.</span><br>A little friend for your Japanese.</h1>
-      <p>Read, look up, remember. Bring Japanese words from your screen into focus, with a soft little friend keeping you company.</p>
+      <h1>Meet Komofuu.<br>A little friend for your Japanese.</h1>
+      <p class="lede">Read manga, visual novels and games in Japanese. Scan what’s on your screen, hover a word for its reading and meaning, and save it for later.</p>
       <a class="btn" href="#download" id="hero-dl">See download options</a>
-      <a class="btn alt" id="gh-link2" href="https://github.com/Komofuu/komofuu-releases">Releases &amp; support</a>
+      <a class="btn alt" href="#demo">Try the demos</a>
       <div class="small" id="hero-ver">Early release · Windows x64</div>
     </div>
-    <div class="stage">
+    <div class="hero-art">
+      <div class="screen shot" aria-hidden="true"><div class="bar"><i></i><i></i><i></i></div><p lang="ja">放課後に、<span class="hl">約束</span>の場所で待ってるね。</p><div class="lookup-demo"><h3 lang="ja"><ruby>約束<rt>やくそく</rt></ruby></h3><small>Noun</small><p>Promise; appointment.</p></div></div>
+          <div class="stage">
       <div class="bubble" id="bubble">Hi! Poke me~</div>
       <svg id="mascot" viewBox="-75 -70 150 135" role="button" tabindex="0" aria-label="Poke Komofuu">
         <defs>
@@ -73,44 +141,63 @@
         </g>
       </svg>
     </div>
-  </header>
-
-  <section id="demo" aria-labelledby="demo-title">
-    <h2 id="demo-title">A word catches your eye.</h2>
-    <p class="section-intro">Keep reading without losing your place. Scan when you need it, then explore the words on your screen.</p>
-    <ol class="steps"><li>Enable OCR: a pink border appears</li><li>Scan with <kbd>Ctrl + Shift + Space</kbd></li><li>Hover over recognised text</li></ol>
-    <div class="screen">
-      <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
-      <p lang="ja">今日は<button class="word" data-word="weather" aria-expanded="true" aria-controls="demo-result">天気</button>がいいので、<button class="word" data-word="walk" aria-expanded="false" aria-controls="demo-result">散歩</button>しましょう。</p>
-      <div class="lookup-demo" id="demo-result" aria-live="polite"><h3 lang="ja"><ruby>天気<rt>てんき</rt></ruby></h3><small>Noun</small><p>Weather; the conditions outside.</p></div>
-      <div class="small">Interactive illustration · Hover, tap, or focus a highlighted word. The app’s scan shortcut is customisable.</div>
     </div>
+  </header>
+  <div class="trust"><span><b>Local OCR</b> on your PC</span><span><b>No account</b> needed</span><span><b>Your dictionaries</b>, your choice</span><span><b>No analytics</b> on this site</span><span><b>Free</b> to use</span></div>
+
+  <section id="uses">
+    <span class="eyebrow">Use cases</span>
+    <h2>Made for reading manga and visual novels.</h2>
+    <p class="section-intro">One of Komofuu’s main use cases is reading manga and visual novels in Japanese. Komofuu reads the text on your screen, so you can look up a word without leaving the story.</p>
+    <div class="uses">
+      <article class="use"><h3>Manga</h3><p>Scan a page and look up words in speech bubbles, including vertical text.</p><ul><li>Scan the whole page or a smaller area</li><li>Zoom in for small print or furigana</li></ul></article>
+      <article class="use"><h3>Visual novels</h3><p>Scan the text box whenever the line changes and hover words you don’t know.</p><ul><li>Works on what’s on screen, no game changes needed</li><li>Save a word with its sentence as you read</li></ul></article>
+    </div>
+    <div class="uses-more">
+      <article class="card"><h3>Games</h3><p>Menus, quest logs and dialogue, scanned on demand.</p></article>
+      <article class="card"><h3>Websites and documents</h3><p>Anything with Japanese text on screen, or copied to your clipboard.</p></article>
+    </div>
+    <p class="small download-note">Komofuu is a reading aid. It doesn’t include or provide manga, games or dictionaries; read titles you own or can access.</p>
   </section>
 
+  <section id="demo" aria-labelledby="demo-title">
+    <span class="eyebrow">App demos</span>
+    <h2 id="demo-title">See how it works.</h2>
+    <p class="section-intro">Watch a manga scan, then explore screenshots of visual-novel lookup, clipboard lookup and saved words.</p>
+    <div class="tabs" role="tablist" aria-label="Demos">
+      <button class="tab" role="tab" id="t-manga" aria-controls="p-manga" aria-selected="true">Manga</button>
+      <button class="tab" role="tab" id="t-vn" aria-controls="p-vn" aria-selected="false" tabindex="-1">Visual novel</button>
+      <button class="tab" role="tab" id="t-clip" aria-controls="p-clip" aria-selected="false" tabindex="-1">Clipboard lookup</button>
+      <button class="tab" role="tab" id="t-saved" aria-controls="p-saved" aria-selected="false" tabindex="-1">Saved words</button>
+    </div>
+    <div id="p-manga" role="tabpanel" aria-labelledby="t-manga" tabindex="0"><figure class="demo-media"><video controls playsinline preload="none" poster="assets/demos/manga-poster.jpg" aria-label="Komofuu manga OCR demonstration"><source src="assets/demos/manga-demo.mp4" type="video/mp4">Your browser cannot play this video. <a href="assets/demos/manga-demo.mp4">Download the manga demonstration</a>.</video><figcaption>Manga OCR recording · Scan visible Japanese text and hover a highlight for a dictionary lookup. <a href="assets/demos/manga-demo.mp4">Open video</a></figcaption></figure></div>
+    <div id="p-vn" role="tabpanel" aria-labelledby="t-vn" tabindex="0" hidden><figure class="demo-media"><a href="assets/demos/visual-novel-demo.png"><img src="assets/demos/visual-novel-demo.png" width="1134" height="877" loading="lazy" alt="Komofuu showing the dictionary entry for 人物 over a visual-novel screenshot"></a><figcaption>Visual-novel lookup screenshot. App demonstration features an overlay on <a href="https://commons.wikimedia.org/wiki/File:Korenanteeroge.png" rel="noreferrer">Korenanteeroge.png</a> by <a href="https://commons.wikimedia.org/wiki/User:Eky" rel="noreferrer">User:Eky</a> (via Wikimedia Commons), used under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noreferrer">CC BY-SA 3.0</a>. Changes: resized background with Komofuu and dictionary overlays. This composite screenshot is licensed under CC BY-SA 3.0. No endorsement is implied.</figcaption></figure></div>
+    <div id="p-clip" role="tabpanel" aria-labelledby="t-clip" tabindex="0" hidden><figure class="demo-media"><a href="assets/demos/clipboard-demo.png"><img src="assets/demos/clipboard-demo.png" width="1402" height="641" loading="lazy" alt="Komofuu clipboard dictionary with selectable Japanese sentence words"></a><figcaption>Clipboard lookup screenshot · Copy Japanese text, then choose a word from the sentence.</figcaption></figure></div>
+    <div id="p-saved" role="tabpanel" aria-labelledby="t-saved" tabindex="0" hidden><figure class="demo-media"><a href="assets/demos/saved-words-demo.png"><img src="assets/demos/saved-words-demo.png" width="680" height="760" loading="lazy" alt="Komofuu saved vocabulary list for reviewing words"></a><figcaption>Saved words screenshot · Revisit vocabulary you saved while reading.</figcaption></figure></div>
+    </section>
+
   <section id="features">
-    <h2>Little tools. More time with Japanese.</h2>
+    <span class="eyebrow">Features</span><h2>Little tools. More time with Japanese.</h2>
     <p class="section-intro">For the words you meet in games, stories, and everyday reading.</p>
     <div class="grid"><article class="card"><div class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8V4h4M17 4h4v4M21 16v4h-4M7 20H3v-4M7 9h10M7 13h7"/></svg></div><h3>Screen lookup</h3><p>Scan your screen on demand, then hover over recognised Japanese text for meanings and readings.</p></article><article class="card"><div class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11a9 9 0 0 1-13 8L3 21l2-5a9 9 0 1 1 16-5Z"/></svg></div><h3>Ask Komofuu</h3><p>Look up words and explore sentence segments in a conversation-style dictionary window.</p></article><article class="card"><div class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v16M3 3h5l4 2 4-2h5v16h-5l-4 2-4-2H3Z"/></svg></div><h3>Dictionary</h3><p>Search with dictionaries you download and import. Enable several local dictionaries together.</p></article><article class="card"><div class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4H5v17h14V4h-4M9 2h6v5H9Z"/></svg></div><h3>Clipboard lookup</h3><p>Enable clipboard lookup, copy Japanese text, and choose words from a sentence to explore.</p></article><article class="card"><div class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v19l-6-4-6 4Z"/></svg></div><h3>Saved words</h3><p>Keep useful words with their sentence context, revisit your list, and export for study.</p></article><article class="card"><div class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9ZM17 8q6 4 0 8"/></svg></div><h3>Readings & pronunciation</h3><p>See furigana above kanji and listen with an installed Japanese Windows voice.</p></article></div>
   </section>
-
-  <section id="download">
-    <h2>Make room for a little friend.</h2>
+    <section id="download">
+    <span class="eyebrow">Download</span><h2>Make room for a little friend.</h2>
     <p class="section-intro">Windows x64 · OCR runtime included in the installer. No separate Python installation needed.</p>
     <div class="dl">
       <div id="dl-status" role="status" aria-live="polite">Looking for a published Windows installer…</div>
       <noscript><p>JavaScript is off. Open the releases page below to find published installers.</p></noscript>
       <div class="dl-list" id="dl-list"></div>
       <a class="btn alt" id="rel-link" href="https://github.com/Komofuu/komofuu-releases/releases">Browse all releases</a>
-      <p class="small download-note">This page describes the upcoming 0.13.3 local-dictionary release. The installer offered above may be older and can still include online dictionary/audio features. Read its release notes and matching LEGAL.txt.</p>
+      <p class="small download-note">This page describes local-dictionary behavior from 0.13.3 and the upcoming 0.13.4 changes. The installer offered above may be older and can still include online dictionary/audio features. Read its release notes and matching LEGAL.txt.</p>
       <div class="small">Choose the <code>Komofuu_…_x64-setup.exe</code> asset. GitHub’s “Source code” ZIP is not the app installer.</div>
       <details id="release-notes" hidden><summary>What’s in this release?</summary><p id="release-date" class="small"></p><pre id="release-copy"></pre><a id="release-detail" href="https://github.com/Komofuu/komofuu-releases/releases">Full release notes</a></details>
       <div id="checksum" class="checksum" hidden><span id="digest-label">Installer SHA-256 · published by GitHub</span><code id="digest" aria-labelledby="digest-label"></code><button id="copy-digest" type="button">Copy checksum</button><span id="copy-status" class="small" role="status"></span></div>
-      <p class="small download-note">Early software: OCR and word segmentation can make mistakes. Future application releases are preparing a proprietary freeware EULA; existing downloads retain their supplied terms. See <a href="https://github.com/Komofuu/komofuu-releases/blob/main/LICENSING.md">license scope</a>.</p>
+      <p class="small download-note">Early software: OCR and word segmentation can make mistakes. A proprietary freeware EULA is prepared for future application releases; existing downloads retain their supplied terms. See <a href="https://github.com/Komofuu/komofuu-releases/blob/main/LICENSING.md">license scope</a>.</p>
     </div>
   </section>
-
-  <section id="start">
-    <h2>A few minutes to settle in.</h2>
+    <section id="start">
+    <span class="eyebrow">Get started</span><h2>A few minutes to settle in.</h2>
     <p class="section-intro">The installer includes the OCR runtime. You do not need to install Python, Rust or development tools.</p>
     <ol class="setup-grid">
       <li><h3>Install the app</h3><p>Download the Windows x64 <code>.exe</code> from a published release and run it. The first installation may need internet for Microsoft WebView2.</p></li>
@@ -120,16 +207,14 @@
     </ol>
     <a href="https://github.com/Komofuu/komofuu-releases/blob/main/GETTING-STARTED.md">Read the first-run guide →</a>
   </section>
-
-  <section id="dictionaries">
-    <h2>Your dictionaries. Your choice.</h2>
+    <section id="dictionaries">
+    <span class="eyebrow">Dictionaries</span><h2>Your dictionaries. Your choice.</h2>
     <p class="section-intro">Download a Yomitan ZIP from its publisher, then add it in Settings → Dictionaries without unzipping. Several dictionaries can be enabled together, including other compatible Yomitan dictionaries beyond these suggestions. Komofuu does not bundle dictionaries or automatically download files.</p>
     <div class="grid"><article class="card"><h3>Start with definitions</h3><p><a href="https://jitendex.org/pages/downloads.html" rel="noreferrer">Jitendex download page ↗</a><br>Japanese meanings and examples. Choose the Yomitan format.</p></article><article class="card"><h3>Add names or kanji</h3><p><a href="https://github.com/yomidevs/jmdict-yomitan#jmnedict-for-yomitan" rel="noreferrer">JMnedict ↗</a> · <a href="https://github.com/yomidevs/jmdict-yomitan#kanjidic-for-yomitan" rel="noreferrer">KANJIDIC ↗</a><br>Optional proper names and single-kanji details.</p></article><article class="card"><h3>Add frequency</h3><p><a href="https://github.com/Kuuuube/yomitan-dictionaries#bccwj-suw-luw-combined" rel="noreferrer">BCCWJ frequency page ↗</a><br>Supplemental information; a definition dictionary is still needed.</p></article></div>
     <p class="small download-note">Review each publisher’s terms. Links open external project pages, not rehosted dictionary files. <a href="https://github.com/Komofuu/komofuu-releases/blob/main/DICTIONARIES.md">Import instructions →</a></p>
   </section>
-
-  <section id="privacy">
-    <h2>Your screen. Your choice.</h2>
+    <section id="privacy">
+    <span class="eyebrow">Privacy</span><h2>Your screen. Your choice.</h2>
     <p class="section-intro">No Komofuu account is required. Local tools and optional online services have different data flows.</p>
     <div class="privacy">
       <div><h3>Local by default</h3><p>PaddleOCR runs on your computer. Enabling OCR shows a pink border; it waits for your scan shortcut. Continuous local scanning is a separate, optional setting. Saved words, settings and an imported dictionary stay in your Windows profile.</p></div>
@@ -139,24 +224,22 @@
     </div>
     <a href="https://github.com/Komofuu/komofuu-releases/blob/main/PRIVACY.md">Read the data and privacy notes →</a>
   </section>
-
-  <section id="faq">
-    <h2>A few things you might wonder.</h2>
+    <section id="faq">
+    <span class="eyebrow">FAQ</span><h2>A few things you might wonder.</h2>
     <div class="faqs">
       <details><summary>Can I use it offline?</summary><p>Yes, for local OCR and definitions from your imported Yomitan or EDICT2 dictionaries. The OCR runtime is included; download dictionaries yourself. Optional Google Lens, GitHub update checks and opening dictionary project pages need internet. A first install may need to download Microsoft WebView2.</p></details>
-      <details><summary>Does it work with manga and games?</summary><p>It can scan visible Japanese text, including horizontal and vertical regions. Small text, furigana, artwork, decorative fonts and tilted lettering can still be missed or misread. Try a smaller scan area or zoom in. OCR captures a snapshot; scan again when the screen changes.</p></details>
+      <details><summary>Can I read manga and visual novels with it?</summary><p>Yes. Reading manga and visual novels is one of its main use cases, and it works with games too. It can scan visible Japanese text, including horizontal and vertical regions. Small text, furigana, artwork, decorative fonts and tilted lettering can still be missed or misread. Try a smaller scan area or zoom in. OCR captures a snapshot; scan again when the screen changes.</p></details>
       <details><summary>Is Ask Komofuu an AI chat service?</summary><p>Ask Komofuu currently uses dictionary lookups and basic sentence segmentation. It does not generate open-ended AI answers or guarantee full-sentence translations.</p></details>
       <details><summary>How do updates work?</summary><p>Configured release builds can check through <strong>Settings → Updates</strong>. Checking at startup is optional and off by default. You choose when to download and install. Updates require a valid Komofuu update signature; vocabulary, settings and imported dictionaries are intended to be preserved. Back up important saved words before updating.</p></details>
       <details><summary>Why might Windows or my browser warn about the installer?</summary><p>Preview installers currently have no Windows publisher signature. Update signing is a separate check and does not remove browser or SmartScreen warnings. A warning is not proof a file is safe or harmful. Verify the official release and checksum; do not disable antivirus or bypass a detection you cannot verify.</p></details>
       <details><summary>What gets removed when I uninstall?</summary><p>The app’s <strong>Uninstall and delete app data</strong> option removes Komofuu and its local settings, saved words, dictionary and caches for your Windows account. Export your words first if you want to keep them. Exported backups, Anki cards, downloaded installers and shared Windows components stay.</p></details>
-      <details><summary>Is the application source available?</summary><p>The application source repository is private. A <a href="EULA.md">Proprietary Freeware EULA</a> is prepared for future installers, pending publisher completion; it has not replaced the terms supplied with existing downloads. This public repository’s website code and documentation retain their separate MIT licence. Third-party components, dictionary data and earlier MIT grants retain their own rights.</p></details>
+      <details><summary>Is the application source available?</summary><p>The application source repository is private. A <a href="EULA.md">Proprietary Freeware EULA</a> is prepared for future installers, with publisher Luca Andre Ruenholl identified. Existing downloads retain their supplied terms. This website’s code and documentation retain their separate MIT licence. Third-party components, dictionary data and earlier MIT grants retain their own rights.</p></details>
     </div>
   </section>
-  <section class="support-card" aria-labelledby="support-title"><div><h2 id="support-title">Found a rough edge?</h2><p>Tell us what happened, your app version and which OCR engine you used. Redact private text from screenshots.</p></div><a class="btn alt" id="issues-link" href="https://github.com/Komofuu/komofuu-releases/issues/new/choose">Report an issue</a></section>
+    <section class="support-card" aria-labelledby="support-title"><div><h2 id="support-title">Found a rough edge?</h2><p>Tell us what happened, your app version and which OCR engine you used. Redact private text from screenshots.</p></div><a class="btn alt" id="issues-link" href="https://github.com/Komofuu/komofuu-releases/issues/new/choose">Report an issue</a></section>
   </main>
-  <footer>Komofuu · A little company for your Japanese.<br><a id="gh-link3" href="https://github.com/Komofuu/komofuu-releases">GitHub</a><a href="https://github.com/Komofuu/komofuu-releases/blob/main/PRIVACY.md">Privacy</a><a href="https://github.com/Komofuu/komofuu-releases/blob/main/THIRD_PARTY_NOTICES.md">Credits</a><a href="https://github.com/Komofuu/komofuu-releases/blob/main/LICENSING.md">Licensing</a></footer>
 </div>
-
+<footer><div class="wrap foot"><div><a class="logo" href="#top"><svg class="logo-mark" aria-hidden="true" focusable="false"><use href="#kf"/></svg>Komofuu</a><p class="small">A little company for your Japanese. Early release for Windows x64.</p></div><div class="fl"><a id="gh-link3" href="https://github.com/Komofuu/komofuu-releases">GitHub</a><a href="https://github.com/Komofuu/komofuu-releases/blob/main/PRIVACY.md">Privacy</a><a href="https://github.com/Komofuu/komofuu-releases/blob/main/THIRD_PARTY_NOTICES.md">Credits</a><a href="https://github.com/Komofuu/komofuu-releases/blob/main/LICENSING.md">Licensing</a></div></div></footer>
 <script>
 const OWNER = 'Komofuu';
 const REPO = 'komofuu-releases';
@@ -199,22 +282,27 @@ svg.addEventListener('keydown', event => {
     svg.dispatchEvent(new MouseEvent('click', {clientX:r.left+r.width/2,clientY:r.top+r.height/2}));
   }
 });
-const examples = {
-  weather: ['天気', 'てんき', 'Weather; the conditions outside.'],
-  walk: ['散歩', 'さんぽ', 'A walk; a stroll.']
-};
-function selectExample(button) {
-  document.querySelectorAll('.word').forEach(el => el.setAttribute('aria-expanded', String(el === button)));
-  const [word, reading, meaning] = examples[button.dataset.word];
-  const heading = document.createElement('h3'); heading.lang='ja';
-  const ruby = document.createElement('ruby'); ruby.append(document.createTextNode(word));
-  const rt = document.createElement('rt'); rt.textContent=reading; ruby.append(rt); heading.append(ruby);
-  const type=document.createElement('small');type.textContent='Noun';
-  const definition=document.createElement('p');definition.textContent=meaning;
-  document.getElementById('demo-result').replaceChildren(heading,type,definition);
+const tabs=[...document.querySelectorAll('.tab')];
+function pick(tab){
+  tabs.forEach(item=>{
+    const selected=item===tab;
+    item.setAttribute('aria-selected',String(selected));
+    item.tabIndex=selected?0:-1;
+    const panel=document.getElementById(item.getAttribute('aria-controls'));
+    panel.hidden=!selected;
+    if(!selected) panel.querySelectorAll('video').forEach(video=>video.pause());
+  });
 }
-document.querySelectorAll('.word').forEach(button => {
-  ['pointerenter','focus','click'].forEach(event => button.addEventListener(event,()=>selectExample(button)));
+tabs.forEach((tab,index)=>{
+  tab.addEventListener('click',()=>pick(tab));
+  tab.addEventListener('keydown',event=>{
+    let target;
+    if(event.key==='ArrowRight') target=(index+1)%tabs.length;
+    if(event.key==='ArrowLeft') target=(index-1+tabs.length)%tabs.length;
+    if(event.key==='Home') target=0;
+    if(event.key==='End') target=tabs.length-1;
+    if(target!==undefined){event.preventDefault();tabs[target].focus();pick(tabs[target]);}
+  });
 });
 
 // Only complete, published releases from the official downloads repository.
