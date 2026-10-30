@@ -93,3 +93,14 @@ or downloaded by the current app and no new Anki recording attachment is generat
 This project was built with AI assistance. This statement describes the development
 process and does not establish exclusive copyright. Third-party software, models
 and dictionary data retain their respective licenses and attribution requirements.
+
+
+## Website visual-novel demonstration
+
+The website composite `assets/demos/visual-novel-demo.png` uses
+[Korenanteeroge.png](https://commons.wikimedia.org/wiki/File:Korenanteeroge.png)
+by [User:Eky](https://commons.wikimedia.org/wiki/User:Eky), via Wikimedia Commons,
+under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Changes: resized background with Komofuu and dictionary overlays. The composite
+screenshot is licensed under CC BY-SA 3.0. No endorsement is implied.
+See [demo media credits](assets/demos/README.md).

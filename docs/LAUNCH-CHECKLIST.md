@@ -1,8 +1,9 @@
 # Public early-release checklist
 
-Updated 29 October 2026 for the upcoming 0.13.3. This is a normal public release
-labelled **Early release**, not a GitHub prerelease/beta channel. Original application code and assets
-are offered under MIT, subject to the scope in LICENSING.md. This checklist does
+Updated 30 October 2026 for the prepared licence transition. This is a normal public release
+labelled **Early release**, not a GitHub prerelease/beta channel. Future application copies expressly supplied with the completed EULA use
+proprietary freeware terms, subject to LICENSING.md. Earlier MIT grants remain
+intact. The checklist below also records prior 0.13.3 release preparation. This checklist does
 not authorize publishing or certify legal/security clearance.
 
 ## Already established
@@ -83,3 +84,21 @@ not authorize publishing or certify legal/security clearance.
 
 No evidence is marked complete merely because a document or checkbox exists.
 No new company, paid hosting, custom domain or compulsory beta label is assumed.
+
+
+## Prepared EULA transition (30 October 2026)
+
+Future application distributions are prepared for proprietary freeware terms,
+with earlier MIT grants and third-party rights preserved. The earlier MIT status
+above describes the historical release preparation, not a restriction on the
+publisher offering future copies under different terms.
+
+- [x] Identify publisher Luca Andre Ruenholl in the prepared EULA and copy the
+  canonical LICENSE.md from application PR #20 to public EULA.md. Installer
+  resources were regenerated in that branch; final Windows tests remain below.
+- [ ] Determine required publisher/address disclosures, verify third-party rights,
+  and test changed-term acceptance/cancellation before publishing a new installer.
+- [ ] Keep website MIT scope and any demo CC BY-SA attribution separate; preserve
+  prior installers and their matching LEGAL.txt. Do not imply that this draft is
+  already the licence of a published download.
+

@@ -1,41 +1,51 @@
-# Komofuu license scope
+# Komofuu licence scope
 
-Komofuu's original application code, documentation, UI, artwork, animations and
-other original project assets are offered under the [MIT License](LICENSE.md),
-to the extent the licensors hold rights in those materials. This includes the
-original website code and project documentation in the public downloads repository.
+## Application: prepared proprietary freeware transition
 
-The project was built with AI assistance. Applying MIT does not establish
-exclusive copyright or assert that purely AI-generated material is protected.
-The license communicates permissions for rights the licensors can actually grant.
+[EULA.md](EULA.md) is the prepared Komofuu Proprietary Freeware EULA for future
+application copies expressly supplied under it. Personal, educational and
+professional/commercial use is free. Its redistribution/modification restrictions
+apply only within its lawful scope, with exceptions for independent licences and
+mandatory law. The app's source repository remains private.
 
-## Third-party material
+This is not an announcement that a new installer has been published. The prepared
+EULA identifies Luca Andre Ruenholl as publisher and matches LICENSE.md in
+application PR #20 (commit 1accdb323abf7a95f71e4c96ade87148f65ab7b5).
+Installer legal resources were regenerated in that application branch. Before
+publishing, verify that the exact installer includes these terms and complete
+the remaining Windows and distribution checks. Determine any additional required
+publisher/address disclosures separately.
 
-MIT does not replace the licenses of third-party libraries, adapted reference
-code, OCR models, fonts, runtimes, dictionary data or other third-party materials.
-Their own copyright notices, license conditions and source-availability obligations
-remain applicable. See [Third-party notices](THIRD_PARTY_NOTICES.md) and the exact
-notices included with the relevant release.
+Earlier copies retain their accompanying licence and any permissions already
+acquired under MIT. New terms do not withdraw those grants, rewrite previous
+LEGAL.txt assets or change third-party licences. Read the exact notices supplied
+with the particular installer you download.
 
-User-imported dictionaries, saved dictionary extracts and exported entries retain
-their source rights. Permission to use Komofuu is not permission to redistribute
-someone else's dictionaries, screenshots, recordings or branding.
+## Website and documentation: separate MIT scope
 
-No provider affiliation or endorsement is implied. No third-party trademark rights
-are granted by this document.
+The original website code and project documentation in this public repository
+remain under [LICENSE.md](LICENSE.md), to the extent rights are held. This does
+not grant MIT permissions to application installers, their bundled components or
+the application EULA. EULA.md states the terms for application use, not the licence
+for this website. Viewing the website does not accept that application agreement.
 
-## Source availability and release status
+AI assistance does not establish exclusive copyright or protection for every
+component. The licence scope covers only rights the licensor can grant.
 
-The application source repository is currently private. The MIT license does not
-require publishing that repository or supplying Komofuu's own source alongside
-binaries. GitHub's source ZIP for the public downloads repository contains that
-repository's website/docs, not the private application source.
+## Third-party material and demo media
 
-Required third-party source delivery remains a separate obligation. The GEOS/MPL
-source and Microsoft-runtime redistribution review, publisher/private contact
-details and final Windows checks remain launch items; choosing MIT does not mark
-them complete.
+Libraries, adapted reference code, OCR models, runtimes, fonts, imported dictionary
+data and saved/exported extracts keep their own licences and source obligations.
+The application EULA does not restrict rights granted by LGPL, MPL or other
+independent licences. See THIRD_PARTY_NOTICES.md and matching build notices.
 
-This license is adopted for the next release built from this source. An already
-published installer's LEGAL.txt and bundled notices are not rewritten by this
-change. Read the license and notices accompanying the particular version.
+Any visual-novel demo composite using Korenanteeroge.png remains separately
+CC BY-SA 3.0; the application EULA and website MIT grant do not override that
+licence. Preserve its source, author, modification and licence attribution wherever
+it is displayed. Third-party trademarks and provider endorsement are not granted.
+
+GitHub's source archive for this repository contains the website/docs, not the
+private application source or the Windows installer. Required third-party source
+availability is a separate obligation. Licence wording alone is not evidence that
+all distribution or final Windows checks have passed.
+
