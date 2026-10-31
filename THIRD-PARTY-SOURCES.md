@@ -1,6 +1,6 @@
 # Third-party source availability
 
-The first official public release, 0.13.6, and later releases include a separate
+The first official public release, 0.13.7, and later releases include a separate
 **THIRD-PARTY-SOURCES.zip** asset on their matching version's release page:
 https://github.com/Komofuu/komofuu-releases/releases
 

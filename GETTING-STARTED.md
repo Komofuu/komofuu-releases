@@ -1,6 +1,6 @@
 # Getting started with Komofuu
 
-These instructions describe **Komofuu 0.13.6, the first official public release**.
+These instructions describe **Komofuu 0.13.7, the first official public release**.
 Use the official releases page for Windows downloads and release notes.
 
 ## Install and reveal Komofuu

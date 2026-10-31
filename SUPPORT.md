@@ -43,7 +43,7 @@ clipboard history. For vulnerabilities, see [Security reporting](SECURITY.md).
 
 ## Version-specific behavior
 
-These instructions describe 0.13.6, the first official public release, and later
+These instructions describe 0.13.7, the first official public release, and later
 versions. Definitions come from your imported local dictionaries. For missing
 definitions, check that a definition dictionary is enabled (frequency alone is
 insufficient). For Listen errors, install a Japanese Windows voice. New Anki cards

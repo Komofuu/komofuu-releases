@@ -1,6 +1,6 @@
 # Existing data and upgrades
 
-Upgrading from an earlier test build to 0.13.6 keeps imported dictionaries, saved words and existing Anki
+Upgrading from an earlier test build to 0.13.7 keeps imported dictionaries, saved words and existing Anki
 cards/media. Old online-source and recording preferences are ignored; no setting
 can enable an online definition fallback or recording request. The legacy Audio
 field and {audio} marker stay empty in new cards so old note types keep working.

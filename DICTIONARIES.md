@@ -1,6 +1,6 @@
 # Download and add dictionaries
 
-For Komofuu 0.13.6, the first official public release, and later versions. Dictionary data is not bundled or mirrored; you
+For Komofuu 0.13.7, the first official public release, and later versions. Dictionary data is not bundled or mirrored; you
 choose and download files from their publishers. Opening these links contacts
 the respective website in your browser, not an in-app automatic downloader.
 
