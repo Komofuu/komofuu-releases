@@ -13,7 +13,7 @@ This public repository follows the same proprietary distribution policy: see
 [LICENSE.md](LICENSE.md) for website/documentation permissions and [licence scope](LICENSING.md)
 for exceptions and independently licensed material.
 
-**Komofuu 0.13.6 · First official public release.** This guide describes that
+**Komofuu 0.13.7 · First official public release.** This guide describes that
 version. Download the Windows installer from the official releases page and read
 the release notes and matching LEGAL.txt.
 
