@@ -21,8 +21,13 @@ clipboard history. For vulnerabilities, see [Security reporting](SECURITY.md).
   downloads. The website accepts only complete regular releases; draft releases
   and prereleases are excluded. If release information cannot be loaded, use the
   releases-page link or try again later.
-- **OCR enabled but nothing happens:** the pink border means ready. Press your
-  configured scan shortcut; enabling OCR does not start a scan.
+- **OCR enabled but nothing happens:** check scan status and use your configured
+  scan shortcut or scan button. For a cropped area, hold the left mouse button,
+  drag a box around the text and release. The border is optional.
+- **Selected window is unavailable or blank:** restore it, use Refresh and select
+  it again. Some games, elevated apps or protected content do not support window
+  capture. Komofuu does not switch to desktop capture automatically; choose a
+  different scan mode yourself if needed.
 - **Lens permission error:** enable its separate upload permission only if you
   want the captured area sent to Google. Otherwise select local PaddleOCR.
 - **Manga words are missing or displaced:** try a smaller area, zoom, Automatic
@@ -43,9 +48,14 @@ clipboard history. For vulnerabilities, see [Security reporting](SECURITY.md).
 
 ## Version-specific behavior
 
-These instructions describe 0.13.7, the first official public release, and later
+These instructions describe 0.13.8, the first official public release, and later
 versions. Definitions come from your imported local dictionaries. For missing
 definitions, check that a definition dictionary is enabled (frequency alone is
 insufficient). For Listen errors, install a Japanese Windows voice. New Anki cards
 receive no recording attachment; existing notes/media are kept.
 
+
+- **Komofuu is missing from the taskbar:** this is intentional. Open the system
+  tray beside the Windows clock (including its **^** overflow), then click the
+  Komofuu icon. Right-click it to reopen tools or quit. Closing tools keeps the
+  companion running; Quit Komofuu is the exit action.

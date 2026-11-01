@@ -1,6 +1,6 @@
 # Getting started with Komofuu
 
-These instructions describe **Komofuu 0.13.7, the first official public release**.
+These instructions describe **Komofuu 0.13.8, the first official public release**.
 Use the official releases page for Windows downloads and release notes.
 
 ## Install and reveal Komofuu
@@ -34,13 +34,27 @@ Save keeps the selected entry/context in Saved words, with JSON backup and TSV e
 
 ## Scan your screen
 
-1. Enable OCR in the menu. The border means ready.
+1. Choose your scan target in Settings → Screen, then turn OCR on. Scan status shows readiness; the border is optional.
 2. Press **Ctrl+Shift+Space** once while the text is visible.
 3. Hover a highlight for its meaning. Scan again after content changes.
 
 Settings → Shortcuts changes keybinds, including scan, clipboard and Anki mining.
-Whole-current-screen scanning uses the monitor under your pointer. A smaller
-selected area limits what online OCR shares. PaddleOCR works locally; CPU is
+Whole-current-screen scanning uses the monitor under your pointer. For Cropped
+area, choose **Choose area to scan**, hold the left mouse button and drag a box
+around the text, then release to scan. Escape cancels. The area is reused until
+you turn OCR off or choose another.
+
+For **Application window**, choose an available window in the picker. Refresh
+updates the list; restore minimized windows first. Only that window’s content
+is captured. Its position/size are checked each scan; scan again after moving
+or resizing it. Window choice is not retained after restarting Komofuu. Some
+games, elevated applications or protected content may not support window capture;
+choose another mode yourself if needed. Komofuu never switches to desktop capture
+as a fallback.
+
+**Show OCR border** is cosmetic. Turning it off keeps scan status, controls and
+highlights available. A smaller selected area or chosen window limits what online
+OCR shares. PaddleOCR works locally; CPU is
 default and GPU/DirectML is optional. Switch to CPU if GPU initialization fails.
 Continuous local scanning is off by default and not recommended for ordinary use.
 
@@ -100,3 +114,29 @@ Locked files may require later cleanup; secure erasure is not promised.
 
 See [Privacy](PRIVACY.md), [Support](SUPPORT.md) and [Security reporting](SECURITY.md).
 
+
+## Notes
+
+Choose Notes from Komofuu’s right-click menu. The Your notes library lists your
+notes and provides New note. Open a note to write; edits save on this PC. Use
+Collapse note to keep only its title bar visible, then Expand note to continue.
+Closing a note keeps it in the library. Manually opened notes appear near
+Komofuu; notes restored on startup retain their saved positions.
+
+## Dictionary formatting
+
+Compatible Yomitan imports preserve meaning groups, grammatical and usage
+labels, examples and source notes. Reimport dictionaries added using an older
+version to recover their formatting. Old saved words and Anki cards are not
+rewritten. Dictionary scripts, imported styles and remote resources are not loaded.
+
+## Windows system tray
+
+Komofuu runs in the notification area beside the Windows clock instead of the
+taskbar. If its icon is hidden, open the **^** tray overflow; Windows controls
+which tray icons stay visible. Click Komofuu’s tray icon to show the companion.
+Right-click it for Dictionary, Saved words, Notes, Settings and **Quit Komofuu**.
+Closing the tools window hides it while Komofuu keeps running. Minimize and
+maximize controls are removed; you can still resize the tools and note windows.
+Quit waits for notes to save. If saving fails, Komofuu remains open and shows the
+error instead of discarding changes. No startup/autostart setting is added.

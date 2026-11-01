@@ -13,7 +13,7 @@ This public repository follows the same proprietary distribution policy: see
 [LICENSE.md](LICENSE.md) for website/documentation permissions and [licence scope](LICENSING.md)
 for exceptions and independently licensed material.
 
-**Komofuu 0.13.7 · First official public release.** This guide describes that
+**Komofuu 0.13.8 · First official public release.** This guide describes that
 version. Download the Windows installer from the official releases page and read
 the release notes and matching LEGAL.txt.
 
@@ -53,8 +53,10 @@ verify. No malware-free guarantee is claimed.
    ZIP yourself and import it with **Add dictionaries…**, without unzipping.
 3. Enable the dictionaries you want. Several can be used together. Optional
    names, kanji and frequency downloads are in [Dictionary downloads](DICTIONARIES.md).
-4. Enable OCR, then press **Ctrl+Shift+Space** once. The border means ready;
-   hover recognized text for definitions. Change shortcuts in Settings.
+4. Choose a screen, cropped area or application window in Settings → Screen.
+   Turn OCR on, then press **Ctrl+Shift+Space** once. For a crop, click and drag a
+   box and release to scan. Hover recognized text for definitions. The border
+   is optional; status and controls remain available. Change shortcuts in Settings.
 
 Definitions use your imported dictionaries, with no online fallback. PaddleOCR
 is local. Google Lens is optional, online, unofficial and requires separate upload
@@ -101,3 +103,14 @@ connections/policies. No provider endorsement or affiliation is claimed.
 See [third-party source availability](THIRD-PARTY-SOURCES.md) for matching
 source archives and component replacement instructions.
 
+
+## Windows system tray
+
+Komofuu runs in the notification area beside the Windows clock instead of the
+taskbar. If its icon is hidden, open the **^** tray overflow; Windows controls
+which tray icons stay visible. Click Komofuu’s tray icon to show the companion.
+Right-click it for Dictionary, Saved words, Notes, Settings and **Quit Komofuu**.
+Closing the tools window hides it while Komofuu keeps running. Minimize and
+maximize controls are removed; you can still resize the tools and note windows.
+Quit waits for notes to save. If saving fails, Komofuu remains open and shows the
+error instead of discarding changes. No startup/autostart setting is added.
