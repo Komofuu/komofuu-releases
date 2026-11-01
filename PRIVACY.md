@@ -1,6 +1,6 @@
 # Komofuu privacy and data flows
 
-Updated 30 October 2026 for Komofuu 0.13.7 release. Older installers
+Updated 1 November 2026 for Komofuu 0.13.8 release. Older installers
 can behave differently; consult their matching LEGAL.txt.
 
 Publisher: **Luca Andre Ruenholl**, an individual publishing as **Komofuu**,
@@ -97,8 +97,9 @@ sent to Anki, OCR or other services. Closing a note keeps it in the Notes list;
 Delete note removes it from active storage. Updates preserve notes and the
 uninstaller’s app-data deletion includes them. Deletion is not secure erasure.
 
-PaddleOCR processes requested captures locally. The OCR border indicates readiness;
-scanning normally starts only on your shortcut or Scan screen now. Continuous
+PaddleOCR processes requested captures locally. Scan status and controls indicate
+readiness; the optional OCR border is a visual guide. Scanning normally starts
+only on your shortcut, Scan now, or releasing an explicitly drawn crop. Continuous
 local scanning is optional, off by default and not recommended for ordinary use.
 PaddleOCR/native-text temporary jobs use a leased process-specific app-data
 session. Normal exit cleans the session; startup removes abandoned sessions
@@ -108,7 +109,12 @@ No secure-erasure or forensic-removal guarantee is made.
 
 The latest original OCR scan and bounded dictionary results are cached in memory.
 Stopping OCR clears the original-scan cache. Native Lens encodes its image in
-memory rather than starting the Python OCR worker or writing a Lens image file.
+memory without starting the Python OCR worker. Application-window capture uses
+a short-lived helper and an OS-managed temporary image file, removed when its
+handles close. This applies to both OCR engines. Window titles and target IDs
+stay local and are not persisted as capture presets or sent as Lens metadata.
+The chosen window is checked for each scan; a closed, minimized, protected or
+unsupported window produces an error without falling back to a desktop image.
 Cursor position, Windows inactivity, companion position and island state support
 local animation. Optional music reactions read scalar Windows output levels;
 they use no microphone, recording or audio upload and pause in island/Gaming mode.
