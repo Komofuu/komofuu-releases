@@ -17,12 +17,14 @@ the respective website in your browser, not an in-app automatic downloader.
    choose Yomitan, not MDict. GitHub's source-code ZIP is not a dictionary bank.
 2. Keep the dictionary ZIP compressed. Open **Settings → Dictionaries → Add
    dictionaries…** and select one or more downloaded files.
-3. Wait for import to finish; large dictionaries can take a few minutes. Imported
-   files are indexed locally. Each successful/failed import is reported separately.
+3. Watch the import progress and record count; large dictionaries can take a few
+   minutes. Saving finishes before 100% is shown. Each import result is reported.
 4. Enable any combination using the checkboxes. Move up/down sets display order.
    Frequency dictionaries supplement a matching definition dictionary.
-5. To update, download a newer revision, remove the old installed revision and
-   import the new ZIP. Keep a saved-word backup; the original ZIP remains yours.
+5. In 0.13.9 and later, choose **Reimport…** beside an installed dictionary and
+   select its matching Yomitan ZIP. The existing index is kept if replacement
+   fails; order, enabled settings and saved words are preserved. Reimport older
+   dictionaries once to restore grouped meanings, labels and examples.
 
 No dictionary means no definitions; a frequency-only dictionary also supplies no
 word meanings. EDICT2 text/gzip imports remain supported. Multiple definition,

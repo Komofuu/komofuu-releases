@@ -68,7 +68,7 @@ test('dictionary guidance supports other compatible imports and describes the of
   assert.ok(html.includes(url));assert.ok(guide.includes(url));
  }
  assert.match(guide,/other compatible Yomitan format-3 dictionaries/);
- assert.match(html,/Komofuu 0\.13\.8, the first official public release/);
+ assert.match(html,/Komofuu 0\.13\.9, following the first official public release, 0\.13\.8/);
  for(const file of ['README.md','GETTING-STARTED.md','DICTIONARIES.md','SUPPORT.md'])assert.doesNotMatch(read(file),/0\.13\.3/);
  assert.doesNotMatch(html,/0\.13\.3/);
  assert.match(read('PRIVACY.md'),/on by default unless you previously disabled it/);

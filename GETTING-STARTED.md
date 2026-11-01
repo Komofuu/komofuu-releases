@@ -1,6 +1,7 @@
 # Getting started with Komofuu
 
-These instructions describe **Komofuu 0.13.8, the first official public release**.
+These instructions describe **Komofuu 0.13.9**, following the first official
+public release, 0.13.8.
 Use the official releases page for Windows downloads and release notes.
 
 ## Install and reveal Komofuu
@@ -25,8 +26,9 @@ for optional JMnedict, KANJIDIC and BCCWJ frequency. You can import and enable s
 
 All definitions use local imported dictionaries. There is no online fallback.
 If no results appear, confirm a definition dictionary is installed and enabled;
-frequency metadata alone gives no meanings. Remove old revisions and import new
-downloads to update. Original ZIPs and saved words survive dictionary removal.
+frequency metadata alone gives no meanings. Use **Reimport…** beside an installed dictionary to update it or restore older
+plain-text imports. A failed replacement keeps the existing dictionary. Import
+progress shows reading and saving; saved words and original ZIPs are kept.
 
 Dictionary and Ask Komofuu show word/segment meanings, not guaranteed full-sentence
 translations or an open-ended AI chat. Readings appear as furigana above kanji.
@@ -117,7 +119,7 @@ See [Privacy](PRIVACY.md), [Support](SUPPORT.md) and [Security reporting](SECURI
 
 ## Notes
 
-Choose Notes from Komofuu’s right-click menu. The Your notes library lists your
+Choose Notes from Komofuu’s right-click menu. Headings are plain text; use the menu to return to the library. The Your notes library lists your
 notes and provides New note. Open a note to write; edits save on this PC. Use
 Collapse note to keep only its title bar visible, then Expand note to continue.
 Closing a note keeps it in the library. Manually opened notes appear near
