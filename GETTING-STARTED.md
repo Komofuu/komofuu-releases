@@ -1,6 +1,6 @@
 # Getting started with Komofuu
 
-These instructions describe **Komofuu 0.13.9**, following the first official
+These instructions describe **Komofuu 0.14.0**, following the first official
 public release, 0.13.8.
 Use the official releases page for Windows downloads and release notes.
 
@@ -142,3 +142,11 @@ Closing the tools window hides it while Komofuu keeps running. Minimize and
 maximize controls are removed; you can still resize the tools and note windows.
 Quit waits for notes to save. If saving fails, Komofuu remains open and shows the
 error instead of discarding changes. No startup/autostart setting is added.
+
+## Komofuu’s study animation
+
+When OCR is on, the visible companion studies gently orbiting kana. Turning OCR
+off stops the effect. This animation never starts a scan. Putting Komofuu away
+pauses his pet animation; OCR stays in its current state. The settled pill keeps
+its reveal controls while suspending canvas redraws. Reduced motion stops the
+orbital movement, and Gaming retains the controller form.

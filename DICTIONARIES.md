@@ -21,7 +21,7 @@ the respective website in your browser, not an in-app automatic downloader.
    minutes. Saving finishes before 100% is shown. Each import result is reported.
 4. Enable any combination using the checkboxes. Move up/down sets display order.
    Frequency dictionaries supplement a matching definition dictionary.
-5. In 0.13.9 and later, choose **Reimport…** beside an installed dictionary and
+5. In 0.14.0 and later, choose **Reimport…** beside an installed dictionary and
    select its matching Yomitan ZIP. The existing index is kept if replacement
    fails; order, enabled settings and saved words are preserved. Reimport older
    dictionaries once to restore grouped meanings, labels and examples.
