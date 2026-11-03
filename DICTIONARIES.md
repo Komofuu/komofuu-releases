@@ -15,7 +15,7 @@ the respective website in your browser, not an in-app automatic downloader.
 
 1. Review the publisher's terms and choose its **Yomitan ZIP**. For Jitendex,
    choose Yomitan, not MDict. GitHub's source-code ZIP is not a dictionary bank.
-2. Keep the dictionary ZIP compressed. Open **Settings → Dictionaries → Add
+2. Keep the dictionary ZIP compressed. Open **Dictionary → Add
    dictionaries…** and select one or more downloaded files.
 3. Watch the import progress and record count; large dictionaries can take a few
    minutes. Saving finishes before 100% is shown. Each import result is reported.
