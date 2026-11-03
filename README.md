@@ -13,7 +13,7 @@ This public repository follows the same proprietary distribution policy: see
 [LICENSE.md](LICENSE.md) for website/documentation permissions and [licence scope](LICENSING.md)
 for exceptions and independently licensed material.
 
-**Komofuu 0.14.0 · Dictionary and notes hotfix.** The first official public release was 0.13.8. This guide describes the current
+**Komofuu 0.14.1 · Dictionary and notes hotfix.** The first official public release was 0.13.8. This guide describes the current
 version. Download the Windows installer from the official releases page and read
 the release notes and matching LEGAL.txt.
 
@@ -48,7 +48,7 @@ verify. No malware-free guarantee is claimed.
 ## First use
 
 1. Drag down the top-centre pill to reveal Komofuu. Right-click for his menu.
-2. Open **Settings → Dictionaries → Find dictionaries to download**. Start with
+2. Open **Dictionary → Find dictionaries to download**. Start with
    [Jitendex for Yomitan](https://jitendex.org/pages/downloads.html), download its
    ZIP yourself and import it with **Add dictionaries…**, without unzipping.
 3. Enable the dictionaries you want. Several can be used together. Optional

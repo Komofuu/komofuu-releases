@@ -1,6 +1,6 @@
 # Getting started with Komofuu
 
-These instructions describe **Komofuu 0.14.0**, following the first official
+These instructions describe **Komofuu 0.14.1**, following the first official
 public release, 0.13.8.
 Use the official releases page for Windows downloads and release notes.
 
@@ -18,7 +18,7 @@ His completed visible/hidden state is remembered. The menu's × closes it.
 
 ## Add definitions first
 
-Open **Settings → Dictionaries → Find dictionaries to download**. The buttons open
+Open **Dictionary → Find dictionaries to download**. The buttons open
 official project pages in your browser; they do not fetch files in the background.
 Download **Jitendex for Yomitan**, keep the ZIP compressed and choose **Add
 dictionaries…**. Enable its checkbox after import. See [all download pages](DICTIONARIES.md)
@@ -30,7 +30,7 @@ frequency metadata alone gives no meanings. Use **Reimport…** beside an instal
 plain-text imports. A failed replacement keeps the existing dictionary. Import
 progress shows reading and saving; saved words and original ZIPs are kept.
 
-Dictionary and Ask Komofuu show word/segment meanings, not guaranteed full-sentence
+Ask Komofuu shows word/segment meanings, not guaranteed full-sentence
 translations or an open-ended AI chat. Readings appear as furigana above kanji.
 Save keeps the selected entry/context in Saved words, with JSON backup and TSV export.
 
@@ -150,3 +150,13 @@ off stops the effect. This animation never starts a scan. Putting Komofuu away
 pauses his pet animation; OCR stays in its current state. The settled pill keeps
 its reveal controls while suspending canvas redraws. Reduced motion stops the
 orbital movement, and Gaming retains the controller form.
+
+## Dictionary management and visible errors
+
+Dictionary is for adding, reimporting, enabling and ordering dictionaries. Use
+Ask Komofuu to look up a word or sentence; saved-word lookup opens Ask with the
+selected word. Dictionary management is no longer duplicated inside Settings.
+
+If a window cannot open, a notice appears near Komofuu or his pill with the
+reason. Dismiss it after reading; opening Settings is not required. Small
+reaction marks remain separate from these error messages.
