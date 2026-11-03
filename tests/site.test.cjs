@@ -68,7 +68,10 @@ test('dictionary guidance supports other compatible imports and describes the of
   assert.ok(html.includes(url));assert.ok(guide.includes(url));
  }
  assert.match(guide,/other compatible Yomitan format-3 dictionaries/);
- assert.match(html,/Komofuu 0\.14\.1, following the first official public release, 0\.13\.8/);
+ const currentVersion=read('README.md').match(/\*\*Komofuu (\d+\.\d+\.\d+)/)?.[1];
+ assert.ok(currentVersion,'README must state the current application version');
+ assert.ok(html.includes(`Komofuu ${currentVersion}, following the first official public release, 0.13.8`),'Website guidance must match the current version in README');
+ assert.ok(read('GETTING-STARTED.md').includes(`Komofuu ${currentVersion}`),'Getting started must describe the same current version');
  for(const file of ['README.md','GETTING-STARTED.md','DICTIONARIES.md','SUPPORT.md'])assert.doesNotMatch(read(file),/0\.13\.3/);
  assert.doesNotMatch(html,/0\.13\.3/);
  assert.match(read('PRIVACY.md'),/on by default unless you previously disabled it/);
