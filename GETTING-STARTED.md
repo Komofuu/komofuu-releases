@@ -1,6 +1,6 @@
 # Getting started with Komofuu
 
-These instructions describe **Komofuu 0.14.2**, following the first official
+These instructions describe **Komofuu 0.14.3**, following the first official
 public release, 0.13.8.
 Use the official releases page for Windows downloads and release notes.
 
@@ -160,3 +160,13 @@ selected word. Dictionary management is no longer duplicated inside Settings.
 If a window cannot open, a notice appears near Komofuu or his pill with the
 reason. Dismiss it after reading; opening Settings is not required. Small
 reaction marks remain separate from these error messages.
+
+## Playing games
+
+Borderless fullscreen is recommended for OCR overlays. Exclusive fullscreen
+or protected rendering can hide an overlay or prevent capture. Komofuu does
+not change the game's display mode or inject game input.
+
+Gaming animation rate is adjustable from 1–60 FPS in Settings → Appearance.
+The default is 5 FPS; lower rates use less CPU. Continuous scanning stays off
+in Gaming mode.
