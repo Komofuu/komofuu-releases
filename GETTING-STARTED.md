@@ -1,6 +1,6 @@
 # Getting started with Komofuu
 
-These instructions describe **Komofuu 0.14.4**, following the first official
+These instructions describe **Komofuu 0.14.5**, following the first official
 public release, 0.13.8.
 Use the official releases page for Windows downloads and release notes.
 
@@ -170,4 +170,5 @@ not change the game's display mode or inject game input.
 Gaming animation rate is adjustable from 1–60 FPS in Settings → Appearance.
 The default is 5 FPS; lower rates use less CPU. Continuous scanning stays off
 in Gaming mode.
+
 

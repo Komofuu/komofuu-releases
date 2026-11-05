@@ -13,7 +13,7 @@ This public repository follows the same proprietary distribution policy: see
 [LICENSE.md](LICENSE.md) for website/documentation permissions and [licence scope](LICENSING.md)
 for exceptions and independently licensed material.
 
-**Komofuu 0.14.4 · OCR overlay and clipboard lookup hotfix.** The first official public release was 0.13.8. This guide describes the current
+**Komofuu 0.14.5 · OCR word selection and conjugation improvements.** The first official public release was 0.13.8. This guide describes the current
 version. Download the Windows installer from the official releases page and read
 the release notes and matching LEGAL.txt.
 
@@ -114,4 +114,5 @@ Closing the tools window hides it while Komofuu keeps running. Minimize and
 maximize controls are removed; you can still resize the tools and note windows.
 Quit waits for notes to save. If saving fails, Komofuu remains open and shows the
 error instead of discarding changes. No startup/autostart setting is added.
+
 
