@@ -1,6 +1,6 @@
 # Permission for the Komofuu third-party source guide
 
-Copyright (c) 2026 Luca Andre Ruenholl, to the extent rights are held.
+Copyright (c) 2026 Komofuu, to the extent rights are held.
 
 Permission is granted, without a fee, to copy, redistribute and adapt the
 Komofuu SOURCE-AVAILABILITY.md guide (published as THIRD-PARTY-SOURCES.md on the

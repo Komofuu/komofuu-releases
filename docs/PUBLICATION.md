@@ -54,7 +54,8 @@ Do not add a token to reveal draft/private releases or link a private app reposi
   application EULA and required third-party notices with their correct distributions.
   Public LICENSE.md describes repository scope; the app repository LICENSE.md is
   its canonical EULA. Do not substitute one for the other in installer generation.
-- Publisher Luca Andre Ruenholl and privacy/security contact are supplied.
+- Publisher identification is supplied in [the dedicated disclosure](https://komofuu.github.io/komofuu-releases/legal.html#publisher),
+  together with the privacy/security contact.
   Preserve those details. The present noncommercial launch has been assessed;
   reassess provider/address disclosures before adding funding or business activity.
 - GEOS rebuilding, source delivery and Microsoft provenance have recorded
@@ -75,3 +76,20 @@ updates from the older prebuild-source-delivery PR are incorporated into the
 current proprietary-scope documents. Do not merge the old PR unchanged: it uses
 outdated MIT wording. After this update is merged, close that superseded PR.
 
+
+## 0.14.8 document synchronization
+
+The 0.14.8 candidate uses EULA 1.1 (9 November 2026) and the matching privacy
+notice. legal.html identifies the publisher and contains the same privacy
+information; noindex discourages search indexing but does not make it private.
+Only the existing site's legal links and version documentation are updated;
+the website redesign remains paused.
+
+Merge these documents together with the corresponding application candidate.
+Before publishing v0.14.8, verify the public legal link, build a fresh installer,
+collect fresh locked dependency notices, and complete Windows single-instance
+and installer acceptance/update/data-retention tests. Keep the original updater
+key. Stage the installer, matching .sig, latest.json, LEGAL.txt (including the
+publisher disclosure) and THIRD-PARTY-SOURCES.zip from that exact build.
+Do not replace an older release's assets or publish an update manifest pointing
+to an unbuilt version. A documentation PR does not publish a binary release.

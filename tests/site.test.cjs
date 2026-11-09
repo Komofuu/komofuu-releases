@@ -97,7 +97,7 @@ test('earlier test builds cannot activate launch downloads but official launch a
 test('application and repository proprietary scope preserve earlier and third-party rights',()=>{
  const path=require('node:path'),read=name=>fs.readFileSync(path.join(__dirname,'..',name),'utf8');
  assert.match(read('EULA.md'),/Komofuu Proprietary Freeware License/);
- assert.match(read('EULA.md'),/\*\*Publisher:\*\* .+, an individual publishing under the project name Komofuu/);
+ assert.match(read('EULA.md'),/\*\*Publisher:\*\* the individual publishing as \*\*Komofuu\*\*/);
  assert.match(read('LICENSE.md'),/^# Komofuu Proprietary Freeware/);
  assert.match(read('LICENSE.md'),/does not revoke, narrow or override permissions/);
  assert.match(read('LICENSE.md'),/CC BY-SA 3\.0/);
@@ -109,3 +109,26 @@ test('application and repository proprietary scope preserve earlier and third-pa
  for(const file of ['README.md','GETTING-STARTED.md','SUPPORT.md','LICENSING.md','PRIVACY.md','THIRD_PARTY_NOTICES.md'])assert.doesNotMatch(read(file),/being prepared|in preparation|prepared proprietary|prepared for future|upcoming release/i);
 });
 
+
+
+test('0.14.8 legal links identify the publisher and contain the synchronized privacy notice',()=>{
+ const path=require('node:path'),read=name=>fs.readFileSync(path.join(__dirname,'..',name),'utf8');
+ const legal=read('legal.html'),eula=read('EULA.md'),privacy=read('PRIVACY.md');
+ assert.match(legal,/<meta name="robots" content="noindex, noarchive">/);
+ assert.match(legal,/id="publisher"/);
+ const name=legal.match(/Publisher: <strong>([^<]+)<\/strong>/)?.[1];
+ assert.ok(name&&name!=='Komofuu');
+ for(const file of ['LICENSE.md','EULA.md','LICENSING.md','PRIVACY.md','README.md','SECURITY.md']){
+  assert.ok(!read(file).includes(name),file+' should refer to the dedicated identification');
+  assert.doesNotMatch(read(file),/Country of operation/i);
+ }
+ assert.match(eula,/Version 1\.1 — November 9, 2026/);
+ assert.match(eula,/bundled PUBLISHER\.md/);
+ assert.match(eula,/https:\/\/komofuu\.github\.io\/komofuu-releases\/legal\.html#publisher/);
+ assert.match(privacy,/Updated 9 November 2026 for Komofuu 0\.14\.8/);
+ assert.doesNotMatch(privacy,/development/);
+ for(const heading of ['Local recovery and diagnostics','Reopening Komofuu on Windows','Optional Google Lens'])assert.ok(legal.includes(heading));
+ assert.ok(html.includes('href="legal.html"'));
+ assert.match(legal,/komofuu\.contact@gmail\.com/);
+ assert.doesNotMatch(legal,/<script|type="password"|http-equiv="refresh"/i);
+});

@@ -1,6 +1,6 @@
 # Getting started with Komofuu
 
-These instructions describe **Komofuu 0.14.5**, following the first official
+These instructions describe **Komofuu 0.14.8**, following the first official
 public release, 0.13.8.
 Use the official releases page for Windows downloads and release notes.
 
@@ -172,3 +172,9 @@ The default is 5 FPS; lower rates use less CPU. Continuous scanning stays off
 in Gaming mode.
 
 
+
+## If Komofuu is already running
+
+Opening 0.14.8 again shows the existing companion instead of starting another
+app. Its icon can also be found in the Windows notification area. Quit older
+copies before starting a newly built version; they do not have this guard.

@@ -13,7 +13,7 @@ This public repository follows the same proprietary distribution policy: see
 [LICENSE.md](LICENSE.md) for website/documentation permissions and [licence scope](LICENSING.md)
 for exceptions and independently licensed material.
 
-**Komofuu 0.14.5 · OCR word selection and conjugation improvements.** The first official public release was 0.13.8. This guide describes the current
+**Komofuu 0.14.8 · Single-instance startup and updated legal/privacy information.** The first official public release was 0.13.8. This guide describes the current
 version. Download the Windows installer from the official releases page and read
 the release notes and matching LEGAL.txt.
 
@@ -89,7 +89,7 @@ accounts and shared Windows components are kept. Deletion is not secure erasure.
 ## Privacy, credits and support
 
 - [Getting started](GETTING-STARTED.md) and [dictionary downloads](DICTIONARIES.md)
-- [Privacy and data flows](PRIVACY.md)
+- [Publisher and privacy information](legal.html#publisher) and [full data flows](PRIVACY.md)
 - [Third-party credits](THIRD_PARTY_NOTICES.md) and [licensing status](LICENSING.md)
 - [Help](SUPPORT.md) and [security reporting](SECURITY.md)
 - [Older saved data](docs/DATA-MIGRATION.md)
@@ -116,3 +116,10 @@ Quit waits for notes to save. If saving fails, Komofuu remains open and shows th
 error instead of discarding changes. No startup/autostart setting is added.
 
 
+
+## Opening Komofuu again
+
+In 0.14.8, opening Komofuu while it is running shows the existing companion.
+Quit older copies before testing the updated app: older builds have no guard.
+See the [0.14.8 release notes](docs/RELEASE-NOTES-0.14.8.md). The releases page
+is authoritative for which installers are currently available.
