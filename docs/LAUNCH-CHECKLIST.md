@@ -28,7 +28,8 @@ not authorize publishing or certify legal/security clearance.
   repository, subject to their respective scope notices and version applicability.
   Earlier MIT grants are preserved. This does not assert exclusive copyright or
   clear third-party obligations.
-- [x] Publisher Luca Andre Ruenholl and contact komofuu.contact@gmail.com supplied.
+- [x] Publisher identification is supplied in [the dedicated disclosure](https://komofuu.github.io/komofuu-releases/legal.html#publisher);
+  project contact: komofuu.contact@gmail.com.
   Privacy/security request instructions are synchronized. Private reporting was
   verified enabled on 29 October 2026; email remains the fallback.
 - [x] GEOS source rebuilding/replacement and covered MPL source collection passed
@@ -100,9 +101,9 @@ Application copies expressly supplied with the proprietary freeware EULA use
 those terms. Earlier MIT grants and third-party rights remain preserved; see
 LICENSING.md for the scope of each distribution.
 
-- [x] Identify publisher Luca Andre Ruenholl in the EULA and copy the
-  canonical LICENSE.md from application PR #20 to public EULA.md. Installer
-  resources were regenerated in that branch; final Windows tests remain below.
+- [x] The 0.14.8 EULA links to the dedicated publisher disclosure. Public EULA.md
+  matches the canonical application LICENSE.md; installer resources are regenerated.
+  Final Windows tests remain required before publication.
 - [x] Assess publisher disclosure for the confirmed present personal, entirely
   noncommercial launch. Reassess before donations or other funding/business
   activity; no address or company information has been invented.

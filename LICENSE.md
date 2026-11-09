@@ -2,8 +2,9 @@
 
 Effective for distributions expressly supplied under this notice from 30 October 2026.
 
-Publisher: Luca Andre Ruenholl, an individual publishing as Komofuu, operating
-from Romania. Contact: komofuu.contact@gmail.com.
+Publisher: the individual publishing as Komofuu, identified in
+[Publisher and privacy information](https://komofuu.github.io/komofuu-releases/legal.html#publisher).
+Contact: komofuu.contact@gmail.com.
 
 ## Application and installers
 

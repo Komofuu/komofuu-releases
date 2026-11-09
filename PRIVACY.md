@@ -1,10 +1,11 @@
 # Komofuu privacy and data flows
 
-Updated 1 November 2026 for Komofuu 0.13.8 release. Older installers
+Updated 9 November 2026 for Komofuu 0.14.8. Older installers
 can behave differently; consult their matching LEGAL.txt.
 
-Publisher: **Luca Andre Ruenholl**, an individual publishing as **Komofuu**,
-operating from Romania.
+Publisher and support-data controller: the individual publishing as **Komofuu**,
+identified in [Publisher and privacy information](https://komofuu.github.io/komofuu-releases/legal.html#publisher).
+Installed copies also include the offline PUBLISHER.md disclosure.
 Privacy contact: [komofuu.contact@gmail.com](mailto:komofuu.contact@gmail.com).
 
 ## Privacy questions and requests
@@ -21,7 +22,7 @@ use the private reporting route in SECURITY.md, or the project email as a fallba
 
 ## Support correspondence and reports
 
-For messages and reports sent to the project, the publisher identified above acts
+For messages and reports sent to the project, the publisher identified in the disclosure linked above acts
 as controller. This can include your email address or GitHub username, message,
 app/device details and attachments you choose to provide. It does not give the
 publisher access to app data kept only on your device.
@@ -97,21 +98,31 @@ sent to Anki, OCR or other services. Closing a note keeps it in the Notes list;
 Delete note removes it from active storage. Updates preserve notes and the
 uninstaller’s app-data deletion includes them. Deletion is not secure erasure.
 
-PaddleOCR processes requested captures locally. Scan status and controls indicate
+PaddleOCR and optional ScreenAI process requested captures locally. Scan status and controls indicate
 readiness; the optional OCR border is a visual guide. Scanning normally starts
 only on your shortcut, Scan now, or releasing an explicitly drawn crop. Continuous
 local scanning is optional, off by default and not recommended for ordinary use.
-PaddleOCR/native-text temporary jobs use a leased process-specific app-data
+Local OCR/native-text temporary jobs use a leased process-specific app-data
 session. Normal exit cleans the session; startup removes abandoned sessions
-without deleting another active instance's files. Crashes, locked files or deletion
+without deleting another active process's files. Crashes, locked files or deletion
 errors can delay cleanup. Worker diagnostics retain only a 16 KiB tail in memory.
 No secure-erasure or forensic-removal guarantee is made.
+
+ScreenAI is an optional Google component. Choosing Set up ScreenAI downloads a pinned
+component from dl.google.com (with permitted Google CDN redirects), verifies it and
+runs a synthetic Japanese recognition test. This download exposes ordinary connection
+information such as your IP address to the download provider, but does not capture or
+upload your screen. Choosing the engine or Check engine does not download it. Its
+models and complete third-party notices stay in local Komofuu app data. Recognition
+runs in the isolated OCR worker with no image upload; models are released after the
+worker's existing idle timeout, OCR stop, or engine switch. App-data deletion during
+uninstall includes this optional component. Its own third-party licences apply.
 
 The latest original OCR scan and bounded dictionary results are cached in memory.
 Stopping OCR clears the original-scan cache. Native Lens encodes its image in
 memory without starting the Python OCR worker. Application-window capture uses
 a short-lived helper and an OS-managed temporary image file, removed when its
-handles close. This applies to both OCR engines. Window titles and target IDs
+handles close. This applies to all OCR engines. Window titles and target IDs
 stay local and are not persisted as capture presets or sent as Lens metadata.
 The chosen window is checked for each scan; a closed, minimized, protected or
 unsupported window produces an error without falling back to a desktop image.
@@ -183,3 +194,49 @@ components are outside Komofuu's full-data removal. Locked files can require lat
 cleanup and are reported. This is deletion, not secure erasure. A cancelled Windows
 uninstall keeps the app/data. Verify this behavior on the final installer.
 
+
+
+## Local recovery and diagnostics
+
+Komofuu keeps up to five local recovery snapshots each for saved words/selected
+preferences and notes. Each snapshot is limited to 8 MiB. Automatic snapshots
+are paced to no more than one per category per 30 minutes; manual profile backups
+and protection before note deletion/recovery can create an additional snapshot.
+Recovery files contain personal study data and are not encrypted by Komofuu.
+They remain in this Windows profile's app-data folder, with no upload, and are
+removed when app data is deleted during uninstall. Manual exports remain separate.
+If damaged notes are repaired, the unreadable original is preserved as
+`notes-before-recovery.json` (up to 4 MiB). Note recovery adds closed copies rather
+than overwriting healthy current notes.
+
+Diagnostics are generated only when requested in Advanced settings. They contain
+app/component versions, selected engine/animation flags, permission flags and
+counts/sizes and recent numeric lookup timings/cache flags. The OCR overlay keeps
+at most 24 samples each for foreground resolution, background resolution and
+popup construction in memory. Timings are not saved to application storage and
+disappear when the overlay restarts. They exclude vocabulary/definitions, note contents, screenshots,
+clipboard text, dictionary titles, usernames, file paths and credentials. An
+export is downloaded locally; Komofuu does not send it to support automatically.
+
+### Setup guide and last cropped area
+
+Komofuu remembers one recent cropped rectangle and its screen arrangement/scaling
+in local settings. This stores pixel coordinates and display dimensions, not a
+screenshot, recognized text or application-window title. After restarting, reuse
+is explicit and checks the screen layout; nothing is captured automatically.
+Choosing a new area replaces the remembered rectangle. These local preferences
+are removed when Komofuu app data is deleted during uninstall.
+
+The quick-start guide remembers whether it was dismissed/opened and whether a
+first successful screen lookup was completed. That milestone is a boolean, not
+a record of the word or definition. Opening the guide checks local dictionary
+and installed-component metadata; it does not capture, initialize an OCR model,
+download components or grant Google Lens upload permission.
+
+## Reopening Komofuu on Windows
+
+A normal second launch of Komofuu 0.14.8 exits and asks the already-running app
+to show its companion. It does not start another set of app windows or create
+another profile. This local single-instance notification does not upload launch
+arguments or application data. The short-lived selected-window capture helper
+remains a separate process and follows the local capture behavior above.

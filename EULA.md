@@ -1,12 +1,10 @@
 # Komofuu Proprietary Freeware License
 **End User License Agreement (EULA)**
 
-**Version 1.0 — October 30, 2026**
+**Version 1.1 — November 9, 2026**
 
 **Software:** Komofuu  
-**Publisher:** Luca Andre Ruenholl, an individual publishing under the project name Komofuu (the "Publisher").
-
-**Country of operation:** Romania
+**Publisher:** the individual publishing as **Komofuu** (the "Publisher"). Publisher identity and contact details are provided in the bundled PUBLISHER.md and at https://komofuu.github.io/komofuu-releases/legal.html#publisher.
 
 **Licensing contact:** komofuu.contact@gmail.com
 
@@ -207,9 +205,7 @@ It does not replace applicable privacy notices, mandatory consumer disclosures, 
 
 For licensing inquiries, permissions or legal notices, email **komofuu.contact@gmail.com**.
 
-**Publisher:** the individual identified at the beginning of this Agreement, publishing under the project name Komofuu.
-
-**Country of operation:** Romania.
+**Publisher identification:** see the bundled PUBLISHER.md or the public disclosure linked at the beginning of this Agreement.
 
 Komofuu is the project name; it is not identified here as a separate company or legal entity.
 
@@ -217,8 +213,8 @@ The official project site is https://komofuu.github.io/komofuu-releases/.
 
 **Official GitHub organization:** https://github.com/Komofuu
 
-Any additional publisher information required by applicable law, including a geographic contact address where required, must be made available in the accompanying publisher/legal information. Naming Romania and providing an email address does not replace any such obligation.
+Any additional publisher information required by applicable law, including a geographic contact address where required, must be made available in the accompanying publisher/legal information. Providing an email address alone does not replace any such obligation.
 
 ---
 
-**End of Komofuu Proprietary Freeware License — Version 1.0**
+**End of Komofuu Proprietary Freeware License — Version 1.1**

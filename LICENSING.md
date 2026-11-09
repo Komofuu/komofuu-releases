@@ -8,7 +8,7 @@ professional/commercial use is free. Its redistribution/modification restriction
 apply only within its lawful scope, with exceptions for independent licences and
 mandatory law. The app's source repository remains private.
 
-The EULA identifies Luca Andre Ruenholl as publisher. The installer contains its
+The EULA links to the [publisher disclosure](https://komofuu.github.io/komofuu-releases/legal.html#publisher). The installer contains its
 matching EULA and legal information. For historical permissions, third-party
 rights and source availability, consult the exact notices accompanying the
 particular installer.

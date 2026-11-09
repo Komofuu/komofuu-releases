@@ -1,6 +1,7 @@
 # Security reporting
 
-Publisher: **Luca Andre Ruenholl**, publishing as **Komofuu**.
+Publisher: the individual publishing as **Komofuu**, identified in
+[Publisher and privacy information](https://komofuu.github.io/komofuu-releases/legal.html#publisher).
 
 Use GitHub’s **Security → Report a vulnerability** private flow:
 https://github.com/Komofuu/komofuu-releases/security/advisories/new

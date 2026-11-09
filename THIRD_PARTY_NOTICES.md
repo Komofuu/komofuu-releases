@@ -1,12 +1,11 @@
 # Komofuu third-party credits
 
-Updated 30 October 2026 for Komofuu 0.13.8 release. This index accompanies
+Updated 5 November 2026 for Komofuu 0.14.3 early release. This index accompanies
 the exact license texts/copyright notices in each build's LEGAL.txt and installed
 legal resources. It does not replace them or certify redistribution clearance.
-Original Komofuu material follows the proprietary distribution policy, to the
-extent the Publisher has the necessary rights. See LICENSE.md, EULA.md and
-LICENSING.md for scope and version applicability. Earlier MIT grants remain valid;
-this notice does not change the terms supplied with existing installers.
+Future Komofuu copies expressly supplied with the proprietary freeware EULA use
+that EULA within its lawful scope. Earlier MIT permissions remain unaffected.
+See LICENSE.md, LICENSING.md and docs/PRIOR-MIT-LICENSE.txt.
 Third-party components and data retain their own licenses.
 
 ## User-imported dictionary data
@@ -53,10 +52,12 @@ mean Yomitan application code is bundled. Structured definitions are rendered as
 | Python | Python Software Foundation and contributors; included Python license — https://docs.python.org/3/license.html |
 | Noto Sans CJK | Noto/CJK contributors; SIL OFL 1.1 — https://github.com/notofonts/noto-cjk |
 | Tauri and plugins | Tauri contributors; applicable MIT/Apache-2.0 notices — https://github.com/tauri-apps/tauri |
+| Tao 0.37.2 (locally modified) | Tauri contributors; Apache-2.0. Komofuu corrects Windows passive-window activation. Original license, copyright notices and modification details are retained in src-tauri/vendor/tao — https://github.com/tauri-apps/tao |
 | Shapely / GEOS | Shapely BSD-3-Clause; GEOS LGPL-2.1 obligations — https://libgeos.org/ |
 | certifi / covered tqdm portions / MPL Rust crates | Applicable MPL-2.0 source and notice requirements; see exact inventory |
 | NumPy, OpenCV, Pillow, protobuf and other packages | Their individual licenses and nested native-component notices |
-| Microsoft Visual C++ runtime | Microsoft's terms; exact DLL provenance and Community edition evidence are recorded in docs/MICROSOFT-RUNTIME-REVIEW.md; final distribution conditions remain subject to review |
+| Microsoft Edge WebView2 / loader | Microsoft; the matched loader SDK 1.0.3800.47 license and NOTICE are included; runtime terms apply separately from the MIT Rust wrappers — https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution |
+| Microsoft Visual C++ runtime | Microsoft's redistribution terms; publisher eligibility still requires confirmation |
 | zip-rs | zip 9.1.2, MIT; stored/deflate dictionary archive reader — https://github.com/zip-rs/zip2 |
 
 Exact OCR package/model sources and checksums are in the runtime manifest and
@@ -97,21 +98,9 @@ process and does not establish exclusive copyright. Third-party software, models
 and dictionary data retain their respective licenses and attribution requirements.
 
 
-## Website visual-novel demonstration
+## Windows single-instance startup
 
-The website composite `assets/demos/visual-novel-demo.png` uses
-[Korenanteeroge.png](https://commons.wikimedia.org/wiki/File:Korenanteeroge.png)
-by [User:Eky](https://commons.wikimedia.org/wiki/User:Eky), via Wikimedia Commons,
-under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
-Changes: resized background with Komofuu and dictionary overlays. The composite
-screenshot is licensed under CC BY-SA 3.0. No endorsement is implied.
-See [demo media credits](assets/demos/README.md).
-
-
-## Corresponding source delivery
-
-Use the THIRD-PARTY-SOURCES.zip asset matching the installer version.
-See [source availability](THIRD-PARTY-SOURCES.md) for MPL source delivery and
-GEOS rebuild/replacement instructions. Those independent rights are unaffected
-by the application EULA and repository proprietary scope notice.
-
+Windows builds use tauri-plugin-single-instance 2.4.5 from the Tauri project,
+licensed under Apache-2.0 OR MIT. Its exact dependency notices are collected
+from the locked Cargo package into the build-generated legal resources.
+See https://github.com/tauri-apps/plugins-workspace/tree/v2/plugins/single-instance .
